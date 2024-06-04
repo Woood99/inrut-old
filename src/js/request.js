@@ -22,6 +22,7 @@ import {
     emergingBlockScroll
 } from './modules/emergingBlockScroll';
 import videoBlock from './components/videoBlock';
+import mortgage from './components/mortgage';
 import mapMetro from './components/mapMetro';
 import tag from './components/tag';
 import chat from './components/chat';
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardSecondaryActions();
     cardPrimaryActions();
     videoBlock();
+    mortgage();
     mapMetro();
     tag();
     chat();
@@ -106,3 +108,4 @@ document.addEventListener('DOMContentLoaded', () => {
         dropdownItems('[data-bid-more]', '[data-bid-more-btn]', 'Скрыть');
     }
 })
+

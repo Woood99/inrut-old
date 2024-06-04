@@ -49,7 +49,7 @@ import {
 } from './components/dropImage';
 import checkboard from './components/checkboard';
 import headerFixed from './components/headerFixed';
-import {mortgage,mortgageTwo} from './components/mortgage';
+import mortgage from './components/mortgage';
 import mapMetro from './components/mapMetro';
 import tag from './components/tag';
 import chat from './components/chat';
@@ -72,7 +72,7 @@ import videoModal from './components/videoModal';
 import submitApp from './components/submitApp';
 import wantDiscount from './components/wantDiscount';
 import onlineDisplay from './components/onlineDisplay';
-import {bankOffer} from './components/bankOffer';
+import bankOffer from './components/bankOffer';
 import {
     dragDrops
 } from './components/dragDrop';
@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     checkboard();
     headerFixed();
     mortgage();
-    mortgageTwo();
     mapMetro();
     tag();
     chat();

@@ -92,6 +92,14 @@
 
         &__contribution {
             position: relative;
+            margin-bottom: 64px;
+
+            .toggle-checkbox {
+                position: absolute;
+                top: calc(100% + 32px);
+                left: 0;
+                width: max-content;
+            }
 
             .checkbox-secondary {
                 position: absolute;
