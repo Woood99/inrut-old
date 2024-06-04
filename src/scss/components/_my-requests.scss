@@ -1,0 +1,113 @@
+.my-requests {
+    &__body {
+        @media (max-width:$desktop) {
+            padding: calc(var(--header-height,51px) + 24px) 0 16px;
+            background-color: var(--stand-bg);
+        }
+    }
+    &__table {
+        margin-top: 32px;
+        background-color: var(--stand-bg);
+        .object-info {
+            grid-template-columns: percent(130, 1180) percent(450, 1180) max-content 1fr 24px;
+            @media (max-width:$desktop) {
+                grid-template-columns: 1fr max-content;
+                grid-column-gap: 32px;
+            }
+
+            .object-info__offers{
+                flex-direction: row-reverse;
+                justify-content: start;
+
+                border-radius: 8px;
+                background-color: var(--dark);
+                height: 30px;
+                padding: 0 8px;
+
+                span{
+                    font-size: var(--default-fz);
+                    line-height: var(--default-lh);
+                    font-weight: 400;
+                }
+                svg{
+                    margin-right: 0;
+                    margin-left: 10px;
+                    width: 16px;
+                    height: 16px;
+                }
+                &--true{
+                    background-color: rgba(36, 202, 142, 0.2);
+                }
+                &--false{
+                    background-color: var(--primary100);
+                    color: var(--white);
+                }
+            }
+
+        }
+        .moving-card{
+            grid-template-columns: percent(165, 1180) percent(450, 1180) 1fr max-content;
+            height: auto;
+        }
+        .main-table__type{
+            grid-template-columns: percent(130, 1180) percent(450, 1180) 1fr;
+            justify-content: start;
+            margin: 0 24px;
+            grid-column-gap: 20px;
+            span {
+               margin: 0;
+            }
+        }
+        .dots-dropdown {
+            &__dropdown {
+                >button,a {
+                    &:nth-child(1) {
+                        color: var(--red);
+
+                        svg {
+                            fill: currentColor;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        color: var(--blue);
+
+                        svg {
+                            fill: none;
+                            stroke: currentColor;
+                            stroke-width: 1.5px;
+                        }
+                    }
+                }
+
+                @media (max-width:$desktop) {
+                    right: -12px;
+                }
+            }
+
+            @media (max-width:$desktop) {
+                grid-column: 2/3;
+                grid-row: 3/4;
+                justify-self: end;
+            }
+        }
+
+        @media (max-width:$desktop) {
+            padding: 0;
+            margin-top: 16px;
+            background-color: transparent;
+        }
+    }
+    &__banners {
+        margin-top: 32px;
+
+        @media (max-width:$desktop) {
+            margin-top: 16px;
+        }
+    }
+
+
+    @media (max-width:$desktop) {
+        padding-top: 0;
+    }
+}

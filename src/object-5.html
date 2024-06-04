@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Объект</title>
+    <link rel="preload" href="fonts/CoFoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CoFoSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/object.css">
+    <script id="ymaps-id"></script>
+    <script defer src="js/object.js"></script>
+
+    <style>
+        .air-datepicker-global-container {
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body class="page__body">
+    <div class="site-container site-container--object">
+        @include('partials/header.html')
+        <main class="main main-page-gap object">
+            <div class="object__top top-page-inner container">
+                <a href="#" class="object__back top-page-inner__back back-link">
+                    <svg>
+                        <use xlink:href="./img/sprite.svg#arrow-left"></use>
+                    </svg>
+                    <span>Назад</span>
+                </a>
+                <div class="object__btns top-page-inner__btns">
+                    <a href="./edit-apartment.html" class="btn btn-reset edit-btn top-page-inner__btn " title="Редактировать">
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#pencil"></use>
+                        </svg>
+                        <span>Редактировать</span>
+                    </a>
+                    <button type="button" class="btn btn-reset delete-btn top-page-inner__btn " data-popup-path="warning-remove" title="Удалить">
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#trash"></use>
+                        </svg>
+                        <span>Удалить</span>
+                    </button>
+                </div>
+            </div>
+            <div class="object__body object-body">
+                <div class="object-body__container container">
+                    <section class="sale-dynamic agent__row mb-16">
+                        <div class="grid gap-40" style='grid-template-columns: 1fr 27%;'>
+                            <div class="saly-dynamic flex flex-col">
+                                <h2 class="sale-dynamic__title title-2">
+                                    Статистика просмотров
+                                </h2>
+                                <div class="sale-dynamic__wrapper">
+                                    <div class="sale-dynamic__content">
+                                        <div class="dynamic-section dynamic-section--small">
+                                            <div class="dynamic-section__wrapper" style='height: 235px;'>
+                                                <div class="dynamic-section__items">
+                                                    <div class="dynamic-section__item dynamic-section-item">
+                                                        <div class="dynamic-section-item__tooltip _small-width">
+                                                            <h3 class="title-4">01.03.2023</h3>
+                                                            <div class="info-price-block _minus _row">
+                                                                <p class="info-price-block__name">
+                                                                    Просмотров объявления
+                                                                </p>
+                                                                <div class="info-price-block__wrapper">
+                                                                    <span class="title-4">
+                                                                        50
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info-price-block _plus _row">
+                                                                <p class="info-price-block__name">
+                                                                    Посмотрели ваш телефон
+                                                                </p>
+                                                                <div class="info-price-block__wrapper">
+                                                                    <span class="title-4">
+                                                                        5
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info-price-block _plus _row">
+                                                                <p class="info-price-block__name">
+                                                                    Добавили в избранное
+                                                                </p>
+                                                                <div class="info-price-block__wrapper">
+                                                                    <span class="title-4">
+                                                                        5
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info-price-block _plus _row">
+                                                                <p class="info-price-block__name">
+                                                                    Добавили в сравнение
+                                                                </p>
+                                                                <div class="info-price-block__wrapper">
+                                                                    <span class="title-4">
+                                                                        3
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info-price-block _plus _row">
+                                                                <p class="info-price-block__name">
+                                                                    Написали в чат
+                                                                </p>
+                                                                <div class="info-price-block__wrapper">
+                                                                    <span class="title-4">
+                                                                        9
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info-price-block _plus _row">
+                                                                <p class="info-price-block__name">
+                                                                    Записалось на просмотр
+                                                                </p>
+                                                                <div class="info-price-block__wrapper">
+                                                                    <span class="title-4">
+                                                                        4
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info-price-block _plus _row">
+                                                                <p class="info-price-block__name">
+                                                                    Откликнулись на рассылку спецпредложений
+                                                                </p>
+                                                                <div class="info-price-block__wrapper">
+                                                                    <span class="title-4">
+                                                                        4
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dynamic-section-item__wrapper" data-diagram-value="28">
+                                                        </div>
+                                                        <div class="dynamic-section-item__date">
+                                                            1 мар.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tw-flex tw-gap-4 tw-mt-4 tw-items-center">
+                                        <button type='button' class='btn btn-reset btn-primary' data-popup-path="favorite-contacts">Детальная статистика</button>
+                                        <button type='button' class='btn btn-reset btn-blue underline-hover' data-popup-path="sell-faster">Как продать быстрее</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='flex flex-col gap-12 mb-16'>
+                                <div class="bg-primary100 p24 tw-rounded-xl">
+                                    <h3 class='title-4 mb-16'>Объект размещён 29 дней назад</h3>
+                                    <div class="card-actions">
+                                        <div>
+                                            <svg role="img" aria-hidden="true" data-icon="visible" viewBox="0 0 24 24" name="visible" class="personal-items-8e6522">
+                                                <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+                                                <path d="M0 12a13 13 0 0 1 24 0 13 13 0 0 1-24 0Zm17 0a5 5 0 1 0-10 0 5 5 0 0 0 10 0Z"></path>
+                                            </svg>
+                                            <div><span>400</span> просмотров карточки ЖК</div>
+                                        </div>
+                                        <div>
+                                            <svg role="img" aria-hidden="true" data-icon="visible" viewBox="0 0 24 24" name="visible" class="personal-items-8e6522">
+                                                <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+                                                <path d="M0 12a13 13 0 0 1 24 0 13 13 0 0 1-24 0Zm17 0a5 5 0 1 0-10 0 5 5 0 0 0 10 0Z"></path>
+                                            </svg>
+                                            <div><span>300</span> просмотров объектов ЖК</div>
+                                        </div>
+                                        <div>
+                                            <svg role="img" aria-hidden="true" data-icon="user" viewBox="0 0 24 24" name="user" class="personal-items-8e6522">
+                                                <path d="M13.85 13c.72 0 1.31 0 1.8.04.51.04.98.12 1.44.33a4 4 0 0 1 1.66 1.45c.27.41.42.87.53 1.37.11.48.2 1.07.3 1.78l.41 2.89A1 1 0 0 1 19 22H5a1 1 0 0 1-.99-1.14l.41-2.9c.1-.7.19-1.3.3-1.77.1-.5.26-.96.53-1.37a4 4 0 0 1 1.66-1.45c.46-.2.93-.3 1.44-.33.49-.04 1.08-.04 1.8-.04h3.7ZM12 11a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z"></path>
+                                            </svg>
+                                            <div><span>10</span> посмотрели ваш телефон</div>
+                                        </div>
+                                        <button type='button' class='btn btn-reset' data-popup-path="favorite-contacts">
+                                            <svg role="img" aria-hidden="true" data-icon="favorites-filled" viewBox="0 0 24 24" name="favorites-filled" class="personal-items-59czvu">
+                                                <path d="M7.71 3c1.78 0 3.34.87 4.29 2.21A5.22 5.22 0 0 1 16.29 3a5.73 5.73 0 0 1 4.1 9.73l-7.72 7.61a.95.95 0 0 1-1.34 0l-7.72-7.62A5.73 5.73 0 0 1 7.71 3Z"></path>
+                                            </svg>
+                                            <div><span>11</span> добавили в избранное</div>
+                                        </button>
+                                        <div>
+                                            <svg role="img" aria-hidden="true" data-icon="visible" viewBox="0 0 24 24" name="visible" class="personal-items-8e6522">
+                                                <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+                                                <path d="M0 12a13 13 0 0 1 24 0 13 13 0 0 1-24 0Zm17 0a5 5 0 1 0-10 0 5 5 0 0 0 10 0Z"></path>
+                                            </svg>
+                                            <div><span>10</span> добавили в сравнение</div>
+                                        </div>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width="512" height="512">
+                                                <path d="M24,24H12.017A12,12,0,1,1,24,11.246l0,.094ZM12.017,3a9,9,0,1,0,0,18H21V11.389A9.015,9.015,0,0,0,12.017,3Z" />
+                                                <rect x="8" y="8" width="6" height="3" />
+                                                <rect x="8" y="14" width="10" height="3" />
+                                            </svg>
+                                            <div><span>10</span> написали в чат</div>
+                                        </div>
+                                        <div>
+                                            <svg role="img" aria-hidden="true" data-icon="visible" viewBox="0 0 24 24" name="visible" class="personal-items-8e6522">
+                                                <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+                                                <path d="M0 12a13 13 0 0 1 24 0 13 13 0 0 1-24 0Zm17 0a5 5 0 1 0-10 0 5 5 0 0 0 10 0Z"></path>
+                                            </svg>
+                                            <div><span>10</span> записалось на просмотр</div>
+                                        </div>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width="512" height="512">
+                                                <path d="M24,24H12.017A12,12,0,1,1,24,11.246l0,.094ZM12.017,3a9,9,0,1,0,0,18H21V11.389A9.015,9.015,0,0,0,12.017,3Z" />
+                                                <rect x="8" y="8" width="6" height="3" />
+                                                <rect x="8" y="14" width="10" height="3" />
+                                            </svg>
+                                            <div><span>5</span> откликнулись на рассылку спецпредложений</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type='button' class='btn btn-reset btn-secondary' data-popup-path="special-offers">Рассылка спецпредложений</button>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="object-body__slider object-slider">
+                        <div class="object-slider__body object-slider-body">
+                            <div class="swiper object-slider-body__wrapper" data-popup-path="object-gallery--two">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source srcset="./img/card-8.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-8.jpg" width="818" height="480" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-1.jpg" width="818" height="480" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source srcset="./img/card-9.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-9.jpg" width="818" height="480" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-1.jpg" width="818" height="480" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-1.jpg" width="818" height="480" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-reset object-slider-body__navigation nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                <div class="nav-arrow-primary__wrapper">
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                            <button type="button" class="btn btn-reset object-slider-body__navigation nav-arrow-primary nav-arrow-primary--next">
+                                <div class="nav-arrow-primary__wrapper">
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="object-slider-body__fullscreen">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 3.75H16.25V7.5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M11.875 8.125L16.25 3.75" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.5 16.25H3.75V12.5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M8.125 11.875L3.75 16.25" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
+                            <div class="object-slider-body__more">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 16 16">
+                                    <path fill="currentColor" d="M6.5 3a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0zm0 5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0zm0 5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="object-slider-body__pagination pagination-primary"></div>
+                        </div>
+                        <div class="object-slider__nav object-slider-nav">
+                            <div class="swiper object-slider-nav__wrapper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source srcset="./img/card-8.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-8.jpg" width="336" height="181" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-1.jpg" width="336" height="181" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source srcset="./img/card-9.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-9.jpg" width="336" height="181" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-1.jpg" width="336" height="181" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-1.jpg" width="336" height="181" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-reset object-slider-nav__navigation nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                <div class="nav-arrow-primary__wrapper">
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                            <button type="button" class="btn btn-reset object-slider-nav__navigation nav-arrow-primary nav-arrow-primary--next">
+                                <div class="nav-arrow-primary__wrapper">
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="object-body__wrapper">
+                        <div class="object-body__content">
+                            <div class="object-body__data object-data">
+                                <div class="object-data__price card-price card-price--up" data-main-info-price>
+                                    <span class="card-price__price">2 897 000 ₽</span>
+                                    <div class="secondary-tooltip">
+                                        <button class="btn btn-reset secondary-tooltip__btn" title="Посмотреть историю изменения цены" data-scroll-target="history-price" data-scroll-target-gap="16">
+                                            <svg>
+                                                <use xlink:href="./img/sprite.svg#price-up"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="object-data__meter">
+                                    94 742 ₽/м²
+                                </div>
+                                <h3 class="object-data__name" data-main-info-title>
+                                    1-ком. квартира, 39 м², 12/12 эт.
+                                </h3>
+                                <div class="object-data__address" data-main-info-address>
+                                    <span class="object-data__address--two">
+                                        Краснодар, ул.Карла-Маркса., 234
+                                    </span>
+                                </div>
+                                <div class="object-data__text">
+                                    <p>
+                                        Уникальна квартира с ремонтом продается в новом доме по
+                                        улице Тополиная это район Петра Метальникова.
+                                    </p>
+                                    <p>
+                                        В квартире шикарный, современный ремонт панорамные окна, на
+                                        полу ламинат, шикарный вид на город. Из кухни сделана кухня
+                                        гостиная очень актуально в наше время, при этом квартира см.
+                                        Уникальна квартира с ремонтом продается в новом доме по
+                                        улице Тополиная квартира см. Уникальна квартира с ремонтом
+                                        продается в новом доме по улице Тополиная
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-reset object-data__more">
+                                    <span>Показать полностью</span>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="object-body__characteristics object-characteristics">
+                                <h2 class="object-characteristics__title title-2">
+                                    Характеристики
+                                </h2>
+                                <div class="object-characteristics__container">
+                                    <ul class="object-characteristics__list list-reset">
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Тип
+                                            </span>
+                                            <span>
+                                                Квартира
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Высота потолков
+                                            </span>
+                                            <span>
+                                                1
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Общая площадь
+                                            </span>
+                                            <span>
+                                                57 м²
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Этаж
+                                            </span>
+                                            <span>
+                                                12/12
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Площадь кухни
+                                            </span>
+                                            <span>
+                                                39 м²
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Площадь кухни
+                                            </span>
+                                            <span>
+                                                39 м²
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <ul class="object-characteristics__list list-reset" data-dropdown-items hidden>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Тип
+                                            </span>
+                                            <span>
+                                                Квартира
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Высота потолков
+                                            </span>
+                                            <span>
+                                                1
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Общая площадь
+                                            </span>
+                                            <span>
+                                                57 м²
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn btn-reset object-characteristics__more">
+                                        <span>Показать полностью</span>
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#check"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="object-body__history object-history" data-scroll-block="history-price">
+                                <h2 class="object-history__title title-2">
+                                    История изменения цены
+                                </h2>
+                                <ul class="object-history__list list-reset">
+                                    <li class="object-history__item object-history__item--plus">
+                                        <span class="object-history__date">
+                                            03.08.2020
+                                        </span>
+                                        <div class="object-history__old-price">
+                                            <span>
+                                                <span>3 000 000</span>
+                                                ₽
+                                            </span>
+                                            <span>+300 000 ₽</span>
+                                        </div>
+                                        <span class="object-history__new-price">3 300 000 ₽</span>
+                                    </li>
+                                    <li class="object-history__item object-history__item--minus">
+                                        <span class="object-history__date">
+                                            01.08.2020
+                                        </span>
+                                        <div class="object-history__old-price">
+                                            <span>
+                                                <span>3 000 000</span>
+                                                ₽
+                                            </span>
+                                            <span>-300 000 ₽</span>
+                                        </div>
+                                        <span class="object-history__new-price">2 700 000 ₽</span>
+                                    </li>
+                                    <li class="object-history__item object-history__item--plus">
+                                        <span class="object-history__date">
+                                            03.07.2020
+                                        </span>
+                                        <div class="object-history__old-price">
+                                            <span>
+                                                <span>3 000 000</span>
+                                                ₽
+                                            </span>
+                                            <span>+300 000 ₽</span>
+                                        </div>
+                                        <span class="object-history__new-price">3 300 000 ₽</span>
+                                    </li>
+                                    <li class="object-history__item object-history__item--minus">
+                                        <span class="object-history__date">
+                                            05.06.2020
+                                        </span>
+                                        <div class="object-history__old-price">
+                                            <span>
+                                                <span>3 000 000</span>
+                                                ₽
+                                            </span>
+                                            <span>-300 000 ₽</span>
+                                        </div>
+                                        <span class="object-history__new-price">2 700 000 ₽</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="object-body__location object-location object-location--select">
+                                <h2 class="object-location__title title-2">
+                                    Расположение
+                                </h2>
+                                <p class="object-location__descr">
+                                    Краснодар, Тополиная улица, 40/1к1
+                                </p>
+                                <div class="object-location__btns">
+                                    <button type="button" class="btn btn-reset object-location__btn object-location__btn--infrastructure _active">
+                                        Инфраструктура
+                                    </button>
+                                    <button type="button" class="btn btn-reset object-location__btn">
+                                        Предложения рядом
+                                    </button>
+                                    <button type="button" class="btn btn-reset object-location__btn object-location__btn--routes">
+                                        Расстояние
+                                    </button>
+                                </div>
+                                <div class="object-location__maps">
+                                    <div class="object-location__routes location-routes">
+                                        <button type="button" class="btn btn-reset btn-primary location-routes__btn">
+                                            <svg>
+                                                <use xlink:href="./img/sprite.svg#routes"></use>
+                                            </svg>
+                                            Построить маршрут
+                                        </button>
+                                    </div>
+                                    <div class="map-primary remove-copyrights-pane" id="object-maps">
+                                    </div>
+                                </div>
+                                <div class="object-location__infrastructure _active">
+                                    <button type="button" class="btn btn-reset tag">
+                                        Школы
+                                        <span>11</span>
+                                    </button>
+                                    <button type="button" class="btn btn-reset tag">
+                                        Детские сады
+                                        <span>11</span>
+                                    </button>
+                                    <button type="button" class="btn btn-reset tag">
+                                        Поликлиники
+                                        <span>25</span>
+                                    </button>
+                                    <button type="button" class="btn btn-reset tag">
+                                        Магазины
+                                        <span>2</span>
+                                    </button>
+                                    <button type="button" class="btn btn-reset tag">
+                                        Рестораны
+                                        <span>25</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @include('partials/footer.html')
+    </div>
+    <!-- popups -->
+    @include('popups/city.html')
+    @include('popups/add.html')
+    @include('popups/personal-area2.html')
+    @include('popups/edit-profile.html')
+    <!-- ==== -->
+    @include('popups/sell-faster.html')
+    @include('popups/special-offers.html')
+    @include('popups/favorite-contacts.html')
+    <!-- popups -->
+</body>
+
+
+</html>

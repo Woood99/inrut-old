@@ -1,0 +1,100 @@
+.request-catalog {
+    &__body {
+        @media (max-width:$desktop) {
+            padding: calc(var(--header-height,40px) + 24px) 0 16px;
+            background-color: var(--stand-bg);
+        }
+        .request-catalog__filter{
+            @media (max-width:$desktop){
+                 display: none; 
+            }
+        }
+    }
+
+    &__filter {
+        margin-top: 32px;
+
+        @media (max-width:$desktop) {
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__select {}
+
+    &__area {}
+
+    &__checkboxes {
+        margin-bottom: 10px;
+        justify-self: end;
+        align-self: end;
+        display: flex;
+        align-items: center;
+
+        >.checkbox-secondary {
+            &:not(:last-child) {
+                margin-right: 20px;
+
+                @media (max-width:$desktop) {
+                    margin-right: 0;
+                    margin-bottom: 14px;
+                }
+            }
+        }
+
+        @media (max-width:$desktop) {
+            margin: 0;
+            align-self: start;
+            flex-direction: column;
+        }
+    }
+
+    &__table {
+        margin-top: 32px;
+        background-color: var(--stand-bg);
+
+        .main-table__type {
+            grid-template-columns: percent(165, 1180) percent(305, 1180) 1fr percent(220, 1180);
+            grid-column-gap: 20px;
+            margin: 0 24px;
+            span{
+                margin: 0;
+            }
+        }
+
+        @media (max-width:$desktop) {
+            padding: 0;
+            margin-top: 16px;
+            background-color: transparent;
+        }
+    }
+
+    &__banners {
+        margin-top: 32px;
+
+        @media (max-width:$desktop) {
+            margin-top: 16px;
+            padding: 0;
+        }
+    }
+
+
+    @media (max-width:$desktop) {
+        padding-top: 0;
+    }
+}
+
+
+
+.request-catalog-filter {
+    &__row--1 {
+        grid-template-columns: 125px percent(333,1180) 278px 18% 200px;
+    }
+
+    &__row--2 {
+        grid-template-columns: percent(450, 1180) percent(390, 1180) percent(324, 1180);
+    }
+}

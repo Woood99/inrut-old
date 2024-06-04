@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Настройка системы</title>
+    <link rel="preload" href="fonts/CoFoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CoFoSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container site-container--place-sale">
+        @include('partials/header.html')
+        <main class="main main-page-gap place-sale">
+            <div class="place-sale__top top-page-inner-title">
+                <div class="top-page-inner-title__container container">
+                    <a href="#" class="place-sale__back top-page-inner-title__back back-link">
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#arrow-left"></use>
+                        </svg>
+                        <span>Назад</span>
+                    </a>
+                    <h1 class="place-sale__title top-page-inner-title__title title-2" data-da=".place-sale__body,1212,first">
+                        Права доступа
+                    </h1>
+                </div>
+            </div>
+            <div class="groups main-table access-rights">
+                <div class="main-table__inner container">
+                    <div class="main-table__table">
+                        <div class="main-table__type" style="grid-template-columns: 20% 15% 1fr; justify-content: start;">
+                            <span>Роль</span>
+                            <span>Возможность</span>
+                            <div>
+                               <span>Сделки</span>
+                               <span>Объекты</span>
+                               <span>Встреча показ</span>
+                               <span>Акции</span>
+                            </div>
+                        </div>
+                        <div class="main-table__list">
+                            <div class="main-table__item access-rights__item">
+                                <span>
+                                    Администратор
+                                </span>
+                                <div style="display: flex;flex-direction: column;align-items: start; gap:16px;">
+                                    <span>Просмотр</span>
+                                    <span>Создать</span>
+                                    <span>Редактировать</span>
+                                    <span>Удалить</span>
+                                </div>
+                                <div>
+                                    <div class="row">
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_1" name="access-rights_1" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_1" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_2" name="access-rights_2" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_2" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_3" name="access-rights_3" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_3" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_4" name="access-rights_4" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_4" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_5" name="access-rights_5" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_5" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_6" name="access-rights_6" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_6" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_7" name="access-rights_7" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_7" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_8" name="access-rights_8" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_8" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_1" name="access-rights_1" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_1" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_2" name="access-rights_2" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_2" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_3" name="access-rights_3" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_3" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_4" name="access-rights_4" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_4" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_5" name="access-rights_5" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_5" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_6" name="access-rights_6" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_6" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_7" name="access-rights_7" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_7" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-secondary">
+                                            <input id="access-rights_8" name="access-rights_8" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_8" class="checkbox-secondary__label">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>

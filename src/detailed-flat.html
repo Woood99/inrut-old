@@ -1,0 +1,2564 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Объект</title>
+    <link rel="preload" href="fonts/CoFoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CoFoSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/object.css">
+    <script id="ymaps-id"></script>
+    <script defer src="js/object.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container site-container--object">
+        @include('partials/header.html')
+        <main class="main main-page-gap object detailed-flat">
+            <div class="object__top top-page-inner container">
+                <a href="#" class="object__back top-page-inner__back back-link">
+                    <svg>
+                        <use xlink:href="./img/sprite.svg#arrow-left"></use>
+                    </svg>
+                    <span>Назад</span>
+                </a>
+                <div class="object__btns top-page-inner__btns">
+                    <button type='button' class='btn btn-reset favorite-btn-default top-page-inner__btn' data-tooltip-notif='
+                    <div class="tw-flex tw-gap-4">
+                        <svg class="tw-w-4 tw-h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm3.8-8.3a1 1 0 0 0-1.42-1.4L7.2 8.46a.28.28 0 0 1-.4 0l-1.1-1.1A1 1 0 0 0 4.3 8.8l2.08 2.09c.34.34.9.34 1.24 0L11.8 6.7z"></path>
+                        </svg>
+                        <div class="tw-flex tw-flex-col tw-gap-2">
+                            <span>Добавлено в избранное</span>
+                            <a href="./buy-apartment-building-favorite.html" class="btn-blue underline-hover">Перейти в избранное</a>
+                        </div>
+                    </div>
+                    ' data-tooltip-text="Добавить в избранное,tooltip-html">
+                        <svg class='tw-w-4 tw-h-4'>
+                            <use xlink:href="./img/sprite.svg#favorite-stroke"></use>
+                        </svg>
+                        <span>Добавить ЖК в избранное</span>
+                    </button>
+                    <button type='button' class='btn btn-reset comparison-btn-default top-page-inner__btn' data-tooltip-mobile-popup data-tooltip-notif='
+                    <div class="tw-flex tw-gap-4">
+                        <svg class="tw-w-4 tw-h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm3.8-8.3a1 1 0 0 0-1.42-1.4L7.2 8.46a.28.28 0 0 1-.4 0l-1.1-1.1A1 1 0 0 0 4.3 8.8l2.08 2.09c.34.34.9.34 1.24 0L11.8 6.7z"></path>
+                        </svg>
+                        <div class="tw-flex tw-flex-col tw-gap-2">
+                            <span>Добавлено в сравнение</span>
+                            <a href="./comparison.html" class="btn-blue underline-hover">Перейти к сравнению</a>
+                        </div>
+                    </div>
+                    '>
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#comparison"></use>
+                        </svg>
+                        <span>Добавить ЖК к сравнению</span>
+                    </button>
+                    <button type="button" class="btn btn-reset top-page-inner__btn share-btn" data-popup-path="share-app" title="Поделиться">
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#share"></use>
+                        </svg>
+                        <span>Поделиться</span>
+                    </button>
+                </div>
+            </div>
+            <div class="object__body object-body">
+
+                <div class="object-body__container container">
+                    <div class="object-body__content">
+                        <div class="object-body__slider object-slider-two">
+                            <div class="object-slider__body object-slider-body">
+                                <div class="swiper object-slider-body__wrapper" data-popup-path="object-gallery--two">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide _fixed-width">
+                                            <div>
+                                                <picture>
+                                                    <source srcset="./img/card-scheme.png" type="image/webp">
+                                                    <img loading="lazy" src="./img/card-scheme.png" alt="">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div>
+                                                <picture>
+                                                    <source srcset="./img/card-8.webp" type="image/webp">
+                                                    <img loading="lazy" src="./img/card-8.jpg" alt="">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div>
+                                                <picture>
+                                                    <source srcset="./img/card-10.webp" type="image/webp">
+                                                    <img loading="lazy" src="./img/card-10.jpg" alt="">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div>
+                                                <picture>
+                                                    <source srcset="./img/card-1.webp" type="image/webp">
+                                                    <img loading="lazy" src="./img/card-1.jpg" alt="">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div>
+                                                <picture>
+                                                    <source srcset="./img/card-1.webp" type="image/webp">
+                                                    <img loading="lazy" src="./img/card-1.jpg" alt="">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-reset object-slider-body__navigation nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                    <div class="nav-arrow-primary__wrapper">
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-reset object-slider-body__navigation nav-arrow-primary nav-arrow-primary--next">
+                                    <div class="nav-arrow-primary__wrapper">
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <div class="object-slider-body__fullscreen">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5 3.75H16.25V7.5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M11.875 8.125L16.25 3.75" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M7.5 16.25H3.75V12.5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M8.125 11.875L3.75 16.25" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <div class="object-slider-body__more">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 16 16">
+                                        <path fill="currentColor" d="M6.5 3a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0zm0 5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0zm0 5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="object-slider-body__pagination pagination-primary"></div>
+                            </div>
+                        </div>
+                        <div class="object-body__data object-data">
+                            <div class="tags-block tw-mb-3" data-tags-in-height="70">
+                                <button type="button" class="btn btn-reset tag tag--green tag--very-small _no-hover" data-tooltip-mobile-popup data-tooltip-add-selector="max-w-320" data-tooltip-html='
+                                    <h3 class="title-3">Кешбэк за покупку </h3>
+                                    <p>
+                                        Начислим, после покупки за наличные
+                                        или в кредит
+                                    </p>'>
+                                    Кэшбэк &nbsp;до&nbsp; 129 000 ₽
+                                </button>
+                                <button type="button" class="btn btn-reset tag tag--purple tag--very-small _no-hover tw-gap-2" data-tags-in-height-item hidden>
+                                    Подарок
+                                    <img src="./img/present.png" width="15" height="15" alt="">
+                                </button>
+                                <button type="button" class="btn btn-reset tag tag--dark-green tag--very-small _no-hover" data-tags-in-height-item hidden>
+                                    Топ 5
+                                </button>
+                                <button type="button" class="btn btn-reset tag tag--yellow tag--very-small _no-hover" data-tags-in-height-item hidden data-tooltip-position-x="center" data-tooltip-mobile-popup data-tooltip-add-selector="personal-discount-tooltip" data-tooltip-html='
+                                <h3 class="title-3 tw-text-white">Ваша персональная скидка -14%</h3>
+                                <p class="tw-font-medium tw-mt-2">
+                                    Застройщик предлагает вам дополнительную скидку
+                                </p>
+                                <ul class="list-reset chars tw-mb-2">
+                                    <li class="chars__item _white">
+                                        <span>Обычная цена</span>
+                                        <span>5 297 000 ₽</span>
+                                    </li>
+                                    <li class="chars__item _blue">
+                                        <span>Ваши -14%</span>
+                                        <span>- 300 000 ₽</span>
+                                    </li>
+                                    <li class="chars__item _white">
+                                        <span>Цена для вас</span>
+                                        <span>2 491 420 ₽</span>
+                                    </li>
+                                </ul>
+                                <p class="tw-font-medium">
+                                    Предложение действует до 12 марта
+                                </p>
+                                <p class="text-red tw-font-medium">
+                                    Предложение действует последний день
+                                </p>'>
+                                    вам -14%
+                                </button>
+                            </div>
+                            <h3 class="object-data__name">
+                                1-ком. квартира, 39 м², 12/12 эт.
+                            </h3>
+                            <div class="object-data__address">
+                                <span class="object-data__address--one">
+                                    ЖК “Новое Внуково”
+                                </span>
+                                <span class="object-data__address--three">
+                                    <span>
+                                        Корпус: Литер 1
+                                    </span>
+                                    <span>
+                                        Срок сдачи 4 кв. 2024
+                                    </span>
+                                </span>
+                                <span class="object-data__address--two">
+                                    Краснодар, ул.Карла-Маркса., 234
+                                </span>
+                            </div>
+                            <div class="object-data__characteristics object-characteristics">
+                                <div class="object-characteristics__container">
+                                    <ul class="object-characteristics__list list-reset">
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Комнат
+                                            </span>
+                                            <span>
+                                                2
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Этаж
+                                            </span>
+                                            <span>
+                                                16/18
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Площадь
+                                            </span>
+                                            <span>
+                                                57 м²
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Жилая площадь
+                                            </span>
+                                            <span>
+                                                15 м²
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <ul class="object-characteristics__list list-reset" data-dropdown-items hidden>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Тип
+                                            </span>
+                                            <span>
+                                                Квартира
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Площадь кухни
+                                            </span>
+                                            <span>
+                                                19 м²
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Высота потолков
+                                            </span>
+                                            <span>
+                                                3 м²
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Санузел
+                                            </span>
+                                            <span>
+                                                Совмещённый
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Балкон/лоджия
+                                            </span>
+                                            <span>
+                                                Лоджия
+                                            </span>
+                                        </li>
+                                        <li class="object-characteristics__item">
+                                            <span>
+                                                Отделка
+                                            </span>
+                                            <span>
+                                                Ремонт
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn btn-reset object-characteristics__more">
+                                        <span>Показать полностью</span>
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#check"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="object-body__online-display online-display section-observ" id="section-stock">
+                                <h2 class="online-display__main-title">
+                                    Акции, спецпредложения
+                                </h2>
+                                <a href="./promotion.html" class="btn btn-reset online-display__item online-display__item--light-blue">
+                                    <img loading="lazy" src="img/for-sale-owner.png" width="35" height="35" alt="">
+                                    <h4 class="online-display__title">Меблировка</h4>
+                                    <p class="online-display__descr">
+                                        От 250 000 ₽
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>
+                                </a>
+                                <a href="./promotion.html" class="btn btn-reset online-display__item online-display__item--green">
+                                    <img loading="lazy" src="img/for-sale-owner.png" width="35" height="35" alt="">
+                                    <h4 class="online-display__title">Отделка</h4>
+                                    <p class="online-display__descr">
+                                        Включено
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>
+                                </a>
+                                <a href="./promotion.html" class="btn btn-reset online-display__item online-display__item--light-purple">
+                                    <img loading="lazy" src="img/for-sale-owner.png" width="35" height="35" alt="">
+                                    <h4 class="online-display__title">Сплитсистема</h4>
+                                    <p class="online-display__descr">
+                                        В подарок
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>
+                                </a>
+                                <a href="./promotion.html" class="btn btn-reset online-display__item online-display__item--orange">
+                                    <img loading="lazy" src="img/for-sale-owner.png" width="35" height="35" alt="">
+                                    <h4 class="online-display__title">Меблировка</h4>
+                                    <p class="online-display__descr">
+                                        От 250 000 ₽
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>
+                                </a>
+                                <a href="./promotion.html" class="btn btn-reset online-display__item online-display__item--blue" hidden>
+                                    <img loading="lazy" src="img/for-sale-owner.png" width="35" height="35" alt="">
+                                    <h4 class="online-display__title">Меблировка</h4>
+                                    <p class="online-display__descr">
+                                        От 250 000 ₽
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>
+                                </a>
+                                <a href="./promotion.html" class="btn btn-reset online-display__item online-display__item--dark-green" hidden>
+                                    <img loading="lazy" src="img/for-sale-owner.png" width="35" height="35" alt="">
+                                    <h4 class="online-display__title">Скидка 3000 ₽/м²</h4>
+                                    <p class="online-display__descr">
+                                        На неопределенный объем лотов
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>
+                                </a>
+                                <a href="./promotion.html" class="btn btn-reset online-display__item online-display__item--yellow" hidden style="grid-column: 1/-1;">
+                                    <img loading="lazy" src="img/for-sale-owner.png" width="35" height="35" alt="">
+                                    <h4 class="online-display__title">Сертификат для молодоженов</h4>
+                                    <p class="online-display__descr">
+                                        Дарим сертификат на квадратные метры
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>
+                                </a>
+                                <button type="button" class="btn btn-reset btn-secondary online-display__btn">Смотреть всё</button>
+                            </div>
+                        </div>
+                        <div class="object-viewing object-personal-discount">
+                            <div class="tw-flex tw-justify-between tw-gap-5">
+                                <div class="col">
+                                    <h3 class="title-2">Ваша персональная скидка -14%</h3>
+                                    <p class='tw-font-medium'>
+                                        Застройщик предлагает вам дополнительную скидку
+                                    </p>
+                                    <ul class="list-reset chars tw-mb-2">
+                                        <li class="chars__item">
+                                            <span>Обычная цена</span>
+                                            <span>5 297 000 ₽</span>
+                                        </li>
+                                        <li class="chars__item _blue">
+                                            <span>Ваши -14%</span>
+                                            <span>- 300 000 ₽</span>
+                                        </li>
+                                        <li class="chars__item">
+                                            <span>Цена для вас</span>
+                                            <span>2 491 420 ₽</span>
+                                        </li>
+                                    </ul>
+                                    <p class='tw-font-medium'>
+                                        Предложение действует до 12 марта
+                                    </p>
+                                    <p class='text-red tw-font-medium'>
+                                        Предложение действует последний день
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <picture>
+                                        <source srcset="./img/book.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/book.png" width="120" height="120" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                            <button type='button' class='btn btn-reset btn-secondary tw-w-full tw-mt-4' data-popup-path="developer-response">Забрать</button>
+                        </div>
+                        <div class="additionally section-observ" id="section-additionally" data-additionally-type="summ">
+                            <h2 class="additionally__title title-2">
+                                Подарки
+                                <div class="secondary-tooltip secondary-tooltip--top-center">
+                                    <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="secondary-tooltip__content">
+                                        Стоиомость комплекта меблировки
+                                    </div>
+                                </div>
+                            </h2>
+                            <p class="additionally__descr">
+                                Выберите подарки на сумму <span data-total-summ>100 000 ₽</span>
+                            </p>
+                            <div class="additionally__items">
+                                <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                    <div class="user-info card-checkbox__info">
+                                        <div class="user-info__avatar avatar">
+                                            <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                        </div>
+                                        <span class="user-info__name">
+                                            Кондиционер в подарок
+                                        </span>
+                                        <span class="user-info__pos">
+                                            Создаст идеальный микроклимат в вашей новой квартире
+                                        </span>
+                                        <a class="user-info__link underline-hover" href="https://hoff.ru/Files/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0_%D0%A1%D0%B0%D0%BC%D0%BE%D0%B5_%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE%D0%B5.pdf">
+                                            Посмотреть спецификацию
+                                        </a>
+                                    </div>
+                                    <div class="card-checkbox__price">
+                                        <span data-card-summ>10 000 ₽</span>
+                                        <span>0 ₽</span>
+                                    </div>
+                                    <div class="secondary-tooltip secondary-tooltip--top-center">
+                                        <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                            <svg>
+                                                <use xlink:href="./img/sprite.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="secondary-tooltip__content">
+                                            Стоиомость комплекта меблировки
+                                        </div>
+                                    </div>
+                                    <label class="toggle-checkbox">
+                                        <input type="checkbox" name="toggle-1">
+                                        <div aria-hidden="true"></div>
+                                    </label>
+                                </div>
+                                <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                    <div class="user-info card-checkbox__info">
+                                        <div class="user-info__avatar avatar">
+                                            <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                        </div>
+                                        <span class="user-info__name">
+                                            Авторский дизайн
+                                        </span>
+                                        <span class="user-info__pos">
+                                            Создаст идеальный микроклимат в вашей новой квартире
+                                        </span>
+                                    </div>
+                                    <div class="card-checkbox__price">
+                                        <span data-card-summ>5 000 ₽</span>
+                                        <span>0 ₽</span>
+                                    </div>
+                                    <div class="secondary-tooltip secondary-tooltip--top-center">
+                                        <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                            <svg>
+                                                <use xlink:href="./img/sprite.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="secondary-tooltip__content">
+                                            Стоиомость комплекта меблировки
+                                        </div>
+                                    </div>
+                                    <label class="toggle-checkbox">
+                                        <input type="checkbox" name="toggle-1">
+                                        <div aria-hidden="true"></div>
+                                    </label>
+                                </div>
+                                <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                    <div class="user-info card-checkbox__info">
+                                        <div class="user-info__avatar avatar">
+                                            <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                        </div>
+                                        <span class="user-info__name">
+                                            Авторский дизайн интерьерный
+                                        </span>
+                                        <span class="user-info__pos">
+                                            Создаст идеальный микроклимат в вашей новой квартире
+                                        </span>
+                                    </div>
+                                    <div class="card-checkbox__price">
+                                        <span data-card-summ>19 999 ₽</span>
+                                        <span>0 ₽</span>
+                                    </div>
+                                    <div class="secondary-tooltip secondary-tooltip--top-center">
+                                        <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                            <svg>
+                                                <use xlink:href="./img/sprite.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="secondary-tooltip__content">
+                                            ДИЗАЙН-ПРОЕКТ <br>
+                                            "ИНТЕРЬЕРНЫЙ" <br>
+                                            3 варианта планировочного решения; <br>
+                                            2 варианта 3D концепции или коллажа; <br>
+                                            товарная ведомость (шопинг- лист) без расчета количества; <br>
+                                            товары со скидкой; <br>
+                                            проект мебели на заказ <br>
+                                        </div>
+                                    </div>
+                                    <label class="toggle-checkbox">
+                                        <input type="checkbox" name="toggle-1">
+                                        <div aria-hidden="true"></div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="additionally__more-items" data-additionally-more-items hidden>
+                                <div class="additionally__items">
+                                    <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Авторский дизайн для ремонта
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Создаст идеальный микроклимат в вашей новой квартире
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span data-card-summ>22 500 ₽</span>
+                                            <span>0 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                ДИЗАЙН-ПРОЕКТ ик <br>
+                                                "ДЛЯ РЕМОНТА" <br>
+                                                3 варианта планировочного решения; <br>
+                                                2 варианта чертежей (рабочая документация); <br>
+                                                подробная смета на ремонт*; <br>
+                                                товары со скидкой; <br>
+                                                проект мебели на заказ <br>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                    <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Мебельные сеты
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Стильный интерьер с решениями на любой вкус. Заезжайте на все готовое
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span data-card-summ>22 500 ₽</span>
+                                            <span>0 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                ДИЗАЙН-ПРОЕКТ ик <br>
+                                                "ДЛЯ РЕМОНТА" <br>
+                                                3 варианта планировочного решения; <br>
+                                                2 варианта чертежей (рабочая документация); <br>
+                                                подробная смета на ремонт*; <br>
+                                                товары со скидкой; <br>
+                                                проект мебели на заказ <br>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                    <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Переезд без забот
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Перевезем ваши вещи быстро и бережно
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span data-card-summ>22 500 ₽</span>
+                                            <span>0 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                ДИЗАЙН-ПРОЕКТ ик <br>
+                                                "ДЛЯ РЕМОНТА" <br>
+                                                3 варианта планировочного решения; <br>
+                                                2 варианта чертежей (рабочая документация); <br>
+                                                подробная смета на ремонт*; <br>
+                                                товары со скидкой; <br>
+                                                проект мебели на заказ <br>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                    <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Шторы и декор для вашего дома
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Добавьте акценты в интерьер вашей будущей квартиры
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span data-card-summ>22 500 ₽</span>
+                                            <span>0 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                ДИЗАЙН-ПРОЕКТ ик <br>
+                                                "ДЛЯ РЕМОНТА" <br>
+                                                3 варианта планировочного решения; <br>
+                                                2 варианта чертежей (рабочая документация); <br>
+                                                подробная смета на ремонт*; <br>
+                                                товары со скидкой; <br>
+                                                проект мебели на заказ <br>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                    <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Сертификаты на мебель
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Выбирайте стильную и современную мебель, приобретая сертификат в ипотеку
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span data-card-summ>22 500 ₽</span>
+                                            <span>0 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                ДИЗАЙН-ПРОЕКТ ик <br>
+                                                "ДЛЯ РЕМОНТА" <br>
+                                                3 варианта планировочного решения; <br>
+                                                2 варианта чертежей (рабочая документация); <br>
+                                                подробная смета на ремонт*; <br>
+                                                товары со скидкой; <br>
+                                                проект мебели на заказ <br>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <h2 class="additionally__title title-2">
+                                    Дополнительно
+                                </h2>
+                                <div class="additionally__items">
+                                    <div class="card-checkbox card-checkbox--second">
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Скидка 50% на парковку
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Создаст идеальный микроклимат в вашей новой квартире
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span>1 500 000 ₽</span>
+                                            <span>750 000 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                Стоиомость комплекта меблировки
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                    <div class="card-checkbox card-checkbox--second">
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Скидка 5% на квартиру
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Создаст идеальный микроклимат в вашей новой квартире
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span>5 000 000 ₽</span>
+                                            <span>4 900 000 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                Стоиомость комплекта меблировки
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-reset additionally__more">
+                                <span>Показать полностью</span>
+                                <svg>
+                                    <use xlink:href="./img/sprite.svg#check"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- <div class="additionally section-observ" id="section-additionally" data-additionally-type="quantity" data-total-quantity-max="4" data-total-summ-max="50 000">
+                            <input type="text" name="Имя" class="input-reset" data-total-summ-current hidden placeholder="Имя">
+                            <h2 class="additionally__title title-2">
+                                Подарки
+                                <div class="secondary-tooltip secondary-tooltip--bottom-center">
+                                    <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="secondary-tooltip__content">
+                                        Подарки и кэшбек начислятся после приобретения объекта
+                                    </div>
+                                </div>
+                            </h2>
+                            <p class="additionally__descr">
+                                Выберите 4 подарка
+                            </p>
+                            <div class="additionally__items">
+                                <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                    <div class="user-info card-checkbox__info">
+                                        <div class="user-info__avatar avatar">
+                                            <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                        </div>
+                                        <span class="user-info__name">
+                                            Кондиционер в подарок
+                                        </span>
+                                        <span class="user-info__pos">
+                                            Создаст идеальный микроклимат в вашей новой квартире
+                                        </span>
+                                        <a class="user-info__link underline-hover"
+                                            href="https://hoff.ru/Files/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0_%D0%A1%D0%B0%D0%BC%D0%BE%D0%B5_%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE%D0%B5.pdf">
+                                            Посмотреть спецификацию
+                                        </a>
+                                    </div>
+                                    <div class="card-checkbox__price">
+                                        <span data-card-summ>1 000 ₽</span>
+                                        <span>0 ₽</span>
+                                    </div>
+                                    <div class="secondary-tooltip secondary-tooltip--top-center">
+                                        <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                            <svg>
+                                                <use xlink:href="./img/sprite.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="secondary-tooltip__content">
+                                            Стоиомость комплекта меблировки
+                                        </div>
+                                    </div>
+                                    <label class="toggle-checkbox">
+                                        <input type="checkbox" name="toggle-1">
+                                        <div aria-hidden="true"></div>
+                                    </label>
+                                </div>
+                                <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                    <div class="user-info card-checkbox__info">
+                                        <div class="user-info__avatar avatar">
+                                            <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                        </div>
+                                        <span class="user-info__name">
+                                            Авторский дизайн
+                                        </span>
+                                        <span class="user-info__pos">
+                                            Создаст идеальный микроклимат в вашей новой квартире
+                                        </span>
+                                    </div>
+                                    <div class="card-checkbox__price">
+                                        <span data-card-summ>5 000 ₽</span>
+                                        <span>0 ₽</span>
+                                    </div>
+                                    <div class="secondary-tooltip secondary-tooltip--top-center">
+                                        <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                            <svg>
+                                                <use xlink:href="./img/sprite.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="secondary-tooltip__content">
+                                            Стоиомость комплекта меблировки
+                                        </div>
+                                    </div>
+                                    <label class="toggle-checkbox">
+                                        <input type="checkbox" name="toggle-1">
+                                        <div aria-hidden="true"></div>
+                                    </label>
+                                </div>
+                                <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                    <div class="user-info card-checkbox__info">
+                                        <div class="user-info__avatar avatar">
+                                            <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                        </div>
+                                        <span class="user-info__name">
+                                            Авторский дизайн интерьерный
+                                        </span>
+                                        <span class="user-info__pos">
+                                            Создаст идеальный микроклимат в вашей новой квартире
+                                        </span>
+                                    </div>
+                                    <div class="card-checkbox__price">
+                                        <span data-card-summ>4 000 ₽</span>
+                                        <span>0 ₽</span>
+                                    </div>
+                                    <div class="secondary-tooltip secondary-tooltip--top-center">
+                                        <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                            <svg>
+                                                <use xlink:href="./img/sprite.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="secondary-tooltip__content">
+                                            ДИЗАЙН-ПРОЕКТ <br>
+                                            "ИНТЕРЬЕРНЫЙ" <br>
+                                            3 варианта планировочного решения; <br>
+                                            2 варианта 3D концепции или коллажа; <br>
+                                            товарная ведомость (шопинг- лист) без расчета количества; <br>
+                                            товары со скидкой; <br>
+                                            проект мебели на заказ <br>
+                                        </div>
+                                    </div>
+                                    <label class="toggle-checkbox">
+                                        <input type="checkbox" name="toggle-1">
+                                        <div aria-hidden="true"></div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="additionally__more-items" data-additionally-more-items hidden>
+                                <div class="additionally__items">
+                                    <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Авторский дизайн для ремонта
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Создаст идеальный микроклимат в вашей новой квартире
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span data-card-summ>50 000 ₽</span>
+                                            <span>0 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                ДИЗАЙН-ПРОЕКТ ик <br>
+                                                "ДЛЯ РЕМОНТА" <br>
+                                                3 варианта планировочного решения; <br>
+                                                2 варианта чертежей (рабочая документация); <br>
+                                                подробная смета на ремонт*; <br>
+                                                товары со скидкой; <br>
+                                                проект мебели на заказ <br>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                    <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Мебельные сеты
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Стильный интерьер с решениями на любой вкус. Заезжайте на все готовое
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span data-card-summ>22 500 ₽</span>
+                                            <span>0 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                ДИЗАЙН-ПРОЕКТ ик <br>
+                                                "ДЛЯ РЕМОНТА" <br>
+                                                3 варианта планировочного решения; <br>
+                                                2 варианта чертежей (рабочая документация); <br>
+                                                подробная смета на ремонт*; <br>
+                                                товары со скидкой; <br>
+                                                проект мебели на заказ <br>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                    <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Переезд без забот
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Перевезем ваши вещи быстро и бережно
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span data-card-summ>22 500 ₽</span>
+                                            <span>0 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                ДИЗАЙН-ПРОЕКТ ик <br>
+                                                "ДЛЯ РЕМОНТА" <br>
+                                                3 варианта планировочного решения; <br>
+                                                2 варианта чертежей (рабочая документация); <br>
+                                                подробная смета на ремонт*; <br>
+                                                товары со скидкой; <br>
+                                                проект мебели на заказ <br>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                    <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Шторы и декор для вашего дома
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Добавьте акценты в интерьер вашей будущей квартиры
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span data-card-summ>22 500 ₽</span>
+                                            <span>0 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                ДИЗАЙН-ПРОЕКТ ик <br>
+                                                "ДЛЯ РЕМОНТА" <br>
+                                                3 варианта планировочного решения; <br>
+                                                2 варианта чертежей (рабочая документация); <br>
+                                                подробная смета на ремонт*; <br>
+                                                товары со скидкой; <br>
+                                                проект мебели на заказ <br>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                    <div class="card-checkbox card-checkbox--second" data-additionally-card-calc>
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Сертификаты на мебель
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Выбирайте стильную и современную мебель, приобретая сертификат в ипотеку
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span data-card-summ>22 500 ₽</span>
+                                            <span>0 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                ДИЗАЙН-ПРОЕКТ ик <br>
+                                                "ДЛЯ РЕМОНТА" <br>
+                                                3 варианта планировочного решения; <br>
+                                                2 варианта чертежей (рабочая документация); <br>
+                                                подробная смета на ремонт*; <br>
+                                                товары со скидкой; <br>
+                                                проект мебели на заказ <br>
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <h2 class="additionally__title title-2">
+                                    Дополнительно
+                                </h2>
+                                <div class="additionally__items">
+                                    <div class="card-checkbox card-checkbox--second">
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                               Скидка 50% на парковку
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Создаст идеальный микроклимат в вашей новой квартире
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span>1 500 000 ₽</span>
+                                            <span>750 000 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                Стоиомость комплекта меблировки
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                    <div class="card-checkbox card-checkbox--second">
+                                        <div class="user-info card-checkbox__info">
+                                            <div class="user-info__avatar avatar">
+                                                <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                            </div>
+                                            <span class="user-info__name">
+                                                Скидка 5% на квартиру
+                                            </span>
+                                            <span class="user-info__pos">
+                                                Создаст идеальный микроклимат в вашей новой квартире
+                                            </span>
+                                        </div>
+                                        <div class="card-checkbox__price">
+                                            <span>5 000 000 ₽</span>
+                                            <span>4 900 000 ₽</span>
+                                        </div>
+                                        <div class="secondary-tooltip secondary-tooltip--top-center">
+                                            <button type="button" class="btn btn-reset secondary-tooltip__btn">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#info"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="secondary-tooltip__content">
+                                                Стоиомость комплекта меблировки
+                                            </div>
+                                        </div>
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1">
+                                            <div aria-hidden="true"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-reset additionally__more">
+                                <span>Показать полностью</span>
+                                <svg>
+                                    <use xlink:href="./img/sprite.svg#check"></use>
+                                </svg>
+                            </button>
+                        </div> -->
+                        <div class="object-body__history object-history section-observ" data-scroll-block="history-price" id="object-history">
+                            <h2 class="object-history__title title-2">
+                                История изменения цены
+                            </h2>
+                            <div class="sale-dynamic">
+                                <div class="sale-dynamic__info">
+                                    <div class="info-price-block _plus">
+                                        <p class="info-price-block__name">
+                                            Цена за квартиры сегодня
+                                        </p>
+                                        <div class="info-price-block__wrapper">
+                                            <span class="title-3">
+                                                11 368 912 ₽
+                                            </span>
+                                            <div class="info-price-block__price">
+                                                <span>
+                                                    20 500 ₽
+                                                </span>
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#price-up"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sale-dynamic__value">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="49" height="36" viewBox="0 0 49 36" fill="none">
+                                            <g clip-path="url(#clip0_2195_82389)">
+                                                <path d="M9.76689 29.0049H9.54786L9.34889 29.0965L-0.418005 33.5905L0 35.499H49H50L50 34.499L49.9999 7.49899L49.9999 4.12365L48.1613 6.95427L33.8385 29.0049H28.8868H9.76689Z" fill="url(#paint0_linear_2195_82389)" fill-opacity="0.3" stroke="#FF6A59" stroke-width="2"></path>
+                                            </g>
+                                            <defs>
+                                                <linearGradient id="paint0_linear_2195_82389" x1="6.77259" y1="14.6099" x2="6.77259" y2="33.3208" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#F4430E" stop-opacity="0.92"></stop>
+                                                    <stop offset="0.729167" stop-color="#F4430E" stop-opacity="0.08"></stop>
+                                                    <stop offset="1" stop-color="#F4592B" stop-opacity="0"></stop>
+                                                </linearGradient>
+                                                <clipPath id="clip0_2195_82389">
+                                                    <rect width="49" height="29" fill="white" transform="translate(0 3.5)"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <div class="sale-dynamic__value-info">
+                                            <p>
+                                                Цена за всё время
+                                            </p>
+                                            <span>
+                                                упали на 5.1 %
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="object-history__list list-reset">
+                                <li class="object-history__item object-history__item--plus">
+                                    <span class="object-history__date">
+                                        03.08.2020
+                                    </span>
+                                    <div class="object-history__old-price">
+                                        <span>
+                                            <span>3 000 000</span>
+                                            ₽
+                                        </span>
+                                        <span>
+                                            +300 000 ₽
+                                            <svg>
+                                                <use xlink:href="./img/sprite.svg#price-up"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <span class="object-history__new-price">3 300 000 ₽</span>
+                                </li>
+                                <li class="object-history__item object-history__item--minus">
+                                    <span class="object-history__date">
+                                        01.08.2020
+                                    </span>
+                                    <div class="object-history__old-price">
+                                        <span>
+                                            <span>3 000 000</span>
+                                            ₽
+                                        </span>
+                                        <span>
+                                            -300 000 ₽
+                                            <svg>
+                                                <use xlink:href="./img/sprite.svg#price-down"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <span class="object-history__new-price">2 700 000 ₽</span>
+                                </li>
+                                <li class="object-history__item object-history__item--plus">
+                                    <span class="object-history__date">
+                                        03.07.2020
+                                    </span>
+                                    <div class="object-history__old-price">
+                                        <span>
+                                            <span>3 000 000</span>
+                                            ₽
+                                        </span>
+                                        <span>
+                                            +300 000 ₽
+                                            <svg>
+                                                <use xlink:href="./img/sprite.svg#price-up"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <span class="object-history__new-price">3 300 000 ₽</span>
+                                </li>
+                                <li class="object-history__item object-history__item--minus">
+                                    <span class="object-history__date">
+                                        05.06.2020
+                                    </span>
+                                    <div class="object-history__old-price">
+                                        <span>
+                                            <span>3 000 000</span>
+                                            ₽
+                                        </span>
+                                        <span>
+                                            -300 000 ₽
+                                            <svg>
+                                                <use xlink:href="./img/sprite.svg#price-down"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <span class="object-history__new-price">2 700 000 ₽</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="object-apart-renov section-observ" id="section-apart-renov">
+                            <h2 class="object-apart-renov__title title-2">
+                                Отделка квартир
+                            </h2>
+                            <div class="object-apart-renov__container">
+                                <div class="object-apart-renov__tabs tabs-primary">
+                                    <div data-tabs class="tabs-primary__inner _image-popper">
+                                        <nav data-tabs-titles class="tabs-primary__btns tabs__navigation">
+                                            <button type="button" class="btn btn-reset tabs__title _tab-active">
+                                                White box
+                                            </button>
+                                            <button type="button" class="btn btn-reset tabs__title">
+                                                Без стен
+                                            </button>
+                                            <button type="button" class="btn btn-reset tabs__title">
+                                                Дизайнерская отделка
+                                            </button>
+                                            <button type="button" class="btn btn-reset tabs__title">
+                                                Черновая отделка
+                                            </button>
+                                        </nav>
+                                        <div class="tabs-primary__container">
+                                            <button type="button" class="btn btn-reset object-apart-renov__fullscreen" data-popup-path="object-apart-renov-popup">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.75H16.25V7.5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M11.875 8.125L16.25 3.75" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M7.5 16.25H3.75V12.5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M8.125 11.875L3.75 16.25" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+                                            <div data-tabs-body class="tabs__content tabs-primary__content">
+
+                                                <div class="tabs__body object-apart-renov__item">
+                                                    <ul class="object-apart-renov__tags list-reset">
+                                                        <li class="object-apart-renov__tag">
+                                                            Учтена в цене
+                                                        </li>
+                                                    </ul>
+                                                    <div class="swiper object-apart-renov__images">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">
+                                                                <picture>
+                                                                    <source srcset="./img/card-10.webp" type="image/webp">
+                                                                    <img loading="lazy" src="./img/card-10.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                </picture>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <picture>
+                                                                    <source srcset="./img/object-apart-renov-2.webp" type="image/webp">
+                                                                    <img loading="lazy" src="./img/object-apart-renov-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                </picture>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <picture>
+                                                                    <source srcset="./img/object-apart-renov-1.webp" type="image/webp">
+                                                                    <img loading="lazy" src="./img/object-apart-renov-1.jpg" class="object-apart-renov__image" alt="Дизайнерская отделка">
+                                                                </picture>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-reset object-apart-renov__nav-prev nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                                        <div class="nav-arrow-primary__wrapper">
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </button>
+                                                    <button type="button" class="btn btn-reset object-apart-renov__nav-next nav-arrow-primary nav-arrow-primary--next">
+                                                        <div class="nav-arrow-primary__wrapper">
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </button>
+                                                    <div class="object-apart-renov__pagination pagination-primary"></div>
+                                                </div>
+                                                <div class="tabs__body object-apart-renov__item" hidden>
+                                                    <ul class="object-apart-renov__tags list-reset">
+                                                        <li class="object-apart-renov__tag">
+                                                            Дозаказ + 30 000 ₽/м²
+                                                        </li>
+                                                    </ul>
+                                                    <div class="swiper object-apart-renov__images">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">
+                                                                <picture>
+                                                                    <source srcset="./img/card-10.webp" type="image/webp">
+                                                                    <img loading="lazy" src="./img/card-10.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                </picture>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <picture>
+                                                                    <source srcset="./img/object-apart-renov-2.webp" type="image/webp">
+                                                                    <img loading="lazy" src="./img/object-apart-renov-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                </picture>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <picture>
+                                                                    <source srcset="./img/object-apart-renov-1.webp" type="image/webp">
+                                                                    <img loading="lazy" src="./img/object-apart-renov-1.jpg" class="object-apart-renov__image" alt="Дизайнерская отделка">
+                                                                </picture>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-reset object-apart-renov__nav-prev nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                                        <div class="nav-arrow-primary__wrapper">
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </button>
+                                                    <button type="button" class="btn btn-reset object-apart-renov__nav-next nav-arrow-primary nav-arrow-primary--next">
+                                                        <div class="nav-arrow-primary__wrapper">
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div class="tabs__body object-apart-renov__item" hidden>
+                                                    <ul class="object-apart-renov__tags list-reset">
+                                                        <li class="object-apart-renov__tag">
+                                                            Дозаказ + 30 000 ₽/м²
+                                                        </li>
+                                                    </ul>
+                                                    <div class="swiper object-apart-renov__images">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">
+                                                                <picture>
+                                                                    <source srcset="./img/card-8.webp" type="image/webp">
+                                                                    <img loading="lazy" src="./img/card-8.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                </picture>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <picture>
+                                                                    <source srcset="./img/card-10.webp" type="image/webp">
+                                                                    <img loading="lazy" src="./img/card-10.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                </picture>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <picture>
+                                                                    <source srcset="./img/object-apart-renov-1.webp" type="image/webp">
+                                                                    <img loading="lazy" src="./img/object-apart-renov-1.jpg" class="object-apart-renov__image" alt="Дизайнерская отделка">
+                                                                </picture>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-reset object-apart-renov__nav-prev nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                                        <div class="nav-arrow-primary__wrapper">
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </button>
+                                                    <button type="button" class="btn btn-reset object-apart-renov__nav-next nav-arrow-primary nav-arrow-primary--next">
+                                                        <div class="nav-arrow-primary__wrapper">
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div class="tabs__body object-apart-renov__item" hidden>
+                                                    <ul class="object-apart-renov__tags list-reset">
+                                                        <li class="object-apart-renov__tag">
+                                                            Дозаказ + 30 000 ₽/м²
+                                                        </li>
+                                                    </ul>
+                                                    <div class="swiper object-apart-renov__images">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">
+                                                                <picture>
+                                                                    <source srcset="./img/card-10.webp" type="image/webp">
+                                                                    <img loading="lazy" src="./img/card-10.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                </picture>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <picture>
+                                                                    <source srcset="./img/object-apart-renov-2.webp" type="image/webp">
+                                                                    <img loading="lazy" src="./img/object-apart-renov-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                </picture>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <picture>
+                                                                    <source srcset="./img/object-apart-renov-1.webp" type="image/webp">
+                                                                    <img loading="lazy" src="./img/object-apart-renov-1.jpg" class="object-apart-renov__image" alt="Дизайнерская отделка">
+                                                                </picture>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-reset object-apart-renov__nav-prev nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                                        <div class="nav-arrow-primary__wrapper">
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </button>
+                                                    <button type="button" class="btn btn-reset object-apart-renov__nav-next nav-arrow-primary nav-arrow-primary--next">
+                                                        <div class="nav-arrow-primary__wrapper">
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="object-apart-renov section-observ furnishing-sets" id="section-furnishing-sets">
+                            <h2 class="object-apart-renov__title title-2">
+                                Комплекты меблировки
+                            </h2>
+                            <div class="object-apart-renov__container">
+                                <div class="object-apart-renov__tabs tabs-primary">
+                                    <div data-tabs class="tabs-primary__inner _image-popper">
+                                        <nav data-tabs-titles class="tabs-primary__btns tabs__navigation">
+                                            <button type="button" class="btn btn-reset tabs__title _tab-active">
+                                                Для новосёла
+                                            </button>
+                                            <button type="button" class="btn btn-reset tabs__title">
+                                                Для арендатора
+                                            </button>
+                                        </nav>
+                                        <div class="tabs-primary__container">
+                                            <button type="button" class="btn btn-reset furnishing-sets__fullscreen object-apart-renov__fullscreen" data-popup-path="furnishing-sets-popup">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 3.75H16.25V7.5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M11.875 8.125L16.25 3.75" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M7.5 16.25H3.75V12.5" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M8.125 11.875L3.75 16.25" stroke="#161616" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+                                            <div data-tabs-body class="tabs__content tabs-primary__content">
+                                                <div class="tabs__body object-apart-renov__item furnishing-sets__item">
+                                                    <div class="furnishing-sets__btns">
+                                                        <button type="button" class="btn btn-reset furnishing-sets__btn _active">
+                                                            Студия
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__btn">
+                                                            1
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__btn">
+                                                            2
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__btn">
+                                                            3
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__btn">
+                                                            4
+                                                        </button>
+                                                    </div>
+                                                    <div class="furnishing-sets__mores">
+                                                        <button type="button" class="btn btn-reset furnishing-sets__more" data-popup-path="kit-composition">
+                                                            Полный состав комплекта
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__more" data-popup-path="kit-composition" hidden>
+                                                            Полный состав комплекта
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__more" data-popup-path="kit-composition" hidden>
+                                                            Полный состав комплекта
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__more" data-popup-path="kit-composition" hidden>
+                                                            Полный состав комплекта
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__more" data-popup-path="kit-composition" hidden>
+                                                            Полный состав комплекта
+                                                        </button>
+                                                    </div>
+                                                    <div class="furnishing-sets__tabs">
+                                                        <div class="furnishing-sets__tab">
+                                                            <span class="furnishing-sets__price">от 440 000 руб.</span>
+                                                            <div class="swiper object-apart-renov__images">
+                                                                <div class="swiper-wrapper">
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-1.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-1.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-3.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-3.jpg" class="object-apart-renov__image" alt="Дизайнерская отделка">
+                                                                        </picture>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-prev nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-next nav-arrow-primary nav-arrow-primary--next">
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                        <div class="furnishing-sets__tab" hidden>
+                                                            <span class="furnishing-sets__price">от 500 000 руб.</span>
+                                                            <div class="swiper object-apart-renov__images">
+                                                                <div class="swiper-wrapper">
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-3.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-3.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-3.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-3.jpg" class="object-apart-renov__image" alt="Дизайнерская отделка">
+                                                                        </picture>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-prev nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-next nav-arrow-primary nav-arrow-primary--next">
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                        <div class="furnishing-sets__tab" hidden>
+                                                            <span class="furnishing-sets__price">от 200 000 руб.</span>
+                                                            <div class="swiper object-apart-renov__images">
+                                                                <div class="swiper-wrapper">
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-3.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-3.jpg" class="object-apart-renov__image" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-prev nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-next nav-arrow-primary nav-arrow-primary--next">
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                        <div class="furnishing-sets__tab" hidden>
+                                                            <span class="furnishing-sets__price">от 100 000 руб.</span>
+                                                            <div class="swiper object-apart-renov__images">
+                                                                <div class="swiper-wrapper">
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-3.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-3.jpg" class="object-apart-renov__image" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-prev nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-next nav-arrow-primary nav-arrow-primary--next">
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                        <div class="furnishing-sets__tab" hidden>
+                                                            <span class="furnishing-sets__price">от 1 400 000 руб.</span>
+                                                            <div class="swiper object-apart-renov__images">
+                                                                <div class="swiper-wrapper">
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-3.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-3.jpg" class="object-apart-renov__image" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-prev nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-next nav-arrow-primary nav-arrow-primary--next">
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tabs__body object-apart-renov__item furnishing-sets__item" hidden>
+                                                    <div class="furnishing-sets__btns">
+                                                        <button type="button" class="btn btn-reset furnishing-sets__btn">
+                                                            Студия
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__btn _active">
+                                                            1
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__btn">
+                                                            2
+                                                        </button>
+                                                    </div>
+                                                    <div class="furnishing-sets__mores">
+                                                        <button type="button" class="btn btn-reset furnishing-sets__more" data-popup-path="kit-composition">
+                                                            Полный состав комплекта
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__more" data-popup-path="kit-composition" hidden>
+                                                            Полный состав комплекта
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__more" data-popup-path="kit-composition" hidden>
+                                                            Полный состав комплекта
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__more" data-popup-path="kit-composition" hidden>
+                                                            Полный состав комплекта
+                                                        </button>
+                                                        <button type="button" class="btn btn-reset furnishing-sets__more" data-popup-path="kit-composition" hidden>
+                                                            Полный состав комплекта
+                                                        </button>
+                                                    </div>
+                                                    <div class="furnishing-sets__tabs">
+                                                        <div class="furnishing-sets__tab" hidden>
+                                                            <span class="furnishing-sets__price">от 600 000 руб.</span>
+                                                            <div class="swiper object-apart-renov__images">
+                                                                <div class="swiper-wrapper">
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-3.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-3.jpg" class="object-apart-renov__image" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-prev nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-next nav-arrow-primary nav-arrow-primary--next">
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                        <div class="furnishing-sets__tab">
+                                                            <span class="furnishing-sets__price">от 200 000 руб.</span>
+                                                            <div class="swiper object-apart-renov__images">
+                                                                <div class="swiper-wrapper">
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-1.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-1.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-3.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-3.jpg" class="object-apart-renov__image" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-prev nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-next nav-arrow-primary nav-arrow-primary--next">
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                        <div class="furnishing-sets__tab" hidden>
+                                                            <span class="furnishing-sets__price">от 1 400 000 руб.</span>
+                                                            <div class="swiper object-apart-renov__images">
+                                                                <div class="swiper-wrapper">
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-2.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-2.jpg" class="object-apart-renov__image" width="765" height="420" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <picture>
+                                                                            <source srcset="./img/kitchen-3.webp" type="image/webp">
+                                                                            <img loading="lazy" src="./img/kitchen-3.jpg" class="object-apart-renov__image" alt="Дизайнерская отделка">
+                                                                        </picture>
+
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-prev nav-arrow-primary nav-arrow-primary--prev" disabled>
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                            <button type="button" class="btn btn-reset object-apart-renov__nav-next nav-arrow-primary nav-arrow-primary--next">
+                                                                <div class="nav-arrow-primary__wrapper">
+                                                                    <svg>
+                                                                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="object-calc-mort object-calc-mort--add section-observ" id="section-calc-mort">
+                            <h2 class="object-calc-mort__title title-2">
+                                Рассчитайте ипотеку
+                            </h2>
+                            <div class="object-calc-mort__list">
+                                <button type="button" class="btn btn-reset btn-secondary object-calc-mort__btn _active" data-mortgage-card="1">
+                                    <span>Базовая программа</span>
+                                    <span>от 10,9%</span>
+                                    <div aria-hidden="true">
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#verif"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-reset btn-secondary object-calc-mort__btn" data-mortgage-card="2">
+                                    <span>Господдержка</span>
+                                    <span>от 7,7%</span>
+                                    <div aria-hidden="true">
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#verif"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-reset btn-secondary object-calc-mort__btn" data-mortgage-card="3">
+                                    <span>Ипотека для IT</span>
+                                    <span>от 4,7%</span>
+                                    <div aria-hidden="true">
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#verif"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-reset btn-secondary object-calc-mort__btn" data-mortgage-card="4">
+                                    <span>Военная</span>
+                                    <span>от 4,7%</span>
+                                    <div aria-hidden="true">
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#verif"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-reset btn-secondary object-calc-mort__btn" data-mortgage-card="5">
+                                    <span>Семейная</span>
+                                    <span>от 5,7%</span>
+                                    <div aria-hidden="true">
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#verif"></use>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="object-calc-mort__wrapper">
+                                <div class="col">
+                                    <div class="filter-range-one">
+                                        <span class="filter-range-one__subtitle">Стоимость объекта</span>
+                                        <div class="filter-range-one__nav">
+                                            <div data-default="2897000">
+                                                <input maxlength="12" type="text" name="Имя" class="input-reset">
+                                            </div>
+                                        </div>
+                                        <div class="filter-range-one__inner" data-min="1800000" data-max="6000000">
+                                        </div>
+                                    </div>
+                                    <div class="filter-range-one filter-range-one--contribution">
+                                        <span class="filter-range-one__subtitle">Первоначальный взнос</span>
+                                        <div class="filter-range-one__nav">
+                                            <div data-default="400000">
+                                                <input type="text" maxlength="12" name="Имя" class="input-reset">
+                                            </div>
+                                            <span>15%</span>
+                                        </div>
+                                        <div class="filter-range-one__inner" data-min="50000" data-max="2000000"></div>
+                                    </div>
+                                    <div class="filter-range-one filter-range-one--term">
+                                        <span class="filter-range-one__subtitle">Срок кредита</span>
+                                        <div class="filter-range-one__nav">
+                                            <div data-default="5">
+                                                <input type="text" maxlength="3" name="Имя" class="input-reset _width-auto">
+                                                лет
+                                            </div>
+                                        </div>
+                                        <div class="filter-range-one__inner" data-min="0" data-max="30"></div>
+                                    </div>
+                                    <div class="field-static">
+                                        <span class="field-static__subtitle">
+                                            Процентная ставка
+                                        </span>
+                                        <span class="field-static__text">
+                                            от 10,9%
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="object-calc-mort__info">
+                                        <span>194 000 ₽</span>
+                                        Ежемесячный платеж
+                                    </div>
+                                    <div class="object-calc-mort__btns">
+                                        <button type="button" class="btn btn-reset btn-primary object-calc-mort__app" data-popup-path="book-consultation">
+                                            Подать заявку
+                                        </button>
+                                    </div>
+                                    <p class="object-calc-mort__descr">
+                                        Расчёт носит информационный характер и не является публичной офертой
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="object-plate-bottom plate-bottom">
+                            <button type="button" class="btn btn-reset btn-primary" data-popup-path="book-consultation">
+                                <span>Заказать консультацию</span>
+                            </button>
+                            <button type="button" class="btn btn-reset btn-primary" data-popup-path="record-viewing7">
+                                <span>Записаться на просмотр</span>
+                            </button>
+                        </div>
+                        <div class="object-body__location object-location object-location--select section-observ" id="section-location">
+                            <h2 class="object-location__title title-2">
+                                Расположение
+                            </h2>
+                            <p class="object-location__descr">
+                                Краснодар, Тополиная улица, 40/1к1
+                            </p>
+                            <div class="object-location__btns">
+                                <button type="button" class="btn btn-reset object-location__btn object-location__btn--infrastructure _active">
+                                    Инфраструктура
+                                </button>
+                                <button type="button" class="btn btn-reset object-location__btn">
+                                    Предложения рядом
+                                </button>
+                                <button type="button" class="btn btn-reset object-location__btn object-location__btn--routes">
+                                    Расстояние
+                                </button>
+                            </div>
+                            <div class="object-location__maps">
+                                <div class="object-location__routes location-routes">
+                                    <button type="button" class="btn btn-reset btn-primary location-routes__btn">
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#routes"></use>
+                                        </svg>
+                                        Построить маршрут
+                                    </button>
+                                </div>
+                                <div class="map-primary remove-copyrights-pane" id="object-maps">
+                                </div>
+                            </div>
+                            <div class="object-location__infrastructure _active">
+                                <button type="button" class="btn btn-reset tag">
+                                    Школы
+                                    <span>11</span>
+                                </button>
+                                <button type="button" class="btn btn-reset tag">
+                                    Детские сады
+                                    <span>11</span>
+                                </button>
+                                <button type="button" class="btn btn-reset tag">
+                                    Поликлиники
+                                    <span>25</span>
+                                </button>
+                                <button type="button" class="btn btn-reset tag">
+                                    Магазины
+                                    <span>2</span>
+                                </button>
+                                <button type="button" class="btn btn-reset tag">
+                                    Рестораны
+                                    <span>25</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="object-body__sidebar">
+                        <div class="object-body__user bid-user bid-user--grade _sticky" data-da=".object-body__content, 1212,3">
+                            <ul class="bid-user__cashback user-cashback list-reset border-200 bg-transparent">
+                                <li class="user-cashback__item _prc">
+                                    <div class="user-cashback__title">
+                                        Кэшбэк за покупку
+                                    </div>
+                                    <button type="button" class="btn btn-reset tag tag--green tag--very-small _no-hover tw-font-medium" data-tooltip-position-x="center" data-tooltip-mobile-popup data-tooltip-add-selector="max-w-320" data-tooltip-html="
+                                    <h3 class=&quot;title-3&quot;>Кешбэк за покупку </h3>
+                                    <p>
+                                        Начислим, после покупки за наличные
+                                        или в кредит
+                                    </p>">
+                                29 000 ₽
+                            </button>
+                                </li>
+                                <li class="user-cashback__item">
+                                    <div class="user-cashback__title">
+                                        С мастер подпиской
+                                    </div>
+                                    <div class="user-cashback__price tw-font-medium">
+                                        +2 475 ₽
+                                    </div>
+                                </li>
+                                <div class="additionally-calc" hidden>
+                                    <h2 class="additionally-calc__title title-3">Подарки</h2>
+                                    <ul class="additionally-calc__list list-reset simplebar-third">
+
+                                    </ul>
+                                </div>
+                            </ul>
+                            <div class="card-price _old-price card-price--up">
+                                <div class="tw-flex">
+                                    <span class="card-price__old-price">
+                                        3 000 000 ₽
+                                    </span>
+                                    <button type="button" class="btn btn-reset tw-ml-4 tw-font-medium" data-tooltip-position-x="center" data-tooltip-mobile-popup data-tooltip-add-selector="personal-discount-tooltip" data-tooltip-html='
+                                    <h3 class="title-3 tw-text-white">Ваша персональная скидка -14%</h3>
+                                    <p class="tw-font-medium tw-mt-2">
+                                        Застройщик предлагает вам дополнительную скидку
+                                    </p>
+                                    <ul class="list-reset chars tw-mb-2">
+                                        <li class="chars__item _white">
+                                            <span>Обычная цена</span>
+                                            <span>5 297 000 ₽</span>
+                                        </li>
+                                        <li class="chars__item _blue">
+                                            <span>Ваши -14%</span>
+                                            <span>- 300 000 ₽</span>
+                                        </li>
+                                        <li class="chars__item _white">
+                                            <span>Цена для вас</span>
+                                            <span>2 491 420 ₽</span>
+                                        </li>
+                                    </ul>
+                                    <p class="tw-font-medium">
+                                        Предложение действует до 12 марта
+                                    </p>
+                                    <p class="text-red tw-font-medium">
+                                        Предложение действует последний день
+                                    </p>'>
+                                        вам -14%
+                                    </button>
+                                </div>
+                                <span class="card-price__price tw-flex tw-items-end">
+                                    <span class='title-2'>2 897 000 ₽</span>
+                                    <div class="object-data__meter tw-ml-4 tw-mt-0 tw-mb-1">
+                                        94 742 ₽/м²
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="bid-user__btns">
+                                <button type="button" class="btn btn-reset btn-secondary bid-user__btn" data-popup-path="book-consultation">
+                                    Заказать консультацию
+                                </button>
+                                <button type="button" class="btn btn-reset btn-primary bid-user__btn" data-popup-path="record-viewing7">
+                                    Записаться на просмотр
+                                </button>
+                            </div>
+                            <div class="bid-user__user-info user-info">
+                                <div class="user-info__avatar avatar">
+                                    <img loading="lazy" src="./img/samolet.png" width="40" height="40" alt="ГК Самолет">
+                                </div>
+                                <span class="user-info__name">
+                                    ГК Самолет
+                                </span>
+                                <span class="user-info__pos">
+                                    Застройщик
+                                </span>
+                            </div>
+                        </div>
+                        <div class="bid-user _sticky" style='top: 500px;'>
+                            <button type="button" class="btn btn-reset btn-secondary bid-user__btn" data-popup-path="register-book-consultation">
+                                Заказать консультацию
+                            </button>
+                            <button type="button" class="btn btn-reset btn-primary bid-user__btn" data-popup-path="register-viewing">
+                                Записаться на просмотр
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="apartmentography">
+                    <div class="container">
+                        <div class="apartmentography__container">
+                            <h2 class="apartmentography__title title-2">
+                                Квартирография
+                            </h2>
+                            <div class="tabs-primary">
+                                <div data-tabs class="tabs-primary__inner">
+                                    <nav data-tabs-titles class="tabs-primary__btns tabs__navigation">
+                                        <button type="button" class="btn btn-reset tabs__title _tab-active">
+                                            по дому
+                                        </button>
+                                        <button type="button" class="btn btn-reset tabs__title">
+                                            по этажам
+                                        </button>
+                                    </nav>
+                                    <div class="tabs-primary__container">
+                                        <div data-tabs-body class="tabs__content tabs-primary__content">
+                                            <div class="tabs__body apartmentography-house">
+                                                <div class="apartmentography-house__wrapper">
+                                                    <ul class="apartmentography-house__list list-reset">
+                                                        <li class="apartmentography-house__item" style="color: rgb(139, 197, 64);">
+                                                            <span class="apartmentography-house__name">
+                                                                1 комнатные
+                                                            </span>
+                                                            <div class="apartmentography-house__line">
+                                                                <span style="width: 70%;"></span>
+                                                            </div>
+                                                            <span class="apartmentography-house__quantity">
+                                                                1000 квартир в доме <span>50%</span>
+                                                            </span>
+                                                        </li>
+                                                        <li class="apartmentography-house__item" style="color: rgb(78, 195, 224);">
+                                                            <span class="apartmentography-house__name">
+                                                                2 комнатные
+                                                            </span>
+                                                            <div class="apartmentography-house__line">
+                                                                <span style="width: 20%;"></span>
+                                                            </div>
+                                                            <span class="apartmentography-house__quantity">
+                                                                200 квартир в доме <span>50%</span>
+                                                            </span>
+                                                        </li>
+                                                        <li class="apartmentography-house__item" style="color: rgb(178, 181, 182);">
+                                                            <span class="apartmentography-house__name">
+                                                                3 комнатные
+                                                            </span>
+                                                            <div class="apartmentography-house__line">
+                                                                <span style="width: 10%;"></span>
+                                                            </div>
+                                                            <span class="apartmentography-house__quantity">
+                                                                100 квартир в доме <span>50%</span>
+                                                            </span>
+                                                        </li>
+                                                        <li class="apartmentography-house__item" style="color: rgb(106, 126, 133);">
+                                                            <span class="apartmentography-house__name">
+                                                                4+ комнатные
+                                                            </span>
+                                                            <div class="apartmentography-house__line">
+                                                                <span style="width: 0%;"></span>
+                                                            </div>
+                                                            <span class="apartmentography-house__quantity">
+                                                                —
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="apartmentography-house__info">
+                                                        <div class="apartmentography-house__element">
+                                                            <p>
+                                                                Всего квартир
+                                                            </p>
+                                                            <p>
+                                                                1 300 шт.
+                                                            </p>
+                                                        </div>
+                                                        <div class="apartmentography-house__element">
+                                                            <p>
+                                                                Кол-во этажей
+                                                            </p>
+                                                            <p>
+                                                                4
+                                                            </p>
+                                                        </div>
+                                                        <div class="apartmentography-house__element">
+                                                            <p>
+                                                                Первый этаж нежилой
+                                                            </p>
+                                                            <p>
+                                                                Да
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tabs__body apartmentography-floor" hidden>
+                                                <div class="apartmentography-floor__wrapper">
+                                                    <div class="apartmentography-floor__header">
+                                                        <div class="select-secondary">
+                                                            <div class="select-secondary__wrapper">
+                                                                <span class="select-secondary__placeholder">
+                                                                    Выберите подъезд
+                                                                </span>
+                                                                <select class="select-secondary__body" hidden name="floor">
+                                                                    <option value="1">1-подъезд</option>
+                                                                    <option value="2">2-подъезд</option>
+                                                                    <option value="3">3-подъезд</option>
+                                                                    <option value="4">4-подъезд</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="apartmentography-floor__table floor-table">
+                                                        <div class="floor-table__header">
+                                                            <button type="button" class="btn btn-reset floor-table__field floor-table__sort-floor">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="14px" viewBox="0 0 14 14" version="1.1">
+                                                                    <desc>Created with sketchtool.</desc>
+                                                                    <defs>
+                                                                        <path d="M4,6 L18,6 L18,8 L4,8 L4,6 Z M4,12 L13,12 L13,14 L4,14 L4,12 Z M4,18 L9,18 L9,20 L4,20 L4,18 Z" id="path-1" />
+                                                                    </defs>
+                                                                    <g id="ЕРЗ" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                        <g id="ERZ_spisok_1" transform="translate(-120.000000, -362.000000)">
+                                                                            <g id="Group-5" transform="translate(92.000000, 332.000000)">
+                                                                                <g id="Group" transform="translate(24.000000, 24.000000)">
+                                                                                    <g id="⭐️Icon-/-Filter-Copy">
+                                                                                        <rect id="Size" x="0" y="0" width="24" height="24" />
+                                                                                        <mask id="mask-2" fill="white">
+                                                                                            <use xlink:href="#path-1" />
+                                                                                        </mask>
+                                                                                        <path stroke="#8BC540" d="M4.5,6.5 L4.5,7.5 L17.5,7.5 L17.5,6.5 L4.5,6.5 Z M4.5,12.5 L4.5,13.5 L12.5,13.5 L12.5,12.5 L4.5,12.5 Z M4.5,18.5 L4.5,19.5 L8.5,19.5 L8.5,18.5 L4.5,18.5 Z" />
+                                                                                        <g id="Colors" mask="url(#mask-2)" fill="#8BC540" fill-rule="nonzero">
+                                                                                            <rect id="Rectangle" x="0" y="0" width="24" height="24" />
+                                                                                        </g>
+                                                                                    </g>
+                                                                                </g>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </svg>
+                                                                <span>
+                                                                    Этаж
+                                                                </span>
+                                                            </button>
+                                                            <div class="floor-table__field">
+                                                                Всего
+                                                            </div>
+                                                            <div class="floor-table__field">
+                                                                1 комнатные
+                                                            </div>
+                                                            <div class="floor-table__field">
+                                                                2 комнатные
+                                                            </div>
+                                                            <div class="floor-table__field">
+                                                                3 комнатные
+                                                            </div>
+                                                            <div class="floor-table__field">
+                                                                4+ комнатные
+                                                            </div>
+                                                        </div>
+                                                        <ul class="floor-table__list list-reset">
+                                                            <li class="floor-table__item">
+                                                                <div class="floor-table__item-field floor-table__item-floor">
+                                                                    1 этаж
+                                                                </div>
+                                                                <div class="floor-table__item-field floor-table__item-result">
+                                                                    <p>
+                                                                        13 квартир
+                                                                    </p>
+                                                                    <p>
+                                                                        от 30 до 76 м²
+                                                                    </p>
+                                                                </div>
+                                                                <div class="floor-table__item-field floor-table__item-1">
+                                                                    <p>
+                                                                        4 квартиры
+                                                                    </p>
+                                                                    <p>
+                                                                        от 22 до 54 м²
+                                                                    </p>
+                                                                </div>
+                                                                <div class="floor-table__item-field floor-table__item-2">
+                                                                    <p>
+                                                                        4 квартир
+                                                                    </p>
+                                                                    <p>
+                                                                        от 22 до 54 м²
+                                                                    </p>
+                                                                </div>
+                                                                <div class="floor-table__item-field floor-table__item-3">
+                                                                    <p>
+                                                                        2 квартиры
+                                                                    </p>
+                                                                    <p>
+                                                                        от 22 до 54 м²
+                                                                    </p>
+                                                                </div>
+                                                                <div class="floor-table__item-field floor-table__item-more">
+                                                                    <p>
+                                                                        —
+                                                                    </p>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="floor-table__bottom">
+                                                            <button type="button" class="btn btn-reset floor-table__more">
+                                                                <svg>
+                                                                    <use xlink:href="./img/sprite.svg#plus"></use>
+                                                                </svg>
+                                                                <span class="title-3">
+                                                                    Загрузить ещё
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        @include('partials/footer.html')
+    </div>
+    <!-- popups -->
+    @include('popups/city.html')
+    @include('popups/add.html')
+    @include('popups/personal-area2.html')
+    @include('popups/sber-tied.html')
+    <!-- ==== -->
+    @include('popups/share-app.html')
+    @include('popups/book-consultation.html')
+    @include('popups/select-bank.html')
+    @include('popups/object-apart-renov-popup.html')
+    @include('popups/furnishing-sets-popup.html')
+    @include('popups/kit-composition.html')
+    @include('popups/complaint-user.html')
+    @include('popups/thanks.html')
+    @include('popups/object-ecology-parks-popup.html')
+    @include('popups/construct-progress-popup.html')
+    @include('popups/screen-demonstation-popup.html')
+    @include('popups/chat.html')
+    @include('popups/record-viewing7.html')
+    @include('popups/record-viewing8.html')
+    @include('popups/warning-remove4.html')
+    @include('popups/client-fixed.html')
+
+    @include('popups/register-viewing.html')
+    @include('popups/register-book-consultation.html')
+    @include('popups/register-book.html')
+    @include('popups/gallery-detailed-flat.html')
+    <!-- popups -->
+</body>
+
+
+</html>

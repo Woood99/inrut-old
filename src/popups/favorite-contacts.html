@@ -1,0 +1,47 @@
+<div class="popup popup-primary popup-primary--right popup-primary--favorite-contacts">
+    <div class="popup__container popup-primary__container" role="dialog" aria-modal="true" data-popup-target="favorite-contacts">
+        <button class="btn-reset js-popup-close popup__close popup-primary__close" aria-label="Закрыть модальное окно">
+            <svg>
+                <use xlink:href="./img/sprite.svg#x"></use>
+            </svg>
+            <span>Закрыть</span>
+        </button>
+        <div class="popup__content popup-primary__content favorite-contacts">
+            <h2 class="favorite-contacts__title title-2">
+                Детальная статистика просмотров
+            </h2>
+
+            <div class="favorite-contacts__wrapper main-table">
+                <div class="main-table__inner">
+                    <div class="main-table__table">
+                        <div class="main-table__type">
+                            <span>Имя</span>
+                            <span>Вовлеченность</span>
+                            <span>Просмотры</span>
+                        </div>
+                        <div class="main-table__list favorite-contacts__list">
+                            <a href='./statistics-user.html' class="favorite-contacts__item">
+                                <div class="favorite-contacts__user user-info">
+                                    <div class="user-info__avatar avatar online">
+                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                    </div>
+                                    <span class="user-info__name">
+                                        Алексей Г.
+                                    </span>
+                                    <span class="user-info__pos">
+                                        Покупатель был в сети 11.04.2024
+                                    </span>
+                                </div>
+                                <span class="favorite-contacts__info">
+                                    <span class='_green-block'>Высокая</span>
+                                    <span>Время проведения на сайте: 22ч</span>
+                                </span>
+                                <span class='favorite-contacts__count'>3 ЖК, 3 объекта</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

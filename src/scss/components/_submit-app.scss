@@ -1,0 +1,306 @@
+.submit-app {
+
+    &__top {}
+
+    &__title {
+        @media (max-width:$desktop) {
+            padding: 0 16px;
+        }
+    }
+
+    &__body {
+        margin-top: 8px;
+        background-color: var(--stand-bg);
+        padding: 24px 0;
+
+        @media (max-width:$desktop) {
+            margin-top: 0;
+            padding: 78px 0 24px;
+        }
+    }
+
+    &__container {
+        border-radius: 16px;
+
+        @media (max-width:$desktop) {
+            margin-top: 16px;
+
+            &.container {
+                padding: 0;
+            }
+        }
+    }
+
+    &__row {
+        padding: 24px;
+        background-color: var(--white);
+        box-shadow: var(--shadow-primary);
+        border-radius: 12px;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        @media (max-width:$desktop) {
+            padding: 16px;
+            border-radius: 12px;
+
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    &__row-title {
+        margin-bottom: 16px;
+    }
+
+    &__btn {
+        margin-top: 24px;
+        padding: 0 81px;
+        width: 100%;
+
+        @media (max-width:$desktop) {
+            margin-right: 16px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            width: calc(100% - 32px);
+            margin: 24px auto 0;
+            padding: 0 20px;
+        }
+    }
+    &__banner{
+        margin-bottom: 16px;
+    }
+    @media (max-width:$desktop) {
+        background-color: var(--stand-bg);
+    }
+}
+
+
+.submit-app-options {
+
+    &__title {}
+
+    &__descr {
+        color: var(--primaryTwo);
+        font-size: var(--default-fz);
+        line-height: var(--default-lh);
+        margin-bottom: 24px;
+        display: block;
+    }
+
+    &__choice {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+    }
+
+    &__row {
+        display: grid;
+        justify-content: start;
+        align-items: center;
+        grid-column-gap: 8px;
+
+
+        &--1 {
+            grid-template-columns: percent(325, 1132) percent(278, 1132) percent(375, 1132);
+        }
+
+        &--2 {
+            grid-template-columns: percent(375, 1132) percent(375, 1132) percent(300, 1132);
+        }
+
+        &--3 {
+            grid-template-columns: percent(450, 1132) percent(450, 1132);
+        }
+
+        &--4 {
+            grid-template-columns: percent(350, 1132);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        @media (max-width:$desktop) {
+            grid-row-gap: 16px;
+            align-items: center;
+            grid-template-columns: repeat(2, 1fr)
+        }
+
+        @media (max-width:$smallTablet-max) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__textarea {
+        --height: 165px;
+    }
+
+    &__import {
+        margin-top: 24px;
+    }
+
+    &__offers {
+        margin-top: 48px;
+    }
+
+    &__tags {
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid var(--primary100);
+    }
+    &__item--price{
+        .filter-dropdown__dropdown{
+            min-width: 100%;
+        }
+    }
+}
+
+.submit-price-proper {
+    .field-select__name {
+        --width: 325px;
+    }
+
+    .submit-app-options__row {
+        margin-bottom: 0;
+        align-items: start;
+        &:not(:nth-child(2)){
+            margin-top: 24px;
+
+        }
+
+        &:last-child {
+            @media (max-width:$desktop) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+.submit-app-import {
+
+    &__title {}
+
+    &__textarea {
+        --height: 165px;
+    }
+}
+
+.submit-app-offers {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+
+        @media (max-width:$desktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width:$smallTablet-max) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width:$mobile-max) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__btn {
+        margin-top: 16px;
+        color: var(--blue);
+        display: flex;
+        align-items: center;
+
+        span {
+            font-size: var(--small-fz);
+            line-height: var(--small-lh);
+            font-weight: 400;
+        }
+
+        svg {
+            width: 20px;
+            height: 17px;
+            fill: currentColor;
+            margin-left: 8px;
+            transition: transform $transitionSpeed $transitionFunction;
+        }
+
+        &.focus-visible {
+            color: var(--primary600);
+        }
+
+        @media (max-width:$desktop) {}
+    }
+    .checkbox-secondary{
+        margin-top: 24px;
+        &__label{
+            justify-content: start;
+        }
+    }
+    &._active {
+        .submit-app-offers__btn {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+
+.submit-app-maps {
+    &__title {}
+
+    >.row {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 8px;
+
+        @media (max-width:$desktop) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width:$smallTablet-max) {
+            grid-template-columns: 100%;
+            grid-row-gap: 16px;
+        }
+    }
+
+    &__descr {
+        color: var(--primaryTwo);
+        font-size: var(--default-fz);
+        line-height: var(--default-lh);
+    }
+
+    &__map {
+        margin-top: 24px;
+        .map-draw__btns{
+            top: auto;
+            bottom: 20px;
+        }
+    }
+
+    &__checkbox {
+        margin-top: 24px;
+
+        .checkbox-secondary__label {
+            justify-content: start;
+        }
+        @media (max-width:$desktop){
+             margin-top: 16px; 
+        }
+    }
+
+    @media (max-width:$desktop) {}
+}

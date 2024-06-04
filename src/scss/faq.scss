@@ -1,0 +1,36 @@
+@use "sass:math";
+
+@import './$settings';
+
+
+// =============================================================================================================
+
+
+// ui components
+@import "./ui-kit/object-info";
+@import "./ui-kit/program-card";
+@import "./ui-kit/card-document";
+@import "./ui-kit/card-instruction";
+
+// =============================================================================================================
+
+
+// small components
+@import "./components/calendar";
+@import "./components/bid";
+@import "./components/video-block";
+@import "./components/search-area";
+@import "./components/programs-list";
+@import "./components/documents-block";
+@import "./components/popular-instructions";
+@import "./components/faq-block";
+
+// =============================================================================================================
+
+
+// pages
+@import "./components/home";
+@import "./components/faq";
+
+
+// =============================================================================================================

@@ -1,0 +1,159 @@
+@use "sass:math";
+
+@import './$settings';
+
+
+// =============================================================================================================
+
+
+// ui components
+@import "./ui-kit/card-stock";
+
+// small components
+@import "./components/video-block";
+@import "./components/object";
+@import "./components/gallery";
+
+// pages
+@import "./components/home";
+
+
+
+// code
+
+.promo-slider {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-column-gap: 32px;
+
+    &__slider {
+        width: 100%;
+        min-height: 420px;
+        height: 420px;
+
+        @media (max-width:$smallTablet-max) {
+            height: 270px;
+            min-height: 270px;
+
+
+
+            margin-left: -16px;
+            margin-right: -16px;
+
+            padding-left: 16px;
+            padding-right: 16px;
+            width: auto;
+        }
+    }
+
+    &__image {
+        max-height: 500px;
+
+        @media (max-width:$smallTablet-max) {
+            max-height: 270px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width:$desktop) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__counter {
+        @media (max-width:$desktop) {
+            margin: 16px auto 0;
+        }
+    }
+
+    &__icon {
+        background-color: #5639FF1e;
+        --size: 50px;
+
+        width: var(--size);
+        height: var(--size);
+        flex: 0 0 var(--size);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--blue);
+        }
+    }
+
+    &--reverse {
+        @media (min-width:$desktop-min) {
+            grid-template-columns: 1fr 280px;
+
+            .promo-slider__slider {
+                order: -1;
+            }
+        }
+    }
+
+    @media (max-width:$desktop) {
+        grid-template-columns: 100%;
+    }
+}
+
+.promo-about {
+  display: grid;
+  grid-template-columns: 550px 350px;
+  justify-content: space-between;
+  grid-column-gap: 32px;
+  grid-row-gap: 40px;
+    &__items {
+        margin-top: 32px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 44px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-weight: 500;
+    }
+
+    &__value {
+        border-top: 1px solid var(--yellow);
+        padding-top: 8px;
+        margin-top: 8px;
+    }
+    &__image{
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+    }
+}
+
+
+
+.promo-planning-solutions {
+    .swiper-wrapper {
+        align-items: stretch;
+
+        .swiper-slide {
+            height: auto;
+        }
+    }
+}

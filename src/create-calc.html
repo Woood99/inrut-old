@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Настройка системы</title>
+    <link rel="preload" href="fonts/CoFoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CoFoSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script defer src="js/main.js"></script>
+
+
+
+</head>
+
+<body class="page__body">
+    <div class="site-container site-container--place-sale">
+        @include('partials/header.html')
+        <main class="main main-page-gap place-sale create-calc">
+            <div class="place-sale__top top-page-inner-title">
+                <div class="top-page-inner-title__container container">
+                    <a href="#" class="place-sale__back top-page-inner-title__back back-link">
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#arrow-left"></use>
+                        </svg>
+                        <span>Назад</span>
+                    </a>
+                    <h1 class="create-types-objects__title top-page-inner-title__title title-2" data-da=".place-sale__body,1212,first">
+                        Создание <span>Калькулятор</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="place-sale__body">
+                <div class="container">
+                    <div class="place-sale__row place-sale-options">
+                        <h2 class="place-sale__row-title place-sale-options__title title-2">
+                            Параметры
+                        </h2>
+                        <div class="place-sale-options__row place-sale-options__row--1" style="grid-template-columns: 1fr 33% 33%">
+                            <div class="place-sale-options__item input-text">
+                                <label class="input-text__label">
+                                    <span>Название банка</span>
+                                    <input type="text" name="Имя" class="input-reset input-text__input" value="" placeholder="">
+                                </label>
+                            </div>
+                            <div class="search-select" data-search-select-subtitle="Любой">
+                                <button type="button" class="btn btn-reset search-select__button">
+                                    <div class="search-select__button-wrapper">
+                                        <div>Город присутствия</div>
+                                        <div>Любой</div>
+                                    </div>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>
+                                </button>
+                                <div class="search-select__dropdown search-select__dropdown--left">
+                                    <button type="button" class="btn btn-reset search-select__close">
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#x"></use>
+                                        </svg>
+                                    </button>
+                                    <label class="input-primary search-select__input">
+                                        <input type="text" name="Имя" class="input-reset input-primary__input" placeholder="Поиск по названию">
+                                    </label>
+                                    <div class="search-select__control">
+                                        <button type="button" class="btn btn-reset btn-secondary search-select__all">Выбрать всё</button>
+                                        <button type="button" class="btn btn-reset btn-secondary search-select__clear">Очистить всё</button>
+                                    </div>
+                                    <div class="search-select__wrapper simplebar-third">
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_1" name="developer-name_1" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_1" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Волгоград</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_2" name="developer-name_2" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_2" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Санкт-Петербург</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_3" name="developer-name_3" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_3" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Москва</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_4" name="developer-name_4" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_4" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Самара</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_5" name="developer-name_5" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_5" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Казань</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_6" name="developer-name_6" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_6" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Калининград</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_7" name="developer-name_6" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_7" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Владивосток</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_8" name="developer-name_6" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_8" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Нижний Новгород</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-select _selected" data-search-select-subtitle="Не выбрано">
+                                <button type="button" class="btn btn-reset search-select__button">
+                                    <div class="search-select__button-wrapper">
+                                        <div>Цель кредита</div>
+                                        <div>Не выбрано</div>
+                                    </div>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#check"></use>
+                                    </svg>
+                                </button>
+                                <div class="search-select__dropdown search-select__dropdown--left">
+                                    <button type="button" class="btn btn-reset search-select__close">
+                                        <svg>
+                                            <use xlink:href="./img/sprite.svg#x"></use>
+                                        </svg>
+                                    </button>
+                                    <label class="input-primary search-select__input">
+                                        <input type="text" name="Имя" class="input-reset input-primary__input" placeholder="Поиск по названию">
+                                    </label>
+                                    <div class="search-select__control">
+                                        <button type="button" class="btn btn-reset btn-secondary search-select__all">Выбрать всё</button>
+                                        <button type="button" class="btn btn-reset btn-secondary search-select__clear">Очистить всё</button>
+                                    </div>
+                                    <div class="search-select__wrapper simplebar-third">
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_70" name="developer-name_70" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_70" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Новостройки</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_71" name="developer-name_71" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_71" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Вторичка</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_72" name="developer-name_72" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_72" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Дом, коттеджи, дачи</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_73" name="developer-name_73" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_73" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Земельные участки</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="search-select__item checkbox-secondary">
+                                            <input id="developer_74" name="developer-name_74" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="developer_74" class="checkbox-secondary__label">
+                                                <span class="checkbox-secondary__text">
+                                                    <span>Коммерческая недвижимость</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-sale-options__row place-sale-options__row--2" style="grid-template-columns: 1fr 1.4fr">
+                            <div class="filter-dropdown__range filter-range">
+                                <div class="filter-range__nav">
+                                    <div class="input-text input-text--only-number">
+                                        <label class="input-text__label">
+                                            <span>Срок кредита от</span>
+                                            <input type="text" maxlength="3" class="input-reset input-text__input" placeholder="Площадь от">
+                                        </label>
+                                    </div>
+                                    <div>–</div>
+                                    <div class="input-text input-text--only-number">
+                                        <label class="input-text__label">
+                                            <span>До</span>
+                                            <input type="text" maxlength="3" class="input-reset input-text__input" placeholder="До">
+                                        </label>
+                                    </div>
+                                    <div>
+                                        лет
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-dropdown__range filter-range">
+                                <div class="filter-range__nav">
+                                    <div class="input-text input-text--only-number">
+                                        <label class="input-text__label">
+                                            <span>Первоначальный взнос от</span>
+                                            <input type="text" maxlength="12" class="input-reset input-text__input" placeholder="Площадь от">
+                                        </label>
+                                    </div>
+                                    <div>–</div>
+                                    <div class="input-text input-text--only-number">
+                                        <label class="input-text__label">
+                                            <span>До</span>
+                                            <input type="text" maxlength="12" class="input-reset input-text__input" placeholder="До">
+                                        </label>
+                                    </div>
+                                    <div>
+                                        ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-sale-options__row place-sale-options__row--3" style="grid-template-columns: max-content;">
+                            <div class="checkbox-secondary">
+                                <input id="maternal-capital" name="maternal-capital" class="checkbox-secondary__input" type="checkbox" value="true">
+                                <label for="maternal-capital" class="checkbox-secondary__label">
+                                    <span class="checkbox-secondary__text">
+                                        Использовать мат.кап. как ПВ
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="place-sale__row create-calc__mort create-calc-mort" style="margin-top: 16px;">
+                        <div class="object-apart-renov__tabs tabs-primary tabs-primary--controls" style="width: 100%;">
+                            <div class="place-sale__row-title row" style="display: flex;align-items: flex-start;justify-content: space-between;">
+                                <h2 class="place-sale-photo__title title-2">
+                                    Программы
+                                </h2>
+                            </div>
+                            <div data-tabs class="tabs-primary__inner">
+                                <nav data-tabs-titles class="tabs-primary__btns tabs__navigation" style="max-width: none;">
+                                    <button type="button" class="btn btn-reset tabs__title _tab-active">
+                                        Новостройка
+                                    </button>
+                                    <button type="button" class="btn btn-reset tabs__title">
+                                        Вторичка
+                                    </button>
+                                </nav>
+                                <div class="tabs-primary__container">
+                                    <div data-tabs-body class="tabs__content tabs-primary__content">
+                                        <div class="tabs__body create-calc-mort__field">
+                                            <button type="button" class="btn btn-reset create-calc-mort__create-item">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#plus"></use>
+                                                </svg>
+                                                Создать новую программу
+                                            </button>
+                                            <div class="create-calc-mort__item">
+                                                <div class="create-calc-mort__btn">
+                                                    <label class="create-calc-mort__checkbox toggle-checkbox">
+                                                        <input type="checkbox" name="toggle-1">
+                                                        <div aria-hidden="true"></div>
+                                                    </label>
+                                                    <span>
+                                                        <input type="text" name="Имя" class="input-reset _width-auto" disabled value="Военная ипотека">
+                                                        <span class="_disabled">
+                                                            <input type="text" name="Имя" maxlength="3" class="input-reset _width-auto" value="0" disabled="">%
+                                                        </span>
+                                                    </span>
+                                                    <button type="button" class="btn btn-reset create-calc-mort__edit _disabled" title="Редактировать">
+                                                        <svg>
+                                                            <use xlink:href="./img/sprite.svg#pencil">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <button type="button" class="btn btn-reset create-calc-mort__remove" title="Удалить">
+                                                        <svg>
+                                                            <use xlink:href="./img/sprite.svg#trash">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="create-calc-mort__check">
+                                                        <svg>
+                                                            <use xlink:href="./img/sprite.svg#check"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="create-calc-mort__info" hidden>
+                                                    <h3 class="create-calc-mort__title title-4">Дополнительная информация</h3>
+                                                    <div class="create-calc-mort__textareas">
+                                                        <button type="button" class="btn btn-reset create-calc-mort__create" title="Создать новый блок">
+                                                            <span>Создать</span>
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#plus"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="create-calc-mort__conditions create-calc-conditions" style="margin: 24px 0 0;">
+                                                        <div class="row">
+                                                            <h3 class="create-calc-conditions__title title-2">
+                                                                Услуги, снижающие ставку по кредиту
+                                                            </h3>
+                                                            <button type="button" class="btn btn-reset create-calc-conditions__create">
+                                                                <svg>
+                                                                    <use xlink:href="./img/sprite.svg#plus"></use>
+                                                                </svg>
+                                                                <span>Создать новую услугу</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="create-calc-conditions__items">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__body create-calc-mort__field" hidden>
+                                            <button type="button" class="btn btn-reset create-calc-mort__create-item">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#plus"></use>
+                                                </svg>
+                                                Создать новую программу
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="place-sale__row create-calc__mort create-calc-mort tariff-card" style="margin-top: 16px;">
+                        <div class="object-apart-renov__tabs tabs-primary tabs-primary--controls" style="width: 100%;">
+                            <div class="place-sale__row-title row" style="display: flex;align-items: flex-start;justify-content: space-between;">
+                                <h2 class="place-sale-photo__title title-2">
+                                    Тарифная карта
+                                </h2>
+                            </div>
+                            <div data-tabs class="tabs-primary__inner">
+                                <nav data-tabs-titles class="tabs-primary__btns tabs__navigation" style="max-width: none;">
+                                    <button type="button" class="btn btn-reset tabs__title _tab-active">
+                                        Вознаграждение
+                                    </button>
+                                    <button type="button" class="btn btn-reset tabs__title">
+                                        Контакты
+                                    </button>
+                                </nav>
+                                <div class="tabs-primary__container">
+                                    <div data-tabs-body class="tabs__content tabs-primary__content">
+                                        <div class="tabs__body create-calc-mort__field">
+                                            <button type="button" class="btn btn-reset create-calc-mort__create-item">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#plus"></use>
+                                                </svg>
+                                                Создать новую программу
+                                            </button>
+                                                <div class="create-calc-mort__item">
+                                                    <h3 class="create-calc-mort__title title-4">Размер комиссии</h3>
+                                                    <div class="create-calc-mort__textareas">
+                                                        <button type="button" class="btn btn-reset create-calc-mort__create" title="Создать новый блок">
+                                                            <span>Создать</span>
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#plus"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="create-calc-mort__item">
+                                                    <h3 class="create-calc-mort__title title-4">Акции:</h3>
+                                                    <div class="create-calc-mort__textareas">
+                                                        <button type="button" class="btn btn-reset create-calc-mort__create" title="Создать новый блок">
+                                                            <span>Создать</span>
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#plus"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="create-calc-mort__item">
+                                                    <h3 class="create-calc-mort__title title-4">Акции выплачивается:</h3>
+                                                    <div class="create-calc-mort__textareas">
+                                                        <button type="button" class="btn btn-reset create-calc-mort__create" title="Создать новый блок">
+                                                            <span>Создать</span>
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#plus"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="create-calc-mort__item">
+                                                    <h3 class="create-calc-mort__title title-4">Акции не выплачивается:</h3>
+                                                    <div class="create-calc-mort__textareas">
+                                                        <button type="button" class="btn btn-reset create-calc-mort__create" title="Создать новый блок">
+                                                            <span>Создать</span>
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#plus"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="tabs__body create-calc-mort__field" hidden>
+                                            <button type="button" class="btn btn-reset create-calc-mort__create-item">
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#plus"></use>
+                                                </svg>
+                                                Создать контакт
+                                            </button>
+                                            <div class="create-calc-mort__item">
+                                                <div class="row" style="grid-template-columns: repeat(4,1fr);">
+                                                    <div class="input-text input-text--no-exp create-calc-mort__item-name">
+                                                        <label class="input-text__label">
+                                                            <span>ФИО</span>
+                                                            <input type="text" name="ФИО" class="input-reset input-text__input" value="" placeholder="">
+                                                        </label>
+                                                    </div>
+                                                    <div class="input-text input-text--no-exp">
+                                                        <label class="input-text__label">
+                                                            <span>Номер телефона</span>
+                                                            <input type="text" name="Застройщик" class="input-reset input-text__input input-phone-mask" placeholder="">
+                                                        </label>
+                                                    </div>
+                                                    <div class="input-text input-text--no-exp">
+                                                        <label class="input-text__label">
+                                                            <span>Почта</span>
+                                                            <input type="text" name="Почта" class="input-reset input-text__input" placeholder="">
+                                                        </label>
+                                                    </div>
+                                                    <button type="button" class="btn btn-reset create-calc-mort__item-save">Сохранить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-reset btn-primary create-calc__btn" style="width: 100%; margin-top: 32px;">
+                        Сохранить
+                    </button>
+                </div>
+            </div>
+        </main>
+        <div class="footer-fixed create-calc-fixed">
+            <div class="footer-fixed__container">
+                <button type="submit" class="btn btn-reset btn-primary" style="width: 100%;">
+                    Сохранить
+                </button>
+            </div>
+        </div>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>

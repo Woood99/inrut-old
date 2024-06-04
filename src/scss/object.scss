@@ -1,0 +1,67 @@
+@use "sass:math";
+
+@import './$settings';
+
+
+// =============================================================================================================
+
+
+// ui components
+@import "./ui-kit/main-slider";
+@import "./ui-kit/room-info";
+@import "./ui-kit/object-info";
+@import "./ui-kit/skeleton";
+@import "./ui-kit/card-primary";
+@import "./ui-kit/card-secondary";
+@import "./ui-kit/card-small";
+@import "./ui-kit/card-small-photo";
+@import "./ui-kit/card-scheme";
+@import "./ui-kit/card-stock";
+@import "./ui-kit/news-card";
+@import "./ui-kit/video-card";
+@import "./ui-kit/bank-offer";
+@import "./ui-kit/card-price";
+@import "./ui-kit/price-history";
+@import "./ui-kit/record-service";
+@import "./ui-kit/advantages-card";
+@import "./ui-kit/point-system";
+@import "./ui-kit/card-dynamic";
+@import "./ui-kit/dynamic-circle";
+@import "./ui-kit/info-price-block";
+
+// =============================================================================================================
+
+
+// small components
+@import "./components/bid";
+@import "./components/gallery";
+@import "./components/video-block";
+@import "./components/layouts";
+@import "./components/search-area";
+@import "./components/block-stock";
+@import "./components/furnishing-sets";
+@import "./components/documentation";
+@import "./components/additionally";
+@import "./components/shorts";
+@import "./components/genplan";
+@import "./components/sale-dynamic";
+@import "./components/apartmentography";
+@import "./components/floor-table";
+
+
+// =============================================================================================================
+
+
+// pages
+@import "./components/object";
+@import "./components/object-removed";
+@import "./components/object-sold";
+@import "./components/develop-inner";
+@import "./components/detailed-flat";
+@import "./components/objects-base";
+@import "./components/object-base-inner";
+@import "./components/object-agent";
+@import "./components/agent";
+
+
+// =============================================================================================================

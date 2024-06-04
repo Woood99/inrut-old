@@ -1,0 +1,14 @@
+@use "sass:math";
+
+@import './$settings';
+
+// small components
+@import "./components/search-area";
+@import "./components/layouts";
+@import "./components/additionally";
+
+// pages
+@import "./components/submit-app";
+@import "./components/object";
+@import "./components/place-sale";
+@import "./components/quiz";

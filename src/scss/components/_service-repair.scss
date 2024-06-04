@@ -1,0 +1,49 @@
+.service-repair-add-property{
+    &__btn{
+        width: 100%;
+    }
+}
+
+.service-type-select{
+    .field-select--necessarily{
+        .field-select__item{
+            width: 25%;
+        }
+    }
+    &__item{
+        &:not(:last-child){
+            margin-bottom: 32px;
+        }
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 8px;
+        grid-row-gap: 16px;
+    }
+}
+
+.service-moving-options-order{
+    .small-card-select {
+        max-width: 120px;
+        &__icon{
+            margin: 0 auto;
+        }
+    }
+}
+
+.service-repair-add-property-row{
+    .row{
+        display: flex;
+        gap: 8px;
+        width: 100%;
+        .input-text{
+            &:nth-child(1){
+                flex-grow: 1;
+            }
+            &:nth-child(2){
+                max-width: 35%;
+            }
+        }
+    }
+}

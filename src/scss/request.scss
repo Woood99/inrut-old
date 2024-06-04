@@ -1,0 +1,63 @@
+@use "sass:math";
+
+@import './$settings';
+
+
+// =============================================================================================================
+
+
+// ui components
+@import "./ui-kit/object-info";
+@import "./ui-kit/card-primary";
+@import "./ui-kit/card-secondary";
+@import "./ui-kit/card-scheme";
+@import "./ui-kit/bank-info";
+@import "./ui-kit/bank-offer";
+@import "./ui-kit/card-price";
+@import "./ui-kit/price-history";
+@import "./ui-kit/card-stock";
+@import "./ui-kit/video-card";
+@import "./ui-kit/moving-card";
+@import "./ui-kit/info-price-block";
+
+// =============================================================================================================
+
+
+// small components
+@import "./components/calendar";
+@import "./components/bid";
+@import "./components/video-block";
+@import "./components/search-area";
+@import "./components/block-stock";
+@import "./components/service-sample";
+@import "./components/gallery";
+@import "./components/sale-dynamic";
+
+
+
+// =============================================================================================================
+
+
+// pages
+@import "./components/request-catalog";
+@import "./components/purchase-request";
+@import "./components/selection-estate";
+@import "./components/your-app";
+@import "./components/my-requests";
+@import "./components/moving-requests";
+@import "./components/selection-estate-agent";
+@import "./components/my-objects";
+@import "./components/submit-app";
+@import "./components/base-agent-catalog";
+@import "./components/agent";
+@import "./components/agent-develop";
+@import "./components/develop-catalog";
+@import "./components/moving-inner";
+@import "./components/list-appraisers";
+@import "./components/appraisers";
+@import "./components/requests-all";
+@import "./components/agent-rating";
+@import "./components/developer-offers";
+
+
+// =============================================================================================================

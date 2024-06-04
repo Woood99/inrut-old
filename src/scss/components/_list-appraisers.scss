@@ -1,0 +1,19 @@
+.list-appraisers{
+    .main-table__type{
+        grid-template-columns: percent(300, 1132) percent(300, 1132) 1fr;
+    }
+    .object-info-grade{
+        grid-template-columns: percent(300, 1132) percent(300, 1132) percent(500,1132);
+        min-height: 96px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        .user-info{
+            &__name{
+                max-width: 430px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

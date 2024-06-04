@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>База агентов каталог</title>
+    <link rel="preload" href="fonts/CoFoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CoFoSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/request.css">
+    <script id="ymaps-id"></script>
+    <script defer src="js/request.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container site-container--header-filter">
+        @include('partials/header.html')
+        <main class="main main-page-gap base-agent-catalog">
+            <div class="base-agent-catalog__body">
+                <h1 class="base-agent-catalog__title title-2 container">
+                    В базе 1 567 специалистов
+                </h1>
+
+                <form class="base-agent-catalog__filter base-agent-catalog-filter filter filter--more filter--new-style" data-da=".header,1212,last">
+                    <button type="button" class="btn btn-reset btn-secondary filter__btn">
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#filter"></use>
+                        </svg>
+                        <span>Фильтры</span>
+                    </button>
+                    <div class="filter__container">
+                        <div class="filter__top">
+                            <span>Фильтры</span>
+                            <button type="button" class="btn btn-reset filter__close">Закрыть</button>
+                        </div>
+                        <div class="filter__inner">
+                            <div class="filter__row base-agent-catalog-filter__row--1 container" data-da=".filter--new-style,1212,1" style="grid-template-columns: 125px 25% 25% 1fr max-content;">
+                                <div class="btn btn-reset filter__item filter-more-btn filter__btn-control">
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#filter"></use>
+                                    </svg>
+                                    <span>Фильтры</span>
+                                </div>
+                                <div class="filter__item select-secondary select-secondary--city">
+                                    <div class="select-secondary__wrapper">
+                                        <span class="select-secondary__placeholder">
+                                            Город
+                                        </span>
+                                        <select class="select-secondary__body" hidden name="complex">
+                                            <option value="none" placeholder>Не выбрано</option>
+                                            <option value="apartments">Санкт-Петербург</option>
+                                            <option value="apartments2">Волгоград</option>
+                                            <option value="apartments3">Москва</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="filter__item select-secondary base-agent-spec">
+                                    <div class="select-secondary__wrapper">
+                                        <span class="select-secondary__placeholder">
+                                            Специалисты
+                                        </span>
+                                        <select class="select-secondary__body" hidden name="complex">
+                                            <option value="none" placeholder>Не выбрано</option>
+                                            <option value="developers">О.П застройщика</option>
+                                            <option value="realtor">Риэлтор</option>
+                                            <option value="mortgage-broker">Ипотечный брокер</option>
+                                            <option value="lawyer">Юрист</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class="filter__item filter__item--input input-primary">
+                                    <input type="text" name="Имя" class="input-reset input-primary__input" placeholder="ФИО специалиста">
+                                </label>
+                                <button type="reset" class="btn btn-reset underline-hover filter__clear">Очистить</button>
+                            </div>
+                            <div class="filter__row base-agent-catalog-filter__row--2" hidden>
+                                <div class="container">
+                                    <div class="filter__item field-dropdown" data-spec-select-name="developers" hidden data-field-dropdown-name="developer">
+                                        <div class="field-dropdown__name">
+                                            Застройщик
+                                        </div>
+                                        <div class="select-secondary field-dropdown__wrapper">
+                                            <div class="select-secondary__wrapper">
+                                                <select class="select-secondary__body" hidden name="complex">
+                                                    <option value="none" placeholder>Не выбрано</option>
+                                                    <option value="apartments">Ипотечный брокер</option>
+                                                    <option value="apartments2">Ипотечный брокер2</option>
+                                                    <option value="apartments3">Ипотечный брокер3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__item field-dropdown" data-spec-select-name="realtor" hidden data-field-dropdown-name="developer">
+                                        <div class="field-dropdown__name">
+                                            Тип недвижимости
+                                        </div>
+                                        <div class="search-select field-dropdown__wrapper" data-search-select-subtitle="Не выбрано">
+                                            <button type="button" class="btn btn-reset search-select__button">
+                                                <div class="search-select__button-wrapper">
+                                                    <div></div>
+                                                    <div>Не выбрано</div>
+                                                </div>
+                                                <svg>
+                                                    <use xlink:href="./img/sprite.svg#check"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="search-select__dropdown">
+                                                <button type="button" class="btn btn-reset search-select__close">
+                                                    <svg>
+                                                        <use xlink:href="./img/sprite.svg#x"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="search-select__wrapper simplebar-third">
+                                                    <div class="search-select__item checkbox-secondary">
+                                                        <input id="unique-offers_1" name="unique-offers-name_1" class="checkbox-secondary__input" type="checkbox" value="true">
+                                                        <label for="unique-offers_1" class="checkbox-secondary__label">
+                                                            <span class="checkbox-secondary__text">
+                                                                <span>Новостройки</span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="search-select__item checkbox-secondary">
+                                                        <input id="unique-offers_8" name="unique-offers-name_8" class="checkbox-secondary__input" type="checkbox" value="true">
+                                                        <label for="unique-offers_8" class="checkbox-secondary__label">
+                                                            <span class="checkbox-secondary__text">
+                                                                <span>Вторичка</span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="filter__item field-dropdown" data-field-dropdown-name="developer">
+                                        <div class="field-dropdown__name">
+                                            Сортировка
+                                        </div>
+                                        <div class="select-secondary field-dropdown__wrapper">
+                                            <div class="select-secondary__wrapper">
+                                                <select class="select-secondary__body" hidden name="complex">
+                                                    <option value="apartments1">Лучший рейтинг</option>
+                                                    <option value="apartments2">Больше всего отзывов</option>
+                                                    <option value="apartments3">Больше всего сделок</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                    <button type="button" class="btn btn-reset filter__btn-control filter__btn-hidden">
+                                        <span>Скрыть фильтры</span>
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+                <div class="base-agent-catalog__table main-table">
+                    <div class="main-table__inner container">
+                        <div class="main-table__table">
+                            <div class="main-table__type">
+                                <span>Рейтинг</span>
+                                <span>Имя</span>
+                                <span>Сделки</span>
+                                <span>Объекты</span>
+                            </div>
+                            <div class="main-table__list">
+                                <a href="./agent.html" class="main-table__item object-info-grade">
+                                    <div class="object-info-grade__rating rating-item">
+                                        <div class="rating-item__number">
+                                            2.2
+                                        </div>
+                                        <svg class="rating-item__star">
+                                          <use xlink:href="./img/sprite.svg#star"></use>
+                                        </svg>
+                                        <div class="rating-item__quantity">
+                                            (523 отзыва)
+                                        </div>
+                                        <div class="rating-item__time">
+                                            Последний отзыв 03 марта 2024
+                                        </div>
+                                    </div>
+                                    <div class="object-info-grade__from user-info user-info--big">
+                                        <div class="user-info__avatar avatar online">
+                                            <img loading="lazy" src="./img/avatar-1.jpg" width="45" height="45" alt="Абдурахманраджи Г.">
+                                        </div>
+                                        <span class="user-info__name">
+                                            Абдурахманраджи Г.
+                                        </span>
+                                        <span class="user-info__pos">
+                                            Агент был в сети 11.04.2024
+                                        </span>
+                                    </div>
+                                    <div class="object-info-grade__quantity">
+                                        <span>880</span>
+                                    </div>
+                                    <div class="object-info-grade__quantity">
+                                        <span>100</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-reset btn-third main-table__next">
+                            Следующая страница
+                        </button>
+                        <div class="main-table__pagination pagination">
+                            <ul class="pagination__list list-reset">
+                                <li class="pagination__item" disabled>
+                                    <a href="#">
+                                        1
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#">
+                                        2
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#">
+                                        3
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#">
+                                        4
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#">
+                                        5
+                                    </a>
+                                </li>
+                                <li class="pagination__item dots" tabindex="-1">
+                                    ...
+                                </li>
+                                <li class="pagination__item">
+                                    <a href="#">
+                                        199
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @include('partials/footer.html')
+    </div>
+     <!-- popups -->
+     @include('popups/city.html')
+     @include('popups/add.html')
+     @include('popups/personal-area2.html')
+     @include('popups/edit-profile.html')
+     @include('popups/sber-tied.html')
+     <!-- popups -->
+</body>
+
+
+</html>

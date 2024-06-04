@@ -1,0 +1,122 @@
+.agent-develop {
+    .bid-user {
+        padding: 40px 24px 32px;
+
+        @media (max-width:$desktop) {
+            padding: 16px;
+        }
+    }
+
+    .bid__body {
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .agent-object {
+        margin-top: 12px;
+        grid-column: 1/-1;
+        background-color: var(--white);
+        padding: 32px;
+        box-shadow: var(--shadow-primary);
+        border-radius: 12px;
+
+        @media (max-width:$desktop) {
+            margin-top: 8px;
+            padding: 16px 0;
+        }
+    }
+
+    .card-secondary {
+        &__bottom {
+            margin-top: auto;
+            padding-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    .block-stock{
+        &__tabs{
+            @media (max-width:$desktop){
+                 padding: 0;
+                 border-radius: 0; 
+            }
+        }
+        &__title{
+            @media (max-width:$desktop){
+                 padding: 0 16px; 
+            }
+        }
+        .tabs-primary__container{
+            @media (max-width:$desktop){
+                 margin-top: 16px; 
+            }
+        }
+        .tabs-primary__inner{
+            @media (max-width:$desktop){
+                 padding-top: 0; 
+            }
+        }
+        @media (max-width:$desktop){
+              
+        }
+    }
+}
+
+
+
+.agent-object {
+    &__title {
+        span {
+            color: var(--primaryTwo);
+            font-weight: 500;
+            font-size: var(--default-fz);
+            line-height: var(--default-lh);
+            @media (max-width:$desktop){
+                 display: block; 
+            }
+        }
+
+        @media (max-width:$desktop) {
+            padding: 0 16px;
+        }
+    }
+    &__nav{
+        margin-top: 16px;
+    }
+    &__filter {
+        margin-top: 24px;
+
+        @media (max-width:$desktop) {
+            margin-top: 24px;
+            margin-bottom: 0;
+            padding: 0 16px;
+        }
+    }
+
+    &__cards-list {
+        margin-top: 24px;
+      padding: 0;
+      border-radius: 0;
+      background-color: transparent;
+        .cards-list{
+            &__items{
+                margin-top: 0;
+            }
+        }
+    }
+    
+}
+
+.agent-object-filter {
+
+    &__row--1 {
+        grid-template-columns: percent(278, 1180) percent(363, 1180) percent(315, 1180) percent(200, 1180);
+    }
+
+    &__row--2 {
+        grid-template-columns: percent(278, 1180) 1fr;
+    }
+}

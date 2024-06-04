@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Рекомендуемые</title>
+    <link rel="preload" href="fonts/CoFoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CoFoSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/buy-apartment.css">
+    <script id="ymaps-id"></script>
+    <script defer src="js/buy-apartment.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container site-container--buy-apartment site-container--header-filter">
+        @include('partials/header.html')
+        <main class="main main-page-gap buy-apartment">
+            <div class="buy-apartment__body">
+                <h1 class="buy-apartment__title title-2 container">
+                    Рекомендуемые
+                </h1>
+                <div class="buy-apartment__cards-list cards-list control-cards control-cards--maps _map-active">
+                    <div class="container control-cards__container">
+                        <div class="control-cards__wrapper">
+                            <div class="cards-list__items control-cards__content control-cards__content--horizontal">
+                                <div class="card-secondary-skeleton">
+                                    <div class="card-secondary-skeleton__container">
+                                        <div class="card-secondary-skeleton__top">
+                                            <span class="card-secondary-skeleton__image web-skeleton">
+                                                <span class="web-skeleton__children"></span>
+                                            </span>
+                                        </div>
+                                        <div class="card-secondary-skeleton__content">
+                                            <span class="web-skeleton" style="width:85%;border-radius:4px;">
+                                                <span class="web-skeleton__children"></span>
+                                            </span>
+                                            <span class="web-skeleton" style="width:60%;border-radius:4px;margin-top: 8px;">
+                                                <span class="web-skeleton__children"></span>
+                                            </span>
+                                            <span class="web-skeleton" style="width:75%;border-radius:4px;margin-top: 5px;">
+                                                <span class="web-skeleton__children"></span>
+                                            </span>
+                                            <span class="web-skeleton" style="width:70%;border-radius:4px;margin-top: 5px;">
+                                                <span class="web-skeleton__children"></span>
+                                            </span>
+                                            <div class="col-2" style="margin-top:30px;">
+                                                <span class="web-skeleton" style="border-radius:4px;">
+                                                    <span class="web-skeleton__children"></span>
+                                                </span>
+                                                <span class="web-skeleton" style="border-radius:4px;">
+                                                    <span class="web-skeleton__children"></span>
+                                                </span>
+                                                <span class="web-skeleton" style="border-radius:4px;">
+                                                    <span class="web-skeleton__children"></span>
+                                                </span>
+                                            </div>
+                                            <div class="col" style="grid-column: 2/3;grid-row: 1/4;">
+                                                <span class="web-skeleton" style="border-radius:4px;width: 100%;height: 25px;">
+                                                    <span class="web-skeleton__children"></span>
+                                                </span>
+                                                <span class="web-skeleton" style="border-radius:4px;width: 100%;margin-top: 8px;">
+                                                    <span class="web-skeleton__children"></span>
+                                                </span>
+                                            </div>
+                                            <div class="card-secondary-skeleton__bottom user-info">
+                                                <div class="user-info__avatar avatar web-skeleton">
+                                                    <span class="web-skeleton__children"></span>
+                                                </div>
+                                                <span class="user-info__name web-skeleton" style="width:55%;border-radius: 4px;height:15px;">
+                                                    <span class="web-skeleton__children"></span>
+                                                </span>
+                                                <span class="user-info__pos web-skeleton" style="width:45%;border-radius: 4px;height:13px;align-self: end;">
+                                                    <span class="web-skeleton__children"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images" data-card-quantity-image="33">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item card-secondary__item--limit">
+                                                    <div class="card-secondary__image">
+                                                        <div class="card-image-more">
+                                                            Показать ещё 30 фото
+                                                        </div>
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                                <div class="row card-secondary__info--tags">
+                                                    <div class='tag tag--white tag--very-small _no-hover'>
+                                                        <span>Ипотека 0,1%</span>
+                                                    </div>
+                                                    <button type="button" class="btn btn-reset tag tag--white tag--very-small _no-hover" data-tooltip-mobile-popup data-tooltip-add-selector="max-w-320" data-tooltip-html='
+                                                    <div class="tw-flex tw-items-center tw-flex-wrap tw-gap-[6px] tw-w-max">
+                                                        <div class="tag tag--very-small _no-hover"><span>Скидка до 15%</span></div>
+                                                        <div class="tag tag--very-small _no-hover"><span>С кухней</span></div>
+                                                    </div>
+                                                    '>
+                                                    <span>ещё +2</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__options">
+                                                <div class='tag tag--white tag--very-small _no-hover'>
+                                                    <span>ипотека 3.5% для семей с детьми</span>
+                                                </div>
+                                                <button type="button" class="btn btn-reset tag tag--white tag--very-small _no-hover" data-tooltip-position-y="top" data-tooltip-add-selector="max-w-320" data-tooltip-mobile-popup data-tooltip-html='
+                                                <div class="tw-flex tw-items-center tw-flex-wrap tw-gap-[6px]">
+                                                    <div class="tag tag--very-small _no-hover"><span>Подарок 50 000 руб</span></div>
+                                                    <div class="tag tag--very-small _no-hover"><span>вознаграждение за рекомендацию</span></div>
+                                                </div>
+                                                '>
+                                                <span>ещё +2</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__metro metro-info">
+                                                <div class="metro-info__item">
+                                                    <div class="metro-info__icon">
+                                                        <svg width="20" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12.5634 13.0129H12.0132L12.4504 12.2937L12.7015 13.0129H12.5634ZM10.4765 15.5407L12.0037 13.0286V13.5726V15.1307V15.6904H12.5634H18.75H19.3097V15.1307V13.5726V13.0129H18.75H17.9269L13.9717 3.01133L13.5431 1.92757L12.9652 2.93959L9.99849 8.13432L7.03494 2.9398L6.45732 1.92734L6.02834 3.01118L2.06969 13.0129H1.25H0.69028V13.5726V15.1307V15.6904H1.25H7.43658H7.9963V15.1307V13.5726V13.0309L9.51979 15.5404L9.99792 16.328L10.4765 15.5407ZM7.43658 13.0129H7.29848L7.5493 12.2946L7.98536 13.0129H7.43658Z"
+                                                                fill="#4FB04F" stroke="white" stroke-width="1.4"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="metro-info__name">
+                                                        Некрасовка
+                                                    </div>
+                                                    <div class="metro-info__road">
+                                                        <div class="metro-info__time">
+                                                            1 мин.
+                                                        </div>
+                                                        <svg>
+                                                            <use xlink:href="./img/sprite.svg#run2"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="metro-info__item">
+                                                    <div class="metro-info__icon">
+                                                        <svg width="20" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12.5634 13.0129H12.0132L12.4504 12.2937L12.7015 13.0129H12.5634ZM10.4765 15.5407L12.0037 13.0286V13.5726V15.1307V15.6904H12.5634H18.75H19.3097V15.1307V13.5726V13.0129H18.75H17.9269L13.9717 3.01133L13.5431 1.92757L12.9652 2.93959L9.99849 8.13432L7.03494 2.9398L6.45732 1.92734L6.02834 3.01118L2.06969 13.0129H1.25H0.69028V13.5726V15.1307V15.6904H1.25H7.43658H7.9963V15.1307V13.5726V13.0309L9.51979 15.5404L9.99792 16.328L10.4765 15.5407ZM7.43658 13.0129H7.29848L7.5493 12.2946L7.98536 13.0129H7.43658Z"
+                                                                fill="#4FB04F" stroke="white" stroke-width="1.4"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="metro-info__name">
+                                                        Некрасовка
+                                                    </div>
+                                                    <div class="metro-info__road">
+                                                        <div class="metro-info__time">
+                                                            1 мин.
+                                                        </div>
+                                                        <svg>
+                                                            <use xlink:href="./img/sprite.svg#run2"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="metro-info__other" hidden>
+                                                    <span class="metro-info__count">+<span>0</span>&nbsp;станции</span>
+                                                    <div class="metro-info__other-items">
+                                                        <button type="button" class="btn btn-reset metro-info__close">
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#x"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-7.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-7.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-8.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-8.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                                <div class="row card-secondary__info--tags">
+                                                    <div class='tag tag--white tag--very-small _no-hover'>
+                                                        <span>Ипотека 0,1%</span>
+                                                    </div>
+                                                    <button type="button" class="btn btn-reset tag tag--white tag--very-small _no-hover" data-tooltip-mobile-popup data-tooltip-add-selector="max-w-320" data-tooltip-html='
+                                                    <div class="tw-flex tw-items-center tw-flex-wrap tw-gap-[6px] tw-w-max">
+                                                        <div class="tag tag--very-small _no-hover"><span>Скидка до 15%</span></div>
+                                                        <div class="tag tag--very-small _no-hover"><span>С кухней</span></div>
+                                                    </div>
+                                                    '>
+                                                    <span>ещё +2</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__options">
+                                                <div class='tag tag--white tag--very-small _no-hover'>
+                                                    <span>ипотека 3.5% для семей с детьми</span>
+                                                </div>
+                                                <button type="button" class="btn btn-reset tag tag--white tag--very-small _no-hover" data-tooltip-position-y="top" data-tooltip-add-selector="max-w-320" data-tooltip-mobile-popup data-tooltip-html='
+                                                <div class="tw-flex tw-items-center tw-flex-wrap tw-gap-[6px]">
+                                                    <div class="tag tag--very-small _no-hover"><span>Подарок 50 000 руб</span></div>
+                                                    <div class="tag tag--very-small _no-hover"><span>вознаграждение за рекомендацию</span></div>
+                                                </div>
+                                                '>
+                                                <span>ещё +2</span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__metro metro-info">
+                                                <div class="metro-info__item">
+                                                    <div class="metro-info__icon">
+                                                        <svg width="20" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12.5634 13.0129H12.0132L12.4504 12.2937L12.7015 13.0129H12.5634ZM10.4765 15.5407L12.0037 13.0286V13.5726V15.1307V15.6904H12.5634H18.75H19.3097V15.1307V13.5726V13.0129H18.75H17.9269L13.9717 3.01133L13.5431 1.92757L12.9652 2.93959L9.99849 8.13432L7.03494 2.9398L6.45732 1.92734L6.02834 3.01118L2.06969 13.0129H1.25H0.69028V13.5726V15.1307V15.6904H1.25H7.43658H7.9963V15.1307V13.5726V13.0309L9.51979 15.5404L9.99792 16.328L10.4765 15.5407ZM7.43658 13.0129H7.29848L7.5493 12.2946L7.98536 13.0129H7.43658Z"
+                                                                fill="#4FB04F" stroke="white" stroke-width="1.4"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="metro-info__name">
+                                                        Некрасовка
+                                                    </div>
+                                                    <div class="metro-info__road">
+                                                        <div class="metro-info__time">
+                                                            1 мин.
+                                                        </div>
+                                                        <svg>
+                                                            <use xlink:href="./img/sprite.svg#run2"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="metro-info__item">
+                                                    <div class="metro-info__icon">
+                                                        <svg width="20" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12.5634 13.0129H12.0132L12.4504 12.2937L12.7015 13.0129H12.5634ZM10.4765 15.5407L12.0037 13.0286V13.5726V15.1307V15.6904H12.5634H18.75H19.3097V15.1307V13.5726V13.0129H18.75H17.9269L13.9717 3.01133L13.5431 1.92757L12.9652 2.93959L9.99849 8.13432L7.03494 2.9398L6.45732 1.92734L6.02834 3.01118L2.06969 13.0129H1.25H0.69028V13.5726V15.1307V15.6904H1.25H7.43658H7.9963V15.1307V13.5726V13.0309L9.51979 15.5404L9.99792 16.328L10.4765 15.5407ZM7.43658 13.0129H7.29848L7.5493 12.2946L7.98536 13.0129H7.43658Z"
+                                                                fill="#4FB04F" stroke="white" stroke-width="1.4"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="metro-info__name">
+                                                        Некрасовка
+                                                    </div>
+                                                    <div class="metro-info__road">
+                                                        <div class="metro-info__time">
+                                                            1 мин.
+                                                        </div>
+                                                        <svg>
+                                                            <use xlink:href="./img/sprite.svg#run2"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="metro-info__item">
+                                                    <div class="metro-info__icon">
+                                                        <svg width="20" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12.5634 13.0129H12.0132L12.4504 12.2937L12.7015 13.0129H12.5634ZM10.4765 15.5407L12.0037 13.0286V13.5726V15.1307V15.6904H12.5634H18.75H19.3097V15.1307V13.5726V13.0129H18.75H17.9269L13.9717 3.01133L13.5431 1.92757L12.9652 2.93959L9.99849 8.13432L7.03494 2.9398L6.45732 1.92734L6.02834 3.01118L2.06969 13.0129H1.25H0.69028V13.5726V15.1307V15.6904H1.25H7.43658H7.9963V15.1307V13.5726V13.0309L9.51979 15.5404L9.99792 16.328L10.4765 15.5407ZM7.43658 13.0129H7.29848L7.5493 12.2946L7.98536 13.0129H7.43658Z"
+                                                                fill="#4FB04F" stroke="white" stroke-width="1.4"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="metro-info__name">
+                                                        Некрасовка
+                                                    </div>
+                                                    <div class="metro-info__road">
+                                                        <div class="metro-info__time">
+                                                            1 мин.
+                                                        </div>
+                                                        <svg>
+                                                            <use xlink:href="./img/sprite.svg#run2"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="metro-info__item">
+                                                    <div class="metro-info__icon">
+                                                        <svg width="20" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12.5634 13.0129H12.0132L12.4504 12.2937L12.7015 13.0129H12.5634ZM10.4765 15.5407L12.0037 13.0286V13.5726V15.1307V15.6904H12.5634H18.75H19.3097V15.1307V13.5726V13.0129H18.75H17.9269L13.9717 3.01133L13.5431 1.92757L12.9652 2.93959L9.99849 8.13432L7.03494 2.9398L6.45732 1.92734L6.02834 3.01118L2.06969 13.0129H1.25H0.69028V13.5726V15.1307V15.6904H1.25H7.43658H7.9963V15.1307V13.5726V13.0309L9.51979 15.5404L9.99792 16.328L10.4765 15.5407ZM7.43658 13.0129H7.29848L7.5493 12.2946L7.98536 13.0129H7.43658Z"
+                                                                fill="#4FB04F" stroke="white" stroke-width="1.4"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="metro-info__name">
+                                                        Некрасовка
+                                                    </div>
+                                                    <div class="metro-info__road">
+                                                        <div class="metro-info__time">
+                                                            1 мин.
+                                                        </div>
+                                                        <svg>
+                                                            <use xlink:href="./img/sprite.svg#run2"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="metro-info__other" hidden>
+                                                    <span class="metro-info__count">+<span>0</span>&nbsp;станции</span>
+                                                    <div class="metro-info__other-items">
+                                                        <button type="button" class="btn btn-reset metro-info__close">
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#x"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                                <div class="row card-secondary__info--tags">
+                                                    <div class='tag tag--white tag--very-small _no-hover'>
+                                                        <span>Ипотека 0,1%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__options">
+                                                <div class='tag tag--white tag--very-small _no-hover'>
+                                                    <span>ипотека 3.5% для семей с детьми</span>
+                                                </div>
+                                                <button type="button" class="btn btn-reset tag tag--white tag--very-small _no-hover" data-tooltip-position-y="top" data-tooltip-add-selector="max-w-320" data-tooltip-mobile-popup data-tooltip-html='
+                                                <div class="tw-flex tw-items-center tw-flex-wrap tw-gap-[6px]">
+                                                    <div class="tag tag--very-small _no-hover"><span>Подарок 50 000 руб</span></div>
+                                                    <div class="tag tag--very-small _no-hover"><span>вознаграждение за рекомендацию</span></div>
+                                                </div>
+                                                '>
+                                                <span>ещё +2</span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__metro metro-info">
+                                                <div class="metro-info__item">
+                                                    <div class="metro-info__icon">
+                                                        <svg width="20" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12.5634 13.0129H12.0132L12.4504 12.2937L12.7015 13.0129H12.5634ZM10.4765 15.5407L12.0037 13.0286V13.5726V15.1307V15.6904H12.5634H18.75H19.3097V15.1307V13.5726V13.0129H18.75H17.9269L13.9717 3.01133L13.5431 1.92757L12.9652 2.93959L9.99849 8.13432L7.03494 2.9398L6.45732 1.92734L6.02834 3.01118L2.06969 13.0129H1.25H0.69028V13.5726V15.1307V15.6904H1.25H7.43658H7.9963V15.1307V13.5726V13.0309L9.51979 15.5404L9.99792 16.328L10.4765 15.5407ZM7.43658 13.0129H7.29848L7.5493 12.2946L7.98536 13.0129H7.43658Z"
+                                                                fill="#4FB04F" stroke="white" stroke-width="1.4"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="metro-info__name">
+                                                        Некрасовка
+                                                    </div>
+                                                    <div class="metro-info__road">
+                                                        <div class="metro-info__time">
+                                                            1 мин.
+                                                        </div>
+                                                        <svg>
+                                                            <use xlink:href="./img/sprite.svg#run2"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="metro-info__other" hidden>
+                                                    <span class="metro-info__count">+<span>0</span>&nbsp;станции</span>
+                                                    <div class="metro-info__other-items">
+                                                        <button type="button" class="btn btn-reset metro-info__close">
+                                                            <svg>
+                                                                <use xlink:href="./img/sprite.svg#x"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                                <div class="row card-secondary__info--tags">
+                                                    <div class='tag tag--white tag--very-small _no-hover'>
+                                                        <span>Ипотека 0,1%</span>
+                                                    </div>
+                                                    <button type="button" class="btn btn-reset tag tag--white tag--very-small _no-hover" data-tooltip-mobile-popup data-tooltip-add-selector="max-w-320" data-tooltip-html='
+                                                    <div class="tw-flex tw-items-center tw-flex-wrap tw-gap-[6px] tw-w-max">
+                                                        <div class="tag tag--very-small _no-hover"><span>Скидка до 15%</span></div>
+                                                        <div class="tag tag--very-small _no-hover"><span>С кухней</span></div>
+                                                    </div>
+                                                    '>
+                                                    <span>ещё +2</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <div class="cards-list__banner">
+                                    Баннер
+                                </div>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="card-secondary">
+                                    <a href="./develop-inner-test.html" class="card-secondary__container">
+
+
+
+                                        <div class="card-secondary__top">
+                                            <div class="card-secondary__images">
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-3.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-3.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                                <div class="card-secondary__item">
+                                                    <div class="card-secondary__image">
+                                                        <picture>
+                                                            <source srcset="./img/card-6.webp" type="image/webp">
+                                                            <img loading="lazy" src="./img/card-6.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                                        </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="card-secondary__pagination list-reset" aria-hidden="true"></ul>
+                                            <div class="card-secondary__info">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="card-secondary__content">
+                                            <h3 class="card-secondary__name">
+                                                ЖК “Элит цветочные поляны экопарк”
+                                            </h3>
+                                            <div class="card-secondary__add-info">
+                                                <span class="card-secondary__quantity">25 квартир от застройщика</span>
+                                                <span>Срок сдачи: 1 кв. 2024; &nbsp; есть сданные</span>
+                                            </div>
+                                            <div class="card-secondary__address">
+                                                Краснодар, ул.Карла-Маркса., 234
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--1">
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>Студии</span>
+                                                        <span>от 4,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>1-комн.</span>
+                                                        <span>от 34,7 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>2-комн.</span>
+                                                        <span>от 40,7 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="card-secondary__price">
+                                                        <span>3-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                    <div class="card-secondary__price">
+                                                        <span>4-комн.</span>
+                                                        <span>от 134 млн ₽</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__prices card-secondary__prices--2">
+                                                <div class="card-secondary__price-main">
+                                                    <span class="card-secondary__price-new">
+                                                        <span class="title-2">от 2 897 000 ₽</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-secondary__bottom">
+                                                <div class="card-secondary__user user-info">
+                                                    <div class="user-info__avatar avatar online">
+                                                        <img loading="lazy" src="./img/avatar-1.jpg" width="40" height="40" alt="Алексей Г.">
+                                                    </div>
+                                                    <span class="user-info__name">
+                                                        Югстройинвест
+                                                    </span>
+                                                    <span class="user-info__pos">
+                                                        Застройщик
+                                                    </span>
+                                                </div>
+                                                <div class="card-secondary__info--mobile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                            <button type="button" class="btn btn-reset btn-third cards-list__next">
+                                Следующая страница
+                            </button>
+                            <div class="cards-list__pagination pagination">
+                                <ul class="pagination__list list-reset">
+                                    <li class="pagination__item" disabled>
+                                        <a href="#">
+                                            1
+                                        </a>
+                                    </li>
+                                    <li class="pagination__item">
+                                        <a href="#">
+                                            2
+                                        </a>
+                                    </li>
+                                    <li class="pagination__item">
+                                        <a href="#">
+                                            3
+                                        </a>
+                                    </li>
+                                    <li class="pagination__item">
+                                        <a href="#">
+                                            4
+                                        </a>
+                                    </li>
+                                    <li class="pagination__item">
+                                        <a href="#">
+                                            5
+                                        </a>
+                                    </li>
+                                    <li class="pagination__item dots" tabindex="-1">
+                                        ...
+                                    </li>
+                                    <li class="pagination__item">
+                                        <a href="#">
+                                            199
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="control-cards__maps _sticky map-draw">
+                            <div class="control-cards__maps--skeleton skeleton">
+                                <span class="web-skeleton" style="width:100%;border-radius:12px;height: 100%;">
+                                    <span class="web-skeleton__children"></span>
+                                </span>
+                            </div>
+                            <div class="map-draw__btns">
+                                <button type="button" class="btn btn-reset map-draw__btn" title="Нарисовать область">
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#finger"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="btn btn-reset map-draw__btn map-draw__btn-more" title="Добавить ещё область">
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#plus"></use>
+                                    </svg>
+                                    <span>Ещё</span>
+                                </button>
+                                <button type="button" class="btn btn-reset map-draw__btn" title="Очистить">
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#trash-2"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div id="control-cards__maps" class="map-primary remove-copyrights-pane _hidden-map"></div>
+                            <a class="tooltip-card" href="#" style="position: absolute;top: 24px;left: 30px; z-index: 99;">
+                                <div class="tooltip-card__image ibg">
+                                    <picture>
+                                        <source srcset="./img/card-1.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                    </picture>
+                                </div>
+                                <div class="tooltip-card__content">
+                                    <h4 class="tooltip-card__name">
+                                        ЖК “Элит цветочные поляны экопарк”
+                                    </h4>
+                                    <div class="tooltip-card__wrapper">
+                                        <ul class="tooltip-card__list list-reset">
+                                            <li class="tooltip-card__item">
+                                                <span>Студии</span>
+                                                <span>от 4,7 млн ₽</span>
+                                            </li>
+                                            <li class="tooltip-card__item">
+                                                <span>1-комн.</span>
+                                                <span>от 34,7 млн ₽</span>
+                                            </li>
+                                            <li class="tooltip-card__item">
+                                                <span>2-комн.</span>
+                                                <span>от 40,7 млн ₽</span>
+                                            </li>
+                                            <li class="tooltip-card__item">
+                                                <span>3-комн.</span>
+                                                <span>от 134 млн ₽</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="tooltip-card__list list-reset">
+                                            <li class="tooltip-card__item">
+                                                <span>4-комн.</span>
+                                                <span>от 134 млн ₽</span>
+                                            </li>
+                                            <li class="tooltip-card__item">
+                                                <span>5-комн.</span>
+                                                <span>от 134 млн ₽</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="tooltip-card" href="#" style="position: absolute;top: 200px;left: 30px; z-index: 99;">
+                                <div class="tooltip-card__image ibg">
+                                    <picture>
+                                        <source srcset="./img/card-1.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                    </picture>
+                                </div>
+                                <div class="tooltip-card__content">
+                                    <h4 class="tooltip-card__name">
+                                        ЖК “Элит цветочные поляны экопарк”
+                                    </h4>
+                                    <div class="tooltip-card__wrapper">
+                                        <ul class="tooltip-card__list list-reset">
+                                            <li class="tooltip-card__item">
+                                                <span>Студии</span>
+                                                <span>от 4,7 млн ₽</span>
+                                            </li>
+                                            <li class="tooltip-card__item">
+                                                <span>1-комн.</span>
+                                                <span>от 34,7 млн ₽</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="tooltip-cards" style="position: absolute;top: 380px;left: 30px; z-index: 99;">
+                                <a href="#" class="tooltip-cards__item very-small-card">
+                                    <div class="very-small-card__image">
+                                        <picture>
+                                            <source srcset="./img/card-1.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-1.jpg" width="323" height="207" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="very-small-card__info">
+                                        <span class="very-small-card__price">
+                                            5 297 000 ₽
+                                        </span>
+                                        <h4 class="very-small-card__name">
+                                            1-комн. 54 м², 9/12 эт.
+                                        </h4>
+                                        <div class="very-small-card__address">
+                                            Краснодар, ул.Карла-Маркса., 234
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="tooltip-cards__item very-small-card">
+                                    <div class="very-small-card__image">
+                                        <picture>
+                                            <source srcset="./img/card-scheme-2.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-scheme-2.png" width="171" height="171" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                        </picture>
+                                    </div>
+                                    <div class="very-small-card__info">
+                                        <span class="very-small-card__price">
+                                            5 297 000 ₽
+                                        </span>
+                                        <h4 class="very-small-card__name">
+                                            1-комн. 54 м², 9/12 эт.
+                                        </h4>
+                                        <div class="very-small-card__address">
+                                            Краснодар, ул.Карла-Маркса., 234
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="tooltip-cards__item very-small-card">
+                                    <div class="very-small-card__image">
+                                        <picture>
+                                            <source srcset="./img/card-scheme-2.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/card-scheme-2.png" width="171" height="171" alt="1-комн. квартира, 54 м², 12/12 эт.">
+                                        </picture>
+                                    </div>
+                                    <div class="very-small-card__info">
+                                        <span class="very-small-card__price">
+                                            5 297 000 ₽
+                                        </span>
+                                        <h4 class="very-small-card__name">
+                                            1-комн. 54 м², 9/12 эт.
+                                        </h4>
+                                        <div class="very-small-card__address">
+                                            Краснодар, ул.Карла-Маркса., 234
+                                        </div>
+                                    </div>
+                                </a>
+                                <button type="button" class="btn btn-reset tooltip-cards__bottom">
+                                    Ещё 12 квартир
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-lora-btn secondary-tooltip secondary-tooltip--click secondary-tooltip--link _active">
+                <a href="./chat.html" class="btn btn-reset secondary-tooltip__btn">
+                    <picture>
+                        <source srcset="./img/lora_face.webp" type="image/webp">
+                        <img loading="lazy" src="./img/lora_face.webp" width="32" height="32" alt="Lora">
+                      </picture>
+                </a>
+                <div class="secondary-tooltip__content">
+                    <button class="btn btn-reset secondary-tooltip__close">
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#x"></use>
+                        </svg>
+                    </button>
+                    <div>
+                        <h3 class="chat-lora-btn__title">Подбор с YaGPT</h3>
+                        <p>Подберём вам ЖК?</p>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-reset scroll-up">
+                <svg>
+                    <use xlink:href="./img/sprite.svg#check"></use>
+                </svg>
+            </button>
+        </main>
+        @include('partials/footer.html')
+    </div>
+    <!-- popups -->
+    @include('popups/city.html')
+    @include('popups/add.html')
+    @include('popups/personal-area2.html')
+    @include('popups/edit-profile.html')
+    @include('popups/sber-tied.html')
+    <!-- ==== -->
+    @include('popups/search-area.html')
+    <!-- popups -->
+</body>
+
+
+</html>

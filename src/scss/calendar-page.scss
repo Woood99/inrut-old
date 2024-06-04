@@ -1,0 +1,44 @@
+@use "sass:math";
+
+@import './$settings';
+
+
+// =============================================================================================================
+
+
+// ui components
+@import "./ui-kit/object-info";
+@import "./ui-kit/card-primary";
+@import "./ui-kit/card-secondary";
+@import "./ui-kit/card-scheme";
+@import "./ui-kit/bank-info";
+@import "./ui-kit/bank-offer";
+@import "./ui-kit/card-price";
+@import "./ui-kit/price-history";
+@import "./ui-kit/card-stock";
+@import "./ui-kit/video-card";
+@import "./ui-kit/moving-card";
+
+// =============================================================================================================
+
+
+// small components
+@import "./components/calendar";
+@import "./components/bid";
+@import "./components/video-block";
+@import "./components/search-area";
+@import "./components/block-stock";
+@import "./components/service-sample";
+@import "./components/gallery";
+
+
+// =============================================================================================================
+
+
+// pages
+@import "./components/place-sale";
+@import "./components/calendar-page";
+@import "./components/calendar-create-event";
+
+
+// =============================================================================================================

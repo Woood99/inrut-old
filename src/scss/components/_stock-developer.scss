@@ -1,0 +1,110 @@
+.stock-developer {
+    &__body {
+        @media (max-width:$desktop) {
+            padding: calc(var(--header-height,51px) + 24px) 0 16px;
+            background-color: var(--stand-bg);
+            border-radius: 0 0 12px 12px;
+        }
+    }
+
+    &__title {
+        @media (max-width:$desktop) {
+            padding: 0 16px;
+        }
+    }
+
+    &__filter {
+        @media (max-width:$desktop) {
+            padding: 0 16px;
+            margin-top: 16px;
+            margin-bottom: 16px
+        }
+    }
+
+    &__input {
+        @media (max-width:$desktop) {
+            width: 100%;
+        }
+    }
+    &__filter{
+        margin-top: 24px;
+        .filter__btn{
+            @media (max-width:$desktop){
+                 &:not(._dynamic-moved) {
+                    display: none;
+                 } 
+            }
+        }
+    }
+    &__controls {
+        .filter__clear {
+            padding: 0 37px;
+        }
+
+        .filter__go {
+            padding: 0 58px;
+        }
+    }
+
+    &__content {
+        margin-top: 16px;
+        padding: 20px 0;
+    }
+
+    .tabs-primary {
+        &__container {
+            background-color: transparent;
+            margin-top: 0;
+            padding-top: 0;
+        }
+        &__inner{
+            margin-top: 0px;
+            @media (min-width:$desktop-min){
+                >._sticky{
+                    padding-top: 8px;
+                    position: sticky;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 5;
+                    background-color: var(--white);
+                }
+                .filter--sticky{
+                    top: 47px;
+                } 
+            }
+            @media (max-width:$desktop){
+                 padding-top: 0;
+                 margin-top: 0; 
+            }
+        }
+        @media (max-width:$desktop){
+             padding: 24px 0; 
+        }
+    }
+
+    .cards-list {
+        &__items {
+            margin-top: 0;
+        }
+    }
+
+    &__newsline {
+        .cards-list {
+            &__items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    &--2 {
+        .stock-developer {
+            &__filter {
+                margin-top: 32px;
+            }
+        }
+    }
+    .card-stock-secondary{
+
+    }
+}

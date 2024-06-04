@@ -1,0 +1,94 @@
+@use "sass:math";
+
+@import './$settings';
+
+// =============================================================================================================
+
+
+// ui components
+@import "./ui-kit/main-slider";
+@import "./ui-kit/skeleton";
+@import "./ui-kit/room-info";
+@import "./ui-kit/object-info";
+@import "./ui-kit/card-primary";
+@import "./ui-kit/card-secondary";
+@import "./ui-kit/card-small";
+@import "./ui-kit/card-small-photo";
+@import "./ui-kit/card-scheme";
+@import "./ui-kit/advantages-card";
+@import "./ui-kit/card-user";
+@import "./ui-kit/card-stock";
+@import "./ui-kit/client-info";
+@import "./ui-kit/news-card";
+@import "./ui-kit/video-card";
+@import "./ui-kit/tariff-info";
+@import "./ui-kit/bank-info";
+@import "./ui-kit/bank-offer";
+@import "./ui-kit/card-price";
+@import "./ui-kit/price-history";
+
+
+// =============================================================================================================
+
+
+// small components
+@import "./components/calendar";
+@import "./components/bid";
+@import "./components/control-cards";
+@import "./components/gallery";
+@import "./components/video-block";
+@import "./components/checkboard";
+@import "./components/layouts";
+@import "./components/genplan";
+@import "./components/search-area";
+@import "./components/ask";
+@import "./components/block-stock";
+@import "./components/furnishing-sets";
+@import "./components/documentation";
+@import "./components/mortgage-requests";
+@import "./components/shorts";
+
+
+// =============================================================================================================
+
+
+// pages
+@import "./components/home";
+@import "./components/request-catalog";
+@import "./components/purchase-request";
+@import "./components/selection-estate";
+@import "./components/your-app";
+@import "./components/object";
+@import "./components/object-removed";
+@import "./components/object-sold";
+@import "./components/base-agent-catalog";
+@import "./components/agent";
+@import "./components/submit-app";
+@import "./components/place-sale";
+@import "./components/buy-apartment";
+@import "./components/agent-develop";
+@import "./components/develop-catalog";
+@import "./components/develop-inner";
+@import "./components/detailed-flat";
+@import "./components/stock-developer";
+@import "./components/calendar-page";
+@import "./components/objects-base";
+@import "./components/object-base-inner";
+@import "./components/clients";
+@import "./components/favorites";
+@import "./components/client";
+@import "./components/mortgage-app";
+@import "./components/mortgage-app-agent";
+@import "./components/my-requests";
+@import "./components/my-app";
+@import "./components/mortgage";
+@import "./components/selection-estate-agent";
+@import "./components/object-agent";
+@import "./components/tariff-card";
+@import "./components/news";
+@import "./components/my-objects";
+@import "./components/create-develop";
+
+
+
+// =============================================================================================================

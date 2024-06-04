@@ -1,0 +1,19 @@
+@use "sass:math";
+
+@import './$settings';
+
+
+// =============================================================================================================
+
+
+// ui components
+@import "./ui-kit/skeleton";
+@import "./ui-kit/card-stock";
+@import "./ui-kit/video-card";
+
+// small components
+@import "./components/video-block";
+@import "./components/shorts";
+
+// pages
+@import "./components/stock-developer";

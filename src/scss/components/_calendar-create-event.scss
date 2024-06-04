@@ -1,0 +1,156 @@
+.calendar-create-event {
+
+    &__title {
+        @media (max-width:$desktop) {
+            padding: 0 16px;
+        }
+    }
+
+    &__container {
+        @media (max-width:$desktop) {
+            padding: calc(var(--header-height) + 24px) 0 16px;
+            background-color: var(--stand-bg);
+        }
+    }
+
+    &__body {
+        margin-top: 32px;
+        padding: 32px;
+        background-color: var(--stand-bg);
+        border-radius: 16px;
+
+        @media (max-width:$desktop) {
+            margin-top: 24px;
+            background-color: var(--white);
+            padding: 0;
+        }
+    }
+    &__row{
+        padding: 24px;
+        background-color: var(--white);
+        box-shadow: var(--shadow-primary);
+        border-radius: 12px;
+        &:not(:last-child){
+            margin-bottom: 16px;
+        }
+    }
+    &__item{
+        width: 100%;
+        &:not(:last-child){
+            margin-bottom: 32px;
+        }
+        .field-input{
+            &__wrapper{
+                width: 100%;
+                flex-wrap: nowrap;
+                gap: 8px;
+                .input-text{
+                    width: 100%;
+                }
+            }
+        }
+        .field-dropdown{
+            &__wrapper{
+                max-width: 100%;
+            }
+        }
+    }
+    &__create-link{
+        color: var(--blue);
+        @media (min-width:$desktop-min){
+        transition: color $transitionSpeed $transitionFunction;
+             &:hover{
+                text-decoration: underline;
+                color: var(--blue-dark);
+             } 
+        }
+    }
+    &__add-link{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        svg{
+            width: 16px;
+            height: 16px;
+            fill: var(--blue);
+        }
+    }
+    &__video-meeting-result{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    width: 100%;
+
+    background-color: rgba(50, 179, 67, .16);
+    color: #32B343;
+    padding: 8px 16px;
+    border-radius: 12px;
+    }
+    &__video-meeting-close{
+        width: 20px;
+        height: 20px;
+        svg{
+            width: 20px;
+            height: 20px;
+            fill: var(--primaryTwo);
+        }
+    }
+    &__create-link-tooltip{
+        .secondary-tooltip__content{
+            padding: 48px 0 16px;
+            width: max-content;
+            max-width: 300px;
+            min-width: 200px;
+        }
+    }
+    &__create-link-select{
+        text-align: left;
+        display: flex;
+        align-items: center;
+        padding: 12px 16px;
+        width: 100%;
+        transition: background-color $transitionSpeed $transitionFunction,
+        color $transitionSpeed $transitionFunction;
+
+        svg{
+            width: 12px;
+            height: 12px;
+            stroke:var(--blue);
+            stroke-width: 1.5px;
+            fill: none;
+
+        }
+        @media (min-width:$desktop-min){
+             &:hover{
+                background-color: #f2f2f2;
+             } 
+        }
+        &._active{
+            pointer-events: none;
+    background-color: rgba(0, 150, 255, 0.08);
+    color: var(--blue);
+        }
+    }
+    &__btn{
+        width: 100%;
+    }
+    &__add{
+        display: flex;
+        align-items: center;
+        svg{
+            margin-right: 8px;
+            fill: var(--blue);
+            width: 14px;
+            height: 14px;
+        }
+    }
+    [data-add-descr-btn],[data-address-btn]{
+        margin-top: -16px;
+    }
+  @media (min-width:$desktop-min){
+    ._container{
+        max-width: 570px;
+    } 
+  }
+}

@@ -1,0 +1,16 @@
+@use "sass:math";
+
+@import './$settings';
+
+
+// =============================================================================================================
+
+
+// ui components
+@import "./ui-kit/card-small-info";
+
+
+// pages
+@import "./components/edit-profile";
+@import "./components/present";
+

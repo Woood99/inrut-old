@@ -1,0 +1,14 @@
+@use "sass:math";
+
+@import './$settings';
+
+
+// ui components
+@import "./ui-kit/card-info";
+
+
+// small components
+
+
+// pages
+@import "./components/chat-page";

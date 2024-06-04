@@ -1,0 +1,55 @@
+.my-objects {
+    background-color: var(--stand-bg);
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__btns {
+        display: flex;
+    }
+
+    &__btn {
+        &._active{
+            background-color: var(--blue);
+            color: var(--white);
+        }
+        &:not(:last-child){
+            margin-right: 12px;
+        }
+    }
+    &__content{
+        margin-top: 24px;
+    }
+    &__create {
+    }
+
+    .tabs-primary{
+        &__container{
+            background-color: transparent;
+            margin-top: 0;
+            padding: 0;
+        }
+        &__row-list{
+        }
+        &__next{
+            @media (max-width:$smallTablet-max){
+                 width: 100%; 
+            }
+        }
+        &__inner{
+            @media (max-width:$desktop){
+                background-color:var(--white); 
+                margin-top: 16px;
+            }
+        }
+        @media (max-width:$desktop){
+            padding-top: 72px; 
+            background-color:var(--stand-bg);
+        }
+    }
+    .main{
+
+    }
+}

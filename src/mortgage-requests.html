@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Заявка на ипотеку</title>
+    <link rel="preload" href="fonts/CoFoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CoFoSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container site-container--object">
+        @include('partials/header.html')
+        <main class="main main-page-gap object mortgage-requests">
+            <h1 class="buy-apartment__title title-2 container">
+                Заявка на ипотеку
+            </h1>
+            <div class="mortgage-requests__body">
+                <div class="mortgage-requests__container container">
+                    <form action="#" class="mortgage-requests__form" id="mortgage-requests-form">
+                        <div data-spollers class="spollers">
+                            <div class="spollers__item mortgage-requests__spoller">
+                                <button type="button" data-spoller="" class="btn btn-reset spollers__title">
+                                    <h3 class="title-3">
+                                        Паспортные данные
+                                    </h3>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-small"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers__body mortgage-requests__content" hidden>
+                                    <div class="mortgage-requests__descr-block">
+                                        <p>
+                                            Взять ипотеку и забронировать квартиру может только владелец личного кабинета.
+                                            При этом созаёмщиком может быть любой
+                                        </p>
+                                    </div>
+                                    <div class="mortgage-requests__fields">
+                                        <div class="select-secondary">
+                                            <div class="select-secondary__wrapper">
+                                                <span class="select-secondary__placeholder">
+                                                    Пол
+                                                </span>
+                                                <select class="select-secondary__body" hidden name="complex">
+                                                    <option value="room-1">Мужской</option>
+                                                    <option value="room-2">Женский</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="select-secondary" data-mortgage-requests-field="citizenship">
+                                            <div class="select-secondary__wrapper">
+                                                <span class="select-secondary__placeholder">
+                                                    Гражданство
+                                                </span>
+                                                <select class="select-secondary__body" hidden name="complex">
+                                                    <option value="russian">Российская федерация</option>
+                                                    <option value="another">Другая страна</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="input-text input-text--no-exp mortgage-requests__field--row" hidden data-mortgage-requests-field="another-country">
+                                            <label class="input-text__label">
+                                                <span>Страна</span>
+                                                <input type="text" name="Страна" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="input-text input-text--no-exp" data-mortgage-requests-field="place-birth" data-validate-required>
+                                            <label class="input-text__label">
+                                                <span>Место рождения</span>
+                                                <input type="text" name="Место рождения" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="input-text input-text--no-exp" data-mortgage-requests-field="series-number">
+                                            <label class="input-text__label">
+                                                <span>Серия и номер паспорта</span>
+                                                <input type="text" name="Серия и номер паспорта" class="input-reset input-text__input input-series-number-mask" value=""
+                                                    placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="input-text input-text--no-exp" data-mortgage-requests-field="depart-code">
+                                            <label class="input-text__label">
+                                                <span>Код подразделения</span>
+                                                <input type="text" name="Код подразделения" class="input-reset input-text__input input-depart-code-mask" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="input-text input-text--no-exp" data-mortgage-requests-field="date-issue">
+                                            <label class="input-text__label">
+                                                <span>Дата выдачи</span>
+                                                <input type="text" name="Имя" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="input-text input-text--no-exp mortgage-requests__field--row" data-mortgage-requests-field="passport-issued"
+                                            data-validate-required>
+                                            <label class="input-text__label">
+                                                <span>Кем выдан паспорт</span>
+                                                <input type="text" name="Кем выдан паспорт" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mortgage-requests__fields">
+                                        <h3 class="title-3 mortgage-requests__field--row">Адрес регистрации</h3>
+                                        <div class="input-text input-text--no-exp mortgage-requests__field--row" data-mortgage-requests-field="registration-address"
+                                            data-validate-required>
+                                            <label class="input-text__label">
+                                                <span>Адрес регистрации</span>
+                                                <input type="text" name="Адрес регистрации" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                        <label class="toggle-checkbox mortgage-requests__field--row" data-mortgage-requests-field="only-temp-regist">
+                                            <input type="checkbox" name="toggle-1" data-mortgage-requests-toggle="1">
+                                            <div aria-hidden="true"></div>
+                                            <span>У меня только временная регистрация</span>
+                                        </label>
+                                        <div class="input-text input-text--no-exp mortgage-requests__field--row" data-mortgage-requests-field="registration-address-add"
+                                            data-mortgage-requests-content="1" hidden data-validate-required>
+                                            <label class="input-text__label">
+                                                <span>Адрес регистрации</span>
+                                                <input type="text" name="Имя" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="input-text input-text--no-exp" data-mortgage-requests-content="1" hidden data-mortgage-requests-field='start-registr'>
+                                            <label class="input-text__label">
+                                                <span>Дата начала регистрации</span>
+                                                <input type="text" name="Имя" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="input-text input-text--no-exp" data-mortgage-requests-content="1" hidden data-mortgage-requests-field='end-registr'>
+                                            <label class="input-text__label">
+                                                <span>Дата окончания регистрации</span>
+                                                <input type="text" name="Имя" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mortgage-requests__fields">
+                                        <label class="toggle-checkbox mortgage-requests__field--row">
+                                            <input type="checkbox" name="toggle-2" data-mortgage-requests-toggle="2">
+                                            <div aria-hidden="true"></div>
+                                            <span>Адрес фактического проживания совпадает с адресом регистрации</span>
+                                        </label>
+                                        <div class="input-text input-text--no-exp mortgage-requests__field--row" data-mortgage-requests-field="residence-address"
+                                            data-validate-required data-mortgage-requests-content="2">
+                                            <label class="input-text__label">
+                                                <span>Адрес фактического проживания</span>
+                                                <input type="text" name="Адрес фактического проживания" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="select-secondary mortgage-requests__field--row" data-mortgage-requests-field="reasons-residence"
+                                            data-mortgage-requests-content="2">
+                                            <div class="select-secondary__wrapper">
+                                                <span class="select-secondary__placeholder">
+                                                    Основание для проживания
+                                                </span>
+                                                <select class="select-secondary__body" hidden name="complex">
+                                                    <option placeholder>Не выбрано</option>
+                                                    <option value="room-1">Аренда</option>
+                                                    <option value="room-2">Социальный найм</option>
+                                                    <option value="room-2">У родственников</option>
+                                                    <option value="room-2">Другое</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="input-text input-text--no-exp mortgage-requests__field--row" data-mortgage-requests-field="snils">
+                                            <label class="input-text__label">
+                                                <span>Снилс</span>
+                                                <input type="text" name="Снилс" class="input-reset input-text__input input-snils-mask" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spollers__item mortgage-requests__spoller">
+                                <button type="button" data-spoller="" class="btn btn-reset spollers__title">
+                                    <h3 class="title-3">
+                                        Личные данные
+                                    </h3>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-small"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers__body mortgage-requests__content" hidden>
+                                    <div class="mortgage-requests__fields">
+                                        <label class="toggle-checkbox mortgage-requests__field--row">
+                                            <input type="checkbox" name="toggle-2" data-mortgage-requests-toggle="3">
+                                            <div aria-hidden="true"></div>
+                                            <span>Были изменения ФИО</span>
+                                        </label>
+                                        <div class="input-text input-text--no-exp" data-mortgage-requests-field="surname-old" data-validate-required
+                                            data-mortgage-requests-content="3" hidden>
+                                            <label class="input-text__label">
+                                                <span>Фамилия</span>
+                                                <input type="text" name="Фамилия" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="input-text input-text--no-exp" data-mortgage-requests-field="name-old" data-validate-required data-mortgage-requests-content="3"
+                                            hidden>
+                                            <label class="input-text__label">
+                                                <span>Имя</span>
+                                                <input type="text" name="Имя" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="input-text input-text--no-exp" data-mortgage-requests-content="3" hidden>
+                                            <label class="input-text__label">
+                                                <span>Отчество</span>
+                                                <input type="text" name="Отчество" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="input-text input-text--no-exp" data-mortgage-requests-field="shifts-full-name" data-mortgage-requests-content="3" hidden>
+                                            <label class="input-text__label">
+                                                <span>Дата смены ФИО</span>
+                                                <input type="text" name="Имя" class="input-reset input-text__input" value="" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mortgage-requests__fields">
+                                        <div class="mortgage-requests__field--col">
+                                            <h4 class="title-4 mortgage-requests__field-subtitle">
+                                                Образование
+                                            </h4>
+                                            <div class="select-secondary" data-mortgage-requests-field="education">
+                                                <div class="select-secondary__wrapper">
+                                                    <span class="select-secondary__placeholder">
+                                                        Образование
+                                                    </span>
+                                                    <select class="select-secondary__body" hidden name="complex">
+                                                        <option value="room-1" placeholder>Не выбрано</option>
+                                                        <option value="room-2">Средне-специальное</option>
+                                                        <option value="room-2">Высшее</option>
+                                                        <option value="room-2">Ученая степень</option>
+                                                        <option value="room-2">Несколько высших</option>
+                                                        <option value="room-2">Неоконченное высшее</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mortgage-requests__field--col">
+                                            <h4 class="title-4 mortgage-requests__field-subtitle">
+                                                Трудовой стаж
+                                            </h4>
+                                            <div class="select-secondary" data-mortgage-requests-field="seniority">
+                                                <div class="select-secondary__wrapper">
+                                                    <span class="select-secondary__placeholder">
+                                                        Общий трудовой стаж
+                                                    </span>
+                                                    <select class="select-secondary__body" hidden name="complex">
+                                                        <option value="room-1" placeholder>Не выбрано</option>
+                                                        <option value="room-2">Менее года</option>
+                                                        <option value="room-2">Менее 3 лет</option>
+                                                        <option value="room-2">Менее 5 лет</option>
+                                                        <option value="room-2">Менее 6 месяцев</option>
+                                                        <option value="room-2">До 10 лет</option>
+                                                        <option value="room-2">Более 10 лет</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mortgage-requests__field--col">
+                                            <h4 class="title-4 mortgage-requests__field-subtitle">
+                                                Воинская обязанность
+                                            </h4>
+                                            <div class="select-secondary" data-mortgage-requests-field="military-duty">
+                                                <div class="select-secondary__wrapper">
+                                                    <span class="select-secondary__placeholder">
+                                                        Воинская обязанность
+                                                    </span>
+                                                    <select class="select-secondary__body" hidden name="complex">
+                                                        <option value="room-1" placeholder>Не выбрано</option>
+                                                        <option value="room-2">Нет</option>
+                                                        <option value="room-2">Отсрочка</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spollers__item mortgage-requests__spoller">
+                                <button type="button" data-spoller="" class="btn btn-reset spollers__title">
+                                    <h3 class="title-3">
+                                        Семейное положение
+                                    </h3>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-small"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers__body mortgage-requests__content" hidden>
+                                    <div class="mortgage-requests__fields">
+                                        <div class="select-secondary mortgage-requests__field--row" data-mortgage-requests-field="family-status"
+                                            data-mortgage-requests-family-status>
+                                            <div class="select-secondary__wrapper">
+                                                <span class="select-secondary__placeholder">
+                                                    Семейное положение
+                                                </span>
+                                                <select class="select-secondary__body" hidden name="complex">
+                                                    <option placeholder>Не выбрано</option>
+                                                    <option value="married">В браке</option>
+                                                    <option value="not-married">Не в браке</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="checkbox-secondary mortgage-requests__field--row" data-mortgage-requests-spouse-deal hidden>
+                                            <input id="access-rights_1" name="access-rights_1" class="checkbox-secondary__input" type="checkbox" value="true">
+                                            <label for="access-rights_1" class="checkbox-secondary__label">
+                                                <div class="checkbox-secondary checkbox-secondary__text">
+                                                    Супруг(а) не участвует в сделке
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="select-secondary mortgage-requests__field--row" data-mortgage-requests-field="spouse-consent"
+                                            data-mortgage-requests-spouse-consent hidden>
+                                            <div class="select-secondary__wrapper">
+                                                <span class="select-secondary__placeholder">
+                                                    Согласие супруга
+                                                </span>
+                                                <select class="select-secondary__body" hidden name="complex">
+                                                    <option placeholder>Не выбрано</option>
+                                                    <option value="room-1">Брачный контракт</option>
+                                                    <option value="room-1">Нотариальное согласие супруг(и)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mortgage-requests__fields">
+                                        <div class="mortgage-requests__field--row">
+                                            <h4 class="title-4 mortgage-requests__field-subtitle">
+                                                Дети
+                                            </h4>
+                                            <div class="radio-primary__item">
+                                                <input hidden id="children_2" class="radio-primary__input" type="radio" checked value="Нет детей младше 18 лет" name="children"
+                                                    data-mortgage-requests-younger-children="false">
+                                                <label for="children_2" class="radio-primary__label">
+                                                    <span class="radio-primary__text">Нет детей младше 18 лет</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio-primary__item">
+                                                <input hidden id="children_1" class="radio-primary__input" type="radio" value="По телефону и в сообщениях" name="children"
+                                                    data-mortgage-requests-younger-children="true">
+                                                <label for="children_1" class="radio-primary__label">
+                                                    <span class="radio-primary__text">Есть дети младше 18 лет</span>
+                                                </label>
+                                            </div>
+                                            <div class="mortgage-requests__childrens" hidden></div>
+                                            <button type="button" class="btn btn-reset btn-secondary mortgage-requests__create-children" hidden>
+                                                Добавить ребёнка
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spollers__item mortgage-requests__spoller">
+                                <button type="button" data-spoller="" class="btn btn-reset spollers__title">
+                                    <h3 class="title-3">
+                                        Доход
+                                    </h3>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-small"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers__body mortgage-requests__content mortgage-requests__income" hidden data-mortgage-requests-income-name="default">
+                                    <div class="mortgage-requests__fields">
+                                        <div class="select-secondary" data-mortgage-requests-field="employment">
+                                            <div class="select-secondary__wrapper">
+                                                <span class="select-secondary__placeholder">
+                                                    Форма занятости
+                                                </span>
+                                                <select class="select-secondary__body" hidden name="complex">
+                                                    <option placeholder value="default">Не выбрано</option>
+                                                    <option value="business">Собственник бизнеса</option>
+                                                    <option value="hiring">По найму</option>
+                                                    <option value="individualEnt">ИП</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mortgage-requests__content" hidden data-mortgage-requests-income="business">
+
+                                    </div>
+                                    <div class="mortgage-requests__content" hidden data-mortgage-requests-income="hiring">
+
+                                    </div>
+                                    <div class="mortgage-requests__content" hidden data-mortgage-requests-income="individualEnt">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spollers__item mortgage-requests__spoller">
+                                <button type="button" data-spoller="" class="btn btn-reset spollers__title">
+                                    <h3 class="title-3">
+                                        Дополнительные доходы
+                                    </h3>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-small"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers__body mortgage-requests__content" hidden>
+                                    <p>
+                                        Укажите сведения о дополнительных доходах, которые сможете подтвердить документами
+                                    </p>
+                                    <div class="mortgage-requests__fields">
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1" data-mortgage-requests-toggle="5">
+                                            <div aria-hidden="true"></div>
+                                            <span>Доходы от аренды</span>
+                                        </label>
+                                        <div class="mortgage-requests__field--row" data-mortgage-requests-content="5" hidden>
+                                            <p class="mortgage-requests__field-descr">
+                                                Укажите средний доход в месяц за последние полгода после уплаты налогов (на руки)
+                                            </p>
+                                            <div class="input-text input-text--only-number" data-mortgage-requests-field="rental-income" data-validate-required
+                                                data-validate-average-invome-default>
+                                                <label class="input-text__label">
+                                                    <span>Средний доход в месяц</span>
+                                                    <input type="text" name="Средний доход в месяц" maxlength="12" class="input-reset input-text__input" placeholder="">
+                                                    <span>₽</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mortgage-requests__fields">
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1" data-mortgage-requests-toggle="6">
+                                            <div aria-hidden="true"></div>
+                                            <span>Пенсия</span>
+                                        </label>
+                                        <div class="mortgage-requests__field--row" data-mortgage-requests-content="6" hidden>
+                                            <p class="mortgage-requests__field-descr">
+                                                Укажите средний доход в месяц за последние полгода
+                                            </p>
+                                            <div class="input-text input-text--only-number" data-mortgage-requests-field="pension" data-validate-required
+                                                data-validate-average-invome-default>
+                                                <label class="input-text__label">
+                                                    <span>Средний доход в месяц</span>
+                                                    <input type="text" name="Средний доход в месяц" maxlength="12" class="input-reset input-text__input" placeholder="">
+                                                    <span>₽</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mortgage-requests__fields">
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1" data-mortgage-requests-toggle="7">
+                                            <div aria-hidden="true"></div>
+                                            <span>Иные доходы</span>
+                                        </label>
+                                        <div class="mortgage-requests__field--row" data-mortgage-requests-content="7" hidden>
+                                            <p class="mortgage-requests__field-descr">
+                                                Укажите средний доход в месяц за последние полгода после уплаты налогов (на руки)
+                                            </p>
+                                            <div class="input-text input-text--only-number" data-mortgage-requests-field="other-income" data-validate-required
+                                                data-validate-average-invome-default>
+                                                <label class="input-text__label">
+                                                    <span>Средний доход в месяц</span>
+                                                    <input type="text" name="Средний доход в месяц" maxlength="12" class="input-reset input-text__input" placeholder="">
+                                                    <span>₽</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spollers__item mortgage-requests__spoller mortgage-requests__documents">
+                                <button type="button" data-spoller="" class="btn btn-reset spollers__title">
+                                    <h3 class="title-3">
+                                        Документы
+                                    </h3>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-small"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers__body mortgage-requests__content" hidden>
+                                    <div data-spollers class="spollers">
+                                        <div class="spollers__item">
+                                            <button type="button" data-spoller class="btn btn-reset spollers__title">
+                                                Как правильно сфотографировать документы
+                                            </button>
+                                            <div class="spollers__body">
+                                                Сфотографируйте или отсканируйте все развороты документа, в том числе пустые. Проследите, что на фото или скане:
+                                                Разворот виден полностью
+                                                Нет посторонних предметов и бликов
+                                                Данные не перекрыты пальцами
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="document-item mortgage-requests__field--row" data-mortgage-requests-document="passport">
+                                        <div class="document-item__info">
+                                            <img loading="lazy" src="./img/passport-two.svg" width="40" height="60" class="document-item__image" alt="">
+                                            <h3 class="title-3 document-item__title">Паспорт</h3>
+                                            <p class="document-item__descr">
+                                                Фото или скан всех разворотов паспорта, в том числе пустых
+                                            </p>
+                                        </div>
+                                        <div class="photo-load document-item__wrapper place-sale-photo">
+                                            <div class="place-sale-photo__images photo-load__images">
+                                            </div>
+                                            <div class="place-sale-photo__wrapper photo-load__wrapper">
+                                                <button type="button" class="btn btn-reset">
+                                                    <p>
+                                                        <span class="btn btn-reset btn-primary">
+                                                            Загрузите файлы
+                                                        </span>
+                                                        <span>
+                                                            или перетащите в
+                                                            эту область
+                                                        </span>
+                                                    </p>
+                                                </button>
+                                                <input type="file" data-upload-drop data-upload-drop-default name="upload" accept=".jpg,.jpeg,.png,.tiff,.tif,.doc,.docx,.pdf"
+                                                    multiple class="input-reset">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="document-item mortgage-requests__field--row" data-mortgage-requests-document="snils">
+                                        <div class="document-item__info">
+                                            <img loading="lazy" src="./img/snils.svg" width="55" height="37" class="document-item__image" alt="">
+                                            <h3 class="title-3 document-item__title">Снилс</h3>
+                                            <p class="document-item__descr">
+                                                Фото или скан оригинала страхового свидетельства — лицевой стороны с номером СНИЛС, или его электронная копия
+                                            </p>
+                                        </div>
+                                        <div class="photo-load document-item__wrapper place-sale-photo">
+                                            <div class="place-sale-photo__images photo-load__images">
+                                            </div>
+                                            <div class="place-sale-photo__wrapper photo-load__wrapper">
+                                                <button type="button" class="btn btn-reset">
+                                                    <p>
+                                                        <span class="btn btn-reset btn-primary">
+                                                            Загрузите файлы
+                                                        </span>
+                                                        <span>
+                                                            или перетащите в
+                                                            эту область
+                                                        </span>
+                                                    </p>
+                                                </button>
+                                                <input type="file" data-upload-drop data-upload-drop-default name="upload" accept=".jpg,.jpeg,.png,.tiff,.tif,.doc,.docx,.pdf"
+                                                    multiple class="input-reset">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="document-item mortgage-requests__field--row" data-mortgage-requests-document="military">
+                                        <div class="document-item__info">
+                                            <img loading="lazy" src="./img/military.svg" width="40" height="60" class="document-item__image" alt="">
+                                            <h3 class="title-3 document-item__title">
+                                                Военный билет или приписное свидетельство
+                                            </h3>
+                                            <p class="document-item__descr">
+                                                Фото или скан всех страниц военного билета или приписного свидетельства, в том числе пустых
+                                            </p>
+                                        </div>
+                                        <div class="photo-load document-item__wrapper place-sale-photo">
+                                            <div class="place-sale-photo__images photo-load__images">
+                                            </div>
+                                            <div class="place-sale-photo__wrapper photo-load__wrapper">
+                                                <button type="button" class="btn btn-reset">
+                                                    <p>
+                                                        <span class="btn btn-reset btn-primary">
+                                                            Загрузите файлы
+                                                        </span>
+                                                        <span>
+                                                            или перетащите в
+                                                            эту область
+                                                        </span>
+                                                    </p>
+                                                </button>
+                                                <input type="file" data-upload-drop data-upload-drop-default name="upload" accept=".jpg,.jpeg,.png,.tiff,.tif,.doc,.docx,.pdf"
+                                                    multiple class="input-reset">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Налоговая декларация -->
+                                    <div class="document-item mortgage-requests__field--row" data-mortgage-requests-document="tax" hidden>
+                                        <div class="document-item__info">
+                                            <img loading="lazy" src="./img/tax-return.svg" width="40" height="60" class="document-item__image" alt="">
+                                            <h3 class="title-3 document-item__title">
+                                                Налоговая декларация
+                                            </h3>
+                                            <p class="document-item__descr">
+                                                Данные за последний отчётный период с отметкой налогового органа о принятии или с квитанцией об отправке:
+                                                <br> при УСН — декларация по УСН
+                                                <br> при ОСН — декларация 3-НДФЛ
+                                                <br> Если работаете на патенте, загрузите его скан или фото.
+                                            </p>
+                                        </div>
+                                        <div class="photo-load document-item__wrapper place-sale-photo">
+                                            <div class="place-sale-photo__images photo-load__images">
+                                            </div>
+                                            <div class="place-sale-photo__wrapper photo-load__wrapper">
+                                                <button type="button" class="btn btn-reset">
+                                                    <p>
+                                                        <span class="btn btn-reset btn-primary">
+                                                            Загрузите файлы
+                                                        </span>
+                                                        <span>
+                                                            или перетащите в
+                                                            эту область
+                                                        </span>
+                                                    </p>
+                                                </button>
+                                                <input type="file" data-upload-drop data-upload-drop-default name="upload" accept=".jpg,.jpeg,.png,.tiff,.tif,.doc,.docx,.pdf"
+                                                    multiple class="input-reset">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="document-item mortgage-requests__field--row" data-mortgage-requests-document="umsatz" hidden>
+                                        <div class="document-item__info">
+                                            <img loading="lazy" src="./img/umsatz.svg" width="40" height="60" class="document-item__image" alt="">
+                                            <h3 class="title-3 document-item__title">
+                                                Документы, подтверждающие оборот
+                                            </h3>
+                                            <p class="document-item__descr">
+                                                Запросите в банке, где открыт расчётный счёт, выписку или справку об оборотах за последние 12 месяцев
+                                            </p>
+                                        </div>
+                                        <div class="photo-load document-item__wrapper place-sale-photo">
+                                            <div class="place-sale-photo__images photo-load__images">
+                                            </div>
+                                            <div class="place-sale-photo__wrapper photo-load__wrapper">
+                                                <button type="button" class="btn btn-reset">
+                                                    <p>
+                                                        <span class="btn btn-reset btn-primary">
+                                                            Загрузите файлы
+                                                        </span>
+                                                        <span>
+                                                            или перетащите в
+                                                            эту область
+                                                        </span>
+                                                    </p>
+                                                </button>
+                                                <input type="file" data-upload-drop data-upload-drop-default name="upload" accept=".jpg,.jpeg,.png,.tiff,.tif,.doc,.docx,.pdf"
+                                                    multiple class="input-reset">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Налоговая декларация -->
+                                    <!-- 2-НДФЛ -->
+                                    <div class="document-item mortgage-requests__field--row" data-mortgage-requests-document="arbeit" hidden>
+                                        <div class="document-item__info">
+                                            <img loading="lazy" src="./img/arbeit.svg" width="40" height="60" class="document-item__image" alt="">
+                                            <h3 class="title-3 document-item__title">
+                                                Копия трудовой книжки
+                                            </h3>
+                                            <p class="document-item__descr">
+                                                Если у вас электронная трудовая книжка, запросите бумажную выписку в МФЦ или электронную на Госуслугах. Заверенную копию бумажной трудовой можно получить у работодателя — все заполненные страницы, включая вкладыш. Если работаете без трудовой, загрузите фото или скан действующего трудового договора.
+                                            </p>
+                                        </div>
+                                        <div class="photo-load document-item__wrapper place-sale-photo">
+                                            <div class="place-sale-photo__images photo-load__images">
+                                            </div>
+                                            <div class="place-sale-photo__wrapper photo-load__wrapper">
+                                                <button type="button" class="btn btn-reset">
+                                                    <p>
+                                                        <span class="btn btn-reset btn-primary">
+                                                            Загрузите файлы
+                                                        </span>
+                                                        <span>
+                                                            или перетащите в
+                                                            эту область
+                                                        </span>
+                                                    </p>
+                                                </button>
+                                                <input type="file" data-upload-drop data-upload-drop-default name="upload" accept=".jpg,.jpeg,.png,.tiff,.tif,.doc,.docx,.pdf"
+                                                    multiple class="input-reset">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="document-item mortgage-requests__field--row" data-mortgage-requests-document="ndfl" hidden>
+                                        <div class="document-item__info">
+                                            <img loading="lazy" src="./img/ndfl.svg" width="40" height="60" class="document-item__image" alt="">
+                                            <h3 class="title-3 document-item__title">
+                                                Справка 2-НДФЛ
+                                            </h3>
+                                            <p class="document-item__descr">
+                                                Запросите справку за последние 12 месяцев в бухгалтерии работодателя. Мы рекомендуем прикладывать данные за текущий и предыдущий год.
+                                                Убедитесь, что в справке указан номер телефона работодателя и есть подпись бухгалтера или гендиректора. Справка 2-НДФЛ действительна 30 календарных дней.
+                                            </p>
+                                        </div>
+                                        <div class="photo-load document-item__wrapper place-sale-photo">
+                                            <div class="place-sale-photo__images photo-load__images">
+                                            </div>
+                                            <div class="place-sale-photo__wrapper photo-load__wrapper">
+                                                <button type="button" class="btn btn-reset">
+                                                    <p>
+                                                        <span class="btn btn-reset btn-primary">
+                                                            Загрузите файлы
+                                                        </span>
+                                                        <span>
+                                                            или перетащите в
+                                                            эту область
+                                                        </span>
+                                                    </p>
+                                                </button>
+                                                <input type="file" data-upload-drop data-upload-drop-default name="upload" accept=".jpg,.jpeg,.png,.tiff,.tif,.doc,.docx,.pdf"
+                                                    multiple class="input-reset">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 2-НДФЛ -->
+
+
+                                    <div class="document-item mortgage-requests__field--row" data-mortgage-requests-document="other-document">
+                                        <div class="document-item__info">
+                                            <img loading="lazy" src="./img/document.svg" width="40" height="60" class="document-item__image" alt="">
+                                            <h3 class="title-3 document-item__title">
+                                                Документ
+                                            </h3>
+                                            <p class="document-item__descr">
+                                                Фото или скан документа, который вы считаете нужным приложить к заявке
+                                            </p>
+                                        </div>
+                                        <div class="photo-load document-item__wrapper place-sale-photo">
+                                            <div class="place-sale-photo__images photo-load__images">
+                                            </div>
+                                            <div class="place-sale-photo__wrapper photo-load__wrapper">
+                                                <button type="button" class="btn btn-reset">
+                                                    <p>
+                                                        <span class="btn btn-reset btn-primary">
+                                                            Загрузите файлы
+                                                        </span>
+                                                        <span>
+                                                            или перетащите в
+                                                            эту область
+                                                        </span>
+                                                    </p>
+                                                </button>
+                                                <input type="file" data-upload-drop data-upload-drop-default name="upload" accept=".jpg,.jpeg,.png,.tiff,.tif,.doc,.docx,.pdf"
+                                                    multiple class="input-reset">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="document-item mortgage-requests__field--row" data-mortgage-requests-document="reference-bank" hidden>
+                                        <div class="document-item__info">
+                                            <img loading="lazy" src="./img/document.svg" width="40" height="60" class="document-item__image" alt="">
+                                            <h3 class="title-3 document-item__title">
+                                                Справка по форме банка
+                                            </h3>
+                                            <p class="document-item__descr">
+                                                Скачайте и распечатайте бланк справки и передайте его работодателю — справку должен заполнить и заверить руководитель или главный бухгалтер
+                                            </p>
+                                            <button class="btn btn-reset document-item__download-blank">
+                                                Скачать бланк
+                                            </button>
+                                        </div>
+                                        <div class="photo-load document-item__wrapper place-sale-photo">
+                                            <div class="place-sale-photo__images photo-load__images">
+                                            </div>
+                                            <div class="place-sale-photo__wrapper photo-load__wrapper">
+                                                <button type="button" class="btn btn-reset">
+                                                    <p>
+                                                        <span class="btn btn-reset btn-primary">
+                                                            Загрузите файлы
+                                                        </span>
+                                                        <span>
+                                                            или перетащите в
+                                                            эту область
+                                                        </span>
+                                                    </p>
+                                                </button>
+                                                <input type="file" data-upload-drop data-upload-drop-default name="upload" accept=".jpg,.jpeg,.png,.tiff,.tif,.doc,.docx,.pdf"
+                                                    multiple class="input-reset">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spollers__item mortgage-requests__spoller">
+                                <button type="button" data-spoller="" class="btn btn-reset spollers__title">
+                                    <h3 class="title-3">
+                                        Рассходы
+                                    </h3>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-small"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers__body mortgage-requests__content" hidden>
+                                    <p>
+                                        Если у вас есть официальные ежемесячные расходы, укажите их
+                                    </p>
+                                    <div class="mortgage-requests__fields">
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1" data-mortgage-requests-toggle="8">
+                                            <div aria-hidden="true"></div>
+                                            <span>Кредиты</span>
+                                        </label>
+                                        <div class="mortgage-requests__field--row" data-mortgage-requests-content="8" hidden>
+                                            <div class="input-text input-text--only-number" data-mortgage-requests-field="credits" data-validate-required>
+                                                <label class="input-text__label">
+                                                    <span>Сумма ежемесячных платежей</span>
+                                                    <input type="text" name="Средний доход в месяц" maxlength="12" class="input-reset input-text__input" placeholder="">
+                                                    <span>₽</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mortgage-requests__fields">
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1" data-mortgage-requests-toggle="9">
+                                            <div aria-hidden="true"></div>
+                                            <span>Аренда</span>
+                                        </label>
+                                        <div class="mortgage-requests__field--row" data-mortgage-requests-content="9" hidden>
+                                            <div class="input-text input-text--only-number" data-mortgage-requests-field="rent" data-validate-required>
+                                                <label class="input-text__label">
+                                                    <span>Сумма ежемесячных платежей</span>
+                                                    <input type="text" name="Средний доход в месяц" maxlength="12" class="input-reset input-text__input" placeholder="">
+                                                    <span>₽</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mortgage-requests__fields">
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1" data-mortgage-requests-toggle="10">
+                                            <div aria-hidden="true"></div>
+                                            <span>Алименты</span>
+                                        </label>
+                                        <div class="mortgage-requests__field--row" data-mortgage-requests-content="10" hidden>
+                                            <div class="input-text input-text--only-number" data-mortgage-requests-field="alimony" data-validate-required>
+                                                <label class="input-text__label">
+                                                    <span>Сумма ежемесячных платежей</span>
+                                                    <input type="text" name="Средний доход в месяц" maxlength="12" class="input-reset input-text__input" placeholder="">
+                                                    <span>₽</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spollers__item mortgage-requests__spoller">
+                                <button type="button" data-spoller="" class="btn btn-reset spollers__title">
+                                    <h3 class="title-3">
+                                        Активы
+                                    </h3>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-small"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers__body mortgage-requests__content" hidden>
+                                    <p>
+                                        Если у вас в собственности есть недвижимость или автомобиль, укажите их, это поможет банку убедиться в вашей платёжеспособности.
+                                        Собственность необходимо подтвердить документами.
+                                    </p>
+                                    <div class="mortgage-requests__fields">
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1" data-mortgage-requests-car>
+                                            <div aria-hidden="true"></div>
+                                            <span>Автомобиль</span>
+                                        </label>
+                                        <div class="mortgage-requests__cars" hidden>
+                                        </div>
+                                        <button type="button" class="btn btn-reset btn-secondary mortgage-requests__create-car" hidden>
+                                            Добавить автомобиль
+                                        </button>
+                                    </div>
+                                    <div class="mortgage-requests__fields">
+                                        <label class="toggle-checkbox">
+                                            <input type="checkbox" name="toggle-1" data-mortgage-requests-estate>
+                                            <div aria-hidden="true"></div>
+                                            <span>Недвижимость</span>
+                                        </label>
+                                        <div class="mortgage-requests__estates" hidden>
+                                        </div>
+                                        <button type="button" class="btn btn-reset btn-secondary mortgage-requests__create-estate" hidden>
+                                            Добавить недвижимость
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spollers__item mortgage-requests__spoller">
+                                <button type="button" data-spoller="" class="btn btn-reset spollers__title">
+                                    <h3 class="title-3">
+                                        Комментарий к заявке
+                                    </h3>
+                                    <svg>
+                                        <use xlink:href="./img/sprite.svg#arrow-small"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers__body" hidden>
+                                    <label class="textarea-primary">
+                                        <textarea class="input-reset textarea-primary__input" placeholder="Комментарий"></textarea>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-reset mortgage-requests__save btn-primary">
+                            Сохранить
+                        </button>
+                    </form>
+                    <div class="mortgage-requests__sidebar">
+                        <div class="_sticky" style="text-align: center;">
+                            Sidebar
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="footer-fixed mortgage-requests-fixed">
+            <div class="footer-fixed__container">
+                <button type="submit" class="btn btn-reset btn-primary mortgage-requests-fixed__save" form="mortgage-requests-form" style="width: 100%;">
+                    Сохранить
+                </button>
+            </div>
+        </div>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>
